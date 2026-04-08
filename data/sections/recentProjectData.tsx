@@ -6,7 +6,7 @@ import Image3 from "@/public/img/project/3.jpg";
 export const RecentProjectData: SectionProps = {
     wrapperCls: "mt-100",
     container: "container",
-    link: "/projects",
+    link: "/about-us",
     subheading: "Global Reach",
     heading: "Connecting Producers, Suppliers, and Buyers Across Markets",
     text: "With a long-term vision to integrate technology with distribution and retail ecosystems, KBEPL aims to build efficient supply chains that connect producers, suppliers, and buyers across global markets.",        
@@ -16,25 +16,25 @@ export const RecentProjectData: SectionProps = {
             width: 1000,
             height: 595,
             loading: "lazy",
-            alt: "Large image"
+            alt: "Global trading image"
         },
         {
             src: Image2.src,
             width: 500,
             height: 385,
             loading: "lazy",
-            alt: "Small image"
+            alt: "Supply chain image"
         },
         {
             src: Image3.src,
             width: 500,
             height: 385,
             loading: "lazy",
-            alt: "Small image"
+            alt: "Distribution image"
         },
     ],
     block: {
-        heading: "Connecting Producers, Suppliers, and Buyers Across Markets",
+        heading: "Building Efficient Supply Chains Worldwide",
         text: "We aim to build a sustainable, efficient, and customer-focused international trading and distribution business.",
         button: {
             label: "View Services",

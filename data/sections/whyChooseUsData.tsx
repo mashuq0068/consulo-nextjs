@@ -10,11 +10,11 @@ export const WhyChooseUsData: SectionProps = {
         width: 1000,
         height: 1469,
         loading: "lazy",
-        alt: "Promotion image"
+        alt: "Why choose us image"
     },
     subheading: "Why Choose Us",
     heading: "We Transform Your Requirements into Reliable Exports",
-    text: "At Kirti Bhavya Enterprises, we focus on understanding client requirements and converting them into reliable, timely, and high-quality exports. We don't just supply products—we deliver consistency, quality, transparency, and trust in every shipment.",
+    text: "At Kirti Bhavya Enterprises, we focus on understanding client requirements and converting them into reliable, timely, and high-quality exports. We don't just supply products — we deliver consistency, quality, transparency, and trust in every shipment.",
     button: {
         label: "Discover More",
         href: "/about-us",
@@ -23,13 +23,18 @@ export const WhyChooseUsData: SectionProps = {
     promotions: [
         {
             icon: <Icons.Winning />,
-            title: "Experience & <br />Reliability",
-            text: "Global sourcing networks with reliable supply chain management.",
+            title: "Experience",
+            text: "Nearly 25 years of global experience in international trade, supply chain management, and logistics.",
         },
         {
             icon: <Icons.Support />,
-            title: "Quality <br />Control",
-            text: "Ensuring consistency, transparency, and dependable execution.",
+            title: "Reliability",
+            text: "Dependable execution and transparent processes in every shipment.",
+        },
+        {
+            icon: <Icons.Winning />,
+            title: "Quality Control",
+            text: "Ensuring consistency, transparency, and dependable execution in every transaction.",
         },
     ],
     counterData: [
@@ -43,12 +48,12 @@ export const WhyChooseUsData: SectionProps = {
         {
             number: 100,
             suffix: "%",
-            title: "Quality Checks",
+            title: "Quality Assurance",
         },
         {
-            number: 25,
+            number: 50,
             suffix: "+",
-            title: "Years experiences",
+            title: "Global Partners",
         },
     ],
-}
+};

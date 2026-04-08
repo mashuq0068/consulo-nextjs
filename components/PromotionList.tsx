@@ -3,11 +3,11 @@ import { PromotionProps } from "@/types/promotionProps";
 
 const PromotionList = ({ items }: { items: PromotionProps[] }) => {
   return (
-    <ul className="promotion-lists list-unstyled">
+    <ul  style={{backgroundColor:'#3e484e', marginTop:'30px', textAlign:'left'}} className="grid grid-cols-3 gap-1">
       {items.map((item, index) => (
         <li
-          className="promotion-item"
-          data-aos="fade-up"
+        style={{padding:'30px'}}
+           data-aos="fade-up "
           key={`plist-${index}`}
         >
           <div className="promotion-title">

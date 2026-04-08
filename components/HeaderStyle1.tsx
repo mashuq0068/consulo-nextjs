@@ -29,7 +29,7 @@ const Header = () => {
           <NavBar />
 
           {/* Header Actions */}
-          <HeaderActions />
+           <HeaderActions />
         </div>
       </StickyHeader>
     )

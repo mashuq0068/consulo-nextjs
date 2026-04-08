@@ -4,27 +4,28 @@ import Icons from "./Icons";
 import parser from "html-react-parser";
 
 const CardService = ({ data }: ServiceDataType) => {
-    const { 
-        title,
-        description,
-        slug,
-        list,
-        icon,
-    } = data || {};
+  const { title, description, slug, list, icon } = data || {};
 
-    return (        
-        <Link
-            className="multicolumn-card"
-            href={`/services/${slug}`}
-            aria-label="View Service Details"
-        >
-            {icon && <div className="card-icon icon-40">{parser(icon)}</div>}
+  return (
+    <div
+      className="multicolumn-card"
+    //   href={`/services/${slug}`}
+    //   aria-label="View Service Details"
+    >
+      {icon && (
+        <div className="card-icon icon-40">
+          {(() => {
+            const Icon = icon;
+            return <Icon size={40} />;
+          })()}
+        </div>
+      )}
 
-            {title && <h2 className="heading text-28">{title}</h2>}
+      {title && <h2 className="heading text-28">{title}</h2>}
 
-            {description && <div className="text text-16">{description}</div>}
+      {description && <div className="text text-16">{description}</div>}
 
-            {list &&
+      {/* {list &&
                 <ul className="text-lists list-unstyled">
                     {list.map((item, index) => (                        
                         <li className="text-item text text-16 fw-500" key={`service-${index}`}>
@@ -33,9 +34,9 @@ const CardService = ({ data }: ServiceDataType) => {
                         </li>
                     ))}
                 </ul>
-            }
-        </Link>
-    )
-}
+            } */}
+    </div>
+  );
+};
 
 export default CardService;

@@ -23,12 +23,12 @@ export const WhyChooseUsGridBgData: SectionProps = {
         loading: "lazy",
         alt: "Choose us image"
     },
-    subheading: "Why Choose Us",
-    heading: "Supporting Growth on a Global Scale",
-    text: "We provide dependable and tailored consulting services that help your business navigate challenges, seize opportunities.",
+    subheading: "Vision & Mission",
+    heading: "Building a Globally Respected Enterprise",
+    text: "With strong leadership, global networks, and market knowledge, KBEPL aims to build a sustainable, efficient, and customer-focused international trading and distribution business.",
     button: {
-        label: "More About Us",
-        href: "/about-us",
+        label: "Learn More",
+        href: "/contact-us",
         type: "primary"
     },
     rotatingLogo: {
@@ -39,17 +39,17 @@ export const WhyChooseUsGridBgData: SectionProps = {
         {
             icon: <Icons.Mission />,
             title: "Our Mission",
-            text: "Our mission is push engage boundaries, enga audiences, and driv engage.",
+            text: "To build a reliable global trading and distribution company by providing quality products, efficient supply chain solutions, transparent operations, and long-term value to customers, suppliers, and partners.",
         },
         {
             icon: <Icons.Vision />,
             title: "Our Vision",
-            text: "Our mission is push engage boundaries, enga audiences, and driv engage.",
+            text: "To become a globally respected enterprise that strengthens international supply chains, empowers retail and distribution ecosystems, and builds sustainable, technology-driven solutions.",
         },
         {
             icon: <Icons.Awards />,
-            title: "Our Awards",
-            text: "Our mission is push engage boundaries, enga audiences, and driv engage.",
+            title: "Core Values",
+            text: "Integrity & Transparency, Partnership & Trust, Innovation with Purpose, Long-Term Relationships, Sustainable Growth.",
         },
     ],
     promoImage: {

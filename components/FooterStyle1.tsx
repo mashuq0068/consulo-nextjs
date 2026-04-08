@@ -12,7 +12,7 @@ interface FooterProps {
 const FooterStyle1 = ({ container }: FooterProps) => {
     return (
         <>
-            <FooterContact 
+            {/* <FooterContact 
                 container={container}
                 bgImage={FooterContactBgImage.src}
                 imageUrl={FooterContactImage.src}
@@ -23,7 +23,7 @@ const FooterStyle1 = ({ container }: FooterProps) => {
                 subheading="Contact Us"
                 heading="Get free business consultation today"
                 text="Need help with a project, have a question about our work? have a question about our work? We're here to help you."
-            />
+            /> */}
 
             <div
                 className="footer-main bg-contain"

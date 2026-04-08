@@ -11,10 +11,10 @@ export const OurServicesData: SectionProps = {
         alt: "Service background image",
         loading: "lazy"
     },
-    subheading: "Quick Links",
+    subheading: "Our Business Areas",
     heading: "Product Categories",
     button: {
-        label: "All Products",
+        label: "View All Products",
         href: "/services",
         type: "primary"
     },

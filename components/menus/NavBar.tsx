@@ -14,6 +14,7 @@ import {
   LinkWithDesc, 
   BottomMenuLink 
 } from "./MenuLinks";
+import HeaderActions from "../HeaderActions";
 
 const NavBar = () => {
   return (
@@ -77,6 +78,7 @@ const NavBar = () => {
                             </li>
                           ))
                         }
+                         {/* <HeaderActions /> */}
                       </ul>
                     </div>
                   }

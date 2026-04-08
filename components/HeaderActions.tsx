@@ -8,12 +8,12 @@ const HeaderActions = () => {
         <div className="header-actions flex items-center">
             {/* <SearchModal title="Search" placeholder="What are you looking for?" /> */}
             {/* <HeaderSeparator /> */}
-            <SlimButton 
+            {/* <SlimButton 
                 label="Let's Talk"
                 href="/contact-us"
                 ariaLabel="contact us"
                 cls="button--secondary !hidden lg:!inline-flex"
-            />
+            /> */}
             <Hamburger />
         </div>
     )

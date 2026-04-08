@@ -5,22 +5,22 @@ export const ContactData: SectionProps = {
     wrapperCls: "section-padding",
     container: "container",
     subheading: "Contact Us",
-    heading: "Let's Build an Awesome Project Together",
-    text: "Each demo built with Teba will look different. You can customize almost anything in the appearance of your website with only a few clicks. Each demo built with Teba will look different.",
+    heading: "Get in Touch with Us",
+    text: "We are here to assist you with your international trading requirements. Reach out to us for inquiries, partnerships, or any business-related queries.",
     promotions: [
         {
             icon: <Icons.ThumbsUp />,
-            title: "350+ Projects Done",
-            text: "From banking and insurance to wealth the management and security on there",
+            title: "Global Experience",
+            text: "Nearly 25 years of expertise across Africa, North America, and Asia.",
         },
         {
             icon: <Icons.Support />,
-            title: "500+ Happy Clients",
-            text: "From banking and insurance to wealth the management and security on there",
+            title: "Reliable Support",
+            text: "Dedicated support for all your trading and export documentation needs.",
         },
     ],
     block: {
-        heading: "Make an Appointment",
-        text: "Feel free to contact with us, we don't spam your email",
+        heading: "Send Us a Message",
+        text: "Feel free to contact us, we are happy to help with your trading requirements.",
     },
 }

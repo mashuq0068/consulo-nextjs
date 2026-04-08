@@ -49,9 +49,9 @@ const HeroSlider = ({
         <hero-slider className={`hero-slider ${wrapperCls}`}>
             <Swiper
                 slidesPerView={1}
-                loop={true}
-                modules={[Navigation]}
-                onSwiper={setSwiperInstance}
+                // loop={true}
+                // modules={[Navigation]}
+                // onSwiper={setSwiperInstance}
             >
                 {slides.map((slide, index) => (
                     <SwiperSlide key={`slide-${index}`}>
@@ -71,8 +71,8 @@ const HeroSlider = ({
                             }
 
                             <div className="slider-content">
-                                <div className="container height-100 flex items-center">
-                                    <div className="content-box slider-animation section-headings">
+                                <div className="container height-100 w-full flex items-center">
+                                    <div className="content-box w-full slider-animation section-headings">
                                         {slide.subheading && 
                                             <Subheading 
                                                 title={slide.subheading}
@@ -83,7 +83,7 @@ const HeroSlider = ({
                                         {slide.heading && 
                                             <Heading 
                                                 title={slide.heading}
-                                                cls="text-90 fw-700"
+                                                cls="text-80  fw-600"
                                             />
                                         }
 
@@ -119,7 +119,7 @@ const HeroSlider = ({
                 ))}
             </Swiper>            
 
-            {navigation && 
+            {/* {navigation && 
                 <div className="slider-nav">
                     <div className="swiper-button-prev" ref={prevRef}>
                         <Icons.SliderNavPrev />
@@ -128,7 +128,7 @@ const HeroSlider = ({
                         <Icons.SliderNavNext />
                     </div>
                 </div>
-            }
+            } */}
       </hero-slider>
     )
 }

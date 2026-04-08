@@ -9,7 +9,29 @@ import SecondaryButton from "../buttons/SecondaryButton";
 import PromotionList from "../PromotionList";
 import CounterUpVertical from "./CounterUpVertical";
 
+const whyChooseUsData = {
+  wrapperCls: "py-5 bg-white",
+  container: "container",
 
+  subheading: "WHY CHOOSE US",
+
+  heading: "We Transform Your Requirements into Reliable Exports",
+
+  text: "At Kirti Bhavya Enterprises, we focus on understanding client requirements and converting them into reliable, timely, and high-quality exports. We don’t just supply products — we deliver consistency, quality, transparency, and trust in every shipment.",
+
+  promotions: [
+    { title: "Experience" },
+    { title: "Reliability" },
+    { title: "Quality Control" },
+  ],
+
+  image: {
+    src: "/img/about/why-choose.jpg",
+    width: 600,
+    height: 500,
+    alt: "Why Choose Us",
+  },
+};
 const WhyChooseUs = ({ data }: { data: SectionProps }) => {
     const {
         wrapperCls,
@@ -28,8 +50,8 @@ const WhyChooseUs = ({ data }: { data: SectionProps }) => {
             <div className={container}>
                 <div className="promotion-container">
                     <div className="grid grid-cols-12 lg:gap-1">
-                        <div className="lg:col-span-7 col-span-12">
-                            <div className="promtion-content section-headings">
+                        <div className="lg:col-span-12 col-span-12">
+                            <div style={{textAlign:'center'}} className="promtion-content section-headings">
                                 {subheading &&
                                     <Subheading 
                                         title={subheading}
@@ -58,7 +80,7 @@ const WhyChooseUs = ({ data }: { data: SectionProps }) => {
                                 
                                 {promotions && <PromotionList items={promotions} />}
 
-                                {button &&
+                                {/* {button &&
                                     <div className="buttons" data-aos="fade-up">
                                         {button.type == 'primary' &&
                                             <PrimaryButton 
@@ -76,10 +98,10 @@ const WhyChooseUs = ({ data }: { data: SectionProps }) => {
                                             />
                                         }
                                     </div>
-                                }
+                                } */}
                             </div>
                         </div>
-                        <div className="lg:col-span-5 col-span-12">
+                        {/* <div className="lg:col-span-5 col-span-12">
                             <div className="promotion-img radius18" data-aos="flip-left">
                                 {image &&
                                     <Image
@@ -91,9 +113,9 @@ const WhyChooseUs = ({ data }: { data: SectionProps }) => {
                                     />
                                 }
                             </div>
-                        </div>
+                        </div> */}
                     </div>
-                    {counterData && <CounterUpVertical data={counterData} />}
+                    {/* {counterData && <CounterUpVertical data={counterData} />} */}
                 </div>
             </div>
         </div>
