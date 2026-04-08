@@ -1,5 +1,5 @@
 import Logo from "./Logo";
-import LogoImage from "@/public/img/logo-white.png";
+import LogoImage from "@/public/img/logo.png";
 import Social from "./Social";
 
 const FooterBrand = () => {
@@ -9,7 +9,7 @@ const FooterBrand = () => {
             data-aos="fade-up"
             data-aos-anchor=".footer-top"
         >
-            <Logo 
+            {/* <Logo 
                 src={LogoImage.src}
                 width={189}
                 height={32}
@@ -18,7 +18,7 @@ const FooterBrand = () => {
                 alt="Consulo logo"
                 ariaLabel="Consulo logo" 
                 loading="lazy"
-            />
+            /> */}
             <p className="text text-16">
                 Each demo built with Teba will look different. You can customize almost anything in the appearance of your website with only a few
             </p>

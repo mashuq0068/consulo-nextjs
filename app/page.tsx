@@ -45,16 +45,16 @@ const Home = () => {
       <WhyChooseUs data={WhyChooseUsData} />
 
       {/* Our Team */}
-      <TeamSlider 
+      {/* <TeamSlider 
         data={TeamSliderData} 
         pagination={true}
-      />
+      /> */}
 
       {/* Testimonials */}
-      <Testimonials data={TestimonialData} />
+      {/* <Testimonials data={TestimonialData} /> */}
 
       {/* Featured Blog */}
-      <FeaturedBlogGrid data={FeaturedBlogGridData} />
+      {/* <FeaturedBlogGrid data={FeaturedBlogGridData} /> */}
     </>
   );
 }

@@ -13,8 +13,8 @@ export const WhyChooseUsData: SectionProps = {
         alt: "Promotion image"
     },
     subheading: "Why Choose Us",
-    heading: "Supporting Growth on a Global Scale",
-    text: "The solar solution company specializes in providing innovative, eco-friendly energy systems that harness the power, reducing carbon footprints and energy for clients worldwide.",
+    heading: "We Transform Your Requirements into Reliable Exports",
+    text: "At Kirti Bhavya Enterprises, we focus on understanding client requirements and converting them into reliable, timely, and high-quality exports. We don't just supply products—we deliver consistency, quality, transparency, and trust in every shipment.",
     button: {
         label: "Discover More",
         href: "/about-us",
@@ -23,27 +23,27 @@ export const WhyChooseUsData: SectionProps = {
     promotions: [
         {
             icon: <Icons.Winning />,
-            title: "99% Winning <br />Guarantee",
-            text: "The solar solution company specializes innovative.",
+            title: "Experience & <br />Reliability",
+            text: "Global sourcing networks with reliable supply chain management.",
         },
         {
             icon: <Icons.Support />,
-            title: "Full Time <br />Support",
-            text: "The solar solution company specializes innovative.",
+            title: "Quality <br />Control",
+            text: "Ensuring consistency, transparency, and dependable execution.",
         },
     ],
     counterData: [
         {
-            number: 20,
-            suffix: "k+",
-            title: "Project completed",
+            number: 25,
+            suffix: "+",
+            title: "Years Experience",
             aos: "fade-up",
             aosDelay: 20,
         },
         {
-            number: 12,
-            suffix: "k+",
-            title: "Happy customers",
+            number: 100,
+            suffix: "%",
+            title: "Quality Checks",
         },
         {
             number: 25,

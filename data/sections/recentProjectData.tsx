@@ -7,9 +7,9 @@ export const RecentProjectData: SectionProps = {
     wrapperCls: "mt-100",
     container: "container",
     link: "/projects",
-    subheading: "Recent Projects",
-    heading: "Explore the Recent Works We Have Done!",
-    text: "The solar solution company specializes in providing innovative, eco-friendly energy systems harness the power, reducing carbon footprints and energy for clients worldwide.",        
+    subheading: "Global Reach",
+    heading: "Connecting Producers, Suppliers, and Buyers Across Markets",
+    text: "With a long-term vision to integrate technology with distribution and retail ecosystems, KBEPL aims to build efficient supply chains that connect producers, suppliers, and buyers across global markets.",        
     imageList: [
         {
             src: Image1.src,
@@ -34,11 +34,11 @@ export const RecentProjectData: SectionProps = {
         },
     ],
     block: {
-        heading: "Unlocking New Opportunities for Sustainable Growth",
-        text: "The solar solution company specializes in providing innovative, eco-friendly energy systems harness the power.",
+        heading: "Connecting Producers, Suppliers, and Buyers Across Markets",
+        text: "We aim to build a sustainable, efficient, and customer-focused international trading and distribution business.",
         button: {
-            label: "View All Details",
-            href: "/projects",
+            label: "View Services",
+            href: "/services",
             type: "secondary"
         }
     },

@@ -12,13 +12,13 @@ import ScrollTop from "@/components/ScrollToTop";
 export const metadata: Metadata = {
   title: {
     template: '%s',
-    default: 'Consulo Creative Business Consulting Template',
+    default: 'Kirti Bhavya Enterprises Private Limited (KBEPL)',
   },
-  description: "Consulo is a creative business consulting template designed for corporate entities and professional businesses.",
+  description: "Global Trading, Food Distribution, and Tech-Enabled Retail.",
   openGraph: {
-    title: 'Consulo Creative Business Consulting Template',
-    description: 'A versatile HTML template designed for corporate entities and professional businesses.',
-    url: 'https://themeforest.net/user/spreethemes/portfolio',
+    title: 'Kirti Bhavya Enterprises Private Limited',
+    description: 'Global Trading, Food Distribution, and Tech-Enabled Retail.',
+    url: 'https://kbepl.com',
     type: 'website',
   },
 };

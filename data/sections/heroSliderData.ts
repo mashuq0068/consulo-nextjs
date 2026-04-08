@@ -1,11 +1,11 @@
 export const HeroSlidesData = [
     {
-      subheading: "welcome to Zentra",
-      heading: "Business Growth Made Simple",
-      text: "Transform your business with expert consultancy services our team of seasoned consultants unparalleled. Transform your business.",
+      subheading: "welcome to Kirti Bhavya",
+      heading: "Global Trading & Food Distribution",
+      text: "A growth-driven enterprise built on the foundations of global experience, operational excellence, and long-term business relationships.",
       button: {
-          label: "Free Consultation",
-          href: "/contact-us",
+          label: "Learn More",
+          href: "/about-us",
           type: "secondary"
       },
       image: "/img/slider/hero-2.webp",
@@ -13,11 +13,11 @@ export const HeroSlidesData = [
       imageMobile: "/img/slider/hero-575.jpg"
     },
     {
-      subheading: "welcome to Zentra",
-      heading: "Business Growth Made Simple",
-      text: "Transform your business with expert consultancy services our team of seasoned consultants unparalleled. Transform your business.",
+      subheading: "welcome to KBEPL",
+      heading: "Tech-Enabled Retail Solutions",
+      text: "Integrating technology with distribution and retail ecosystems to build efficient supply chains across global markets.",
       button: {
-          label: "Free Consultation",
+          label: "Contact Us",
           href: "/contact-us",
           type: "secondary"
       },

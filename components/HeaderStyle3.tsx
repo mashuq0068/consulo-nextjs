@@ -3,7 +3,7 @@
 import { usePathname } from 'next/navigation';
 import "@/styles/header.css";
 import Logo from "./Logo";
-import LogoImage from "@/public/img/logo-white.png";
+import LogoImage from "@/public/img/logo.png";
 import NavBar from "./menus/NavBar";
 import HeaderActions2 from "./HeaderActions2";
 import AdditionalDrawer from "./AdditionalDrawer";

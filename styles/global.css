@@ -762,8 +762,9 @@ h6,
 }
 
 .button--secondary {
-  color: var(--color-secondary-button-text);
-  background-color: var(--color-secondary-button-background);
+  color: var(--color-secondary-button-hover-text);
+  background-color: var(--color-secondary-button-hover-background);
+
   border: var(--style-border-width-buttons-secondary) solid
     var(--color-secondary-button-border);
   border-radius: var(--style-border-radius-buttons-secondary);
@@ -773,6 +774,7 @@ h6,
 .button--secondary:hover {
   color: var(--color-secondary-button-hover-text);
   background-color: var(--color-secondary-button-hover-background);
+;
   border: var(--style-border-width-buttons-secondary) solid
     var(--color-secondary-button-hover-border);
 }
@@ -793,8 +795,8 @@ h6,
 }
 
 .button--secondary .svg-wrapper {
-  color: var(--color-secondary-button-icon);
-  background-color: var(--color-secondary-button-icon-background);
+ color: var(--color-secondary-button-hover-icon);
+  background-color: var(--color-secondary-button-hover-icon-background);
 }
 
 .button--secondary:focus .svg-wrapper,

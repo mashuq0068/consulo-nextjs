@@ -1,5 +1,5 @@
 import Logo from "./Logo";
-import LogoImage from "@/public/img/logo-white.png";
+import LogoImage from "@/public/img/logo.png";
 import Social from "./Social";
 
 const FooterBrand2 = () => {

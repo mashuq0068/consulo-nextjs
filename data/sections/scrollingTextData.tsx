@@ -9,8 +9,8 @@ import Image6 from "@/public/img/brand/b6.png";
 export const ScrollingTextData: SectionProps = {
     wrapperCls: "mt-100",
     container: "container",
-    heading: "Our Trusted Partners",
-    imageList: [        
+    heading: "Global Trading • Food Distribution • Tech-Enabled Retail",
+    imageList: [    
         {
             src: Image1.src,
             alt: "Scrolling image",

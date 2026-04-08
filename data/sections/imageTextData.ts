@@ -4,12 +4,12 @@ import Image1 from '@/public/img/image-text/img1.png';
 export const ImageTextData: SectionProps = {
     wrapperCls: "mt-100",
     container: "container",
-    subheading: "Our Company",
-    heading: "Redesigning business for solutions",
-    text: "Our mission is to empowers businesses off all size to thrive in an our businesses ever changing marketplace.",
+    subheading: "About Us",
+    heading: "A Dynamic and Growth-Focused Enterprise",
+    text: "The company operates through multiple business verticals including International Trading, Food Distribution, and Tech-Enabled Retail transformation. The organisation focuses on building efficient and reliable supply chains that connect producers, suppliers, and buyers across global markets.",
     button: {
         label: "More About Us",
-        href: "/contact-us",
+        href: "/about-us",
         type: "primary"
     },
     image: {
@@ -21,13 +21,13 @@ export const ImageTextData: SectionProps = {
     },
     textList: [
         {
-            text: "Integrate a diverse range of ideas"
+            text: "Global experience and innovation"
         },
         {
-            text: "Deliver the highest quality outcomes"
+            text: "Operational excellence"
         },
         {
-            text: "Believe in powerof implication"
+            text: "Reliable global networks"
         }
     ]
 }
