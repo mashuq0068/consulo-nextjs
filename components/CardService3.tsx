@@ -13,7 +13,14 @@ const CardService3 = ({ data }: ServiceDataType) => {
       aria-label="View Service Details"
     >
       <div className="flex gap-1 items-center">
-        {icon && <div className="card-icon icon-40">{parser(icon)}</div>}
+        {icon && (
+          <div className="card-icon icon-40">
+            {(() => {
+              const Icon = icon;
+              return <Icon size={40} />;
+            })()}
+          </div>
+        )}
 
         {title && <h2 className="heading text-20 fw-500">{title}</h2>}
       </div>

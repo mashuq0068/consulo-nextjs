@@ -82,10 +82,10 @@ const AccordionHorizontal = ({ items }: { items: ServiceProps[] }) => {
               }}
               onClick={() => handleClick(index)}
             >
-                <div className="accordion-title-icon">
+                {/* <div className="accordion-title-icon">
                     {item.icon && <span className="icon-main">{parser(item.icon)}</span>}
                     <h2 className="heading text-24 text-rotate">{item.title}</h2>
-                </div>
+                </div> */}
                 <span className="icon icon-plus-circle">
                     <Icons.PlusCircle />
                 </span>
@@ -95,11 +95,11 @@ const AccordionHorizontal = ({ items }: { items: ServiceProps[] }) => {
             </div>
             <div className="accordion-content">
               <div className="service-content-inner">
-                <div>                    
+                {/* <div>                    
                     {item.icon && <span className="icon-main">{parser(item.icon)}</span>}
                     <h2 className="heading text-24">{item.title}</h2>
                     {item.description && <p className="text text-16">{parser(item.description)}</p>}
-                </div>
+                </div> */}
                 <div className="service-button">
                   <Link href={`/services/${item.slug}`} className="button button--primary">
                     + View Details

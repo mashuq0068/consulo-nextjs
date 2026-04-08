@@ -3,8 +3,9 @@ import { AuthorType } from '@/types/author';
 import Posts from "@/data/posts.json";
 import Authors from '@/data/author.json';
 import CardBlog from "../CardBlog";
-import NotFoundMsg from "../NotFoundMsg";
+
 import Pagination from "../Pagination";
+import NotFoundMsg from '../NotFoundMsg';
 
 
 const BlogGrid = ({ cls }: { cls: string }) => {

@@ -18,9 +18,9 @@ const Page = async ({ params }: {params: Promise<{slug: string}>}) => {
     const { slug } = await params;
     const serviceList = ServiceList;
 
-    const service: ServiceProps | undefined = serviceList.find(
-        (service: ServiceProps) => service.slug === slug
-    );
+    const service = serviceList.find(
+        (service) => service.slug === slug
+    ) as ServiceProps | undefined;
 
     return (
         <>

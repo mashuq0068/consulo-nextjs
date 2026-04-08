@@ -8,7 +8,7 @@ export interface ServiceProps {
     id: number;
     slug?: string;
     image?: string;
-    icon?: IconType; // ✅ FIXED
+    icon?: IconType | string; // ✅ FIXED
     title?: string;
     description?: string;
     content?: string;
