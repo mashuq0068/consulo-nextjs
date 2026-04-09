@@ -1,4 +1,4 @@
-// import "@/styles/multicolumn.css";
+import "@/styles/multicolumn.css";
 import { ServiceSectionType } from "@/types/serviceSection";
 import ServiceList from "@/data/services.json";
 import CardService from "../CardService";

@@ -18,6 +18,7 @@ import TeamSlider from "@/components/sections/TeamSlider";
 import Testimonials from "@/components/sections/Testimonials";
 import FeaturedBlogGrid from "@/components/sections/FeaturedBlogGrid";
 import GlobalReach from "@/components/sections/GlobalReach";
+import AboutUs from "@/components/sections/AboutUs";
 
 const Home = () => {
   return (
@@ -30,7 +31,7 @@ const Home = () => {
       />
 
       {/* Image Text */}
-      <ImageText data={ImageTextData} />
+      <AboutUs button={true} />
 
       {/* Scrolling Text */}
       {/* <ScrollingText data={ScrollingTextData} /> */}
@@ -43,9 +44,7 @@ const Home = () => {
 
       {/* Recent Projects */}
       {/* <RecentProject data={RecentProjectData} /> */}
-      <GlobalReach
-        
-      />
+      <GlobalReach/>
       {/* Our Team */}
       {/* <TeamSlider 
         data={TeamSliderData} 

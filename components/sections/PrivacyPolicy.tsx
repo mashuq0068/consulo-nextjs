@@ -2,122 +2,116 @@ import "@/styles/blog.css";
 import "@/styles/blog-details.css";
 
 const PrivacyPolicySection = () => {
-    return (
-        <div className="page-blog mt-100 mb-100">
-            <div className="container container-narrow">
-                <div className="blog-details">
-                    <div className="card-blog-list" data-aos="fade-up">
-                        <div className="card-blog-content">
-                            <h2 className="card-blog-heading heading text-50 text-center">
-                                Our Privacy Policy
-                            </h2>
+  return (
+    <div className="page-blog mt-100 mb-100">
+      <div className="container container-narrow">
+        <div className="blog-details">
+          <div className="card-blog-list" data-aos="fade-up">
+            <div className="card-blog-content">
+              <h2 className="card-blog-heading heading text-50 text-center">
+                Our Privacy Policy
+              </h2>
 
-                            <div className="blog-description">
-                                <p>
-                                    This website is operated by Consulo. Throughout the site,
-                                    the terms “we”, “us” and “our” refer to Consulo. Consulo
-                                    offers this website, including all information, tools and
-                                    services available from this site to you, the user,
-                                    conditioned upon your acceptance of all terms, conditions,
-                                    policies and notices stated here.
-                                </p>
+              <div className="blog-description">
+                <p>
+                  This Privacy Policy describes how Kirti Bhavya Enterprises
+                  Private Limited (KBEPL) collects, uses, and protects any
+                  information that you provide when using our website. We are
+                  committed to ensuring that your privacy is protected and that
+                  your information is handled in a safe and responsible manner.
+                </p>
 
-                                <p>
-                                    Please read these Terms of Service carefully before
-                                    accessing or using our website. By accessing or using any
-                                    part of the site, you agree to be bound by these Terms of
-                                    Service. If you do not agree to all the terms and conditions
-                                    of this agreement, then you may not access the website or
-                                    use any services. If these Terms of Service are considered
-                                    an offer, acceptance is expressly limited to these Terms of
-                                    Service.
-                                </p>
+                <h3>1. Information We Collect</h3>
+                <p>
+                  We may collect personal information such as your name, email
+                  address, phone number, company details, and any other
+                  information you provide through contact forms, inquiries, or
+                  business communications.
+                </p>
 
-                                <h3>What is Lorem Ipsum?</h3>
+                <h3>2. How We Use Your Information</h3>
+                <p>
+                  The information we collect is used to understand your
+                  requirements and provide you with better services.
+                  Specifically, we may use your information for:
+                </p>
+                <ul>
+                  <li>Responding to inquiries and business requests</li>
+                  <li>Providing product and service information</li>
+                  <li>Improving our website and services</li>
+                  <li>Internal record keeping and communication</li>
+                  <li>Sharing important updates related to our business</li>
+                </ul>
 
-                                <p>
-                                    Lorem Ipsum is simply dummy text of the printing and
-                                    typesetting industry. Lorem Ipsum has been the industry's
-                                    standard dummy text ever since the 1500s, when an unknown
-                                    printer took a galley of type and scrambled it to make a
-                                    type specimen book. It has survived not only five centuries,
-                                    but also the leap into electronic typesetting, remaining
-                                    essentially unchanged. It was popularised in the 1960s with
-                                    the release of Letraset sheets containing Lorem Ipsum
-                                    passages, and more recently with desktop publishing software
-                                    like Aldus PageMaker including versions of Lorem Ipsum.
-                                </p>
+                <h3>3. Business Operations & Data Use</h3>
+                <p>
+                  As a company engaged in global trading, food distribution, and
+                  tech-enabled retail, we may use collected data to facilitate
+                  communication, manage supply chain processes, and support
+                  long-term business relationships with clients, suppliers, and
+                  partners.
+                </p>
 
-                                <h3>Why do we use it?</h3>
-                                <p>
-                                    It is a long established fact that a reader will be
-                                    distracted by the readable content of a page when looking at
-                                    its layout. The point of using Lorem Ipsum is that it has a
-                                    more-or-less normal distribution of letters, as opposed to
-                                    using 'Content here, content here', making it look like
-                                    readable English. Many desktop publishing packages and web
-                                    page editors now use Lorem Ipsum as their default model
-                                    text, and a search for 'lorem ipsum' will uncover many web
-                                    sites still in their infancy. Various versions have evolved
-                                    over the years, sometimes by accident, sometimes on purpose
-                                    (injected humour and the like).
-                                </p>
+                <h3>4. Data Protection & Security</h3>
+                <p>
+                  We are committed to ensuring that your information is secure.
+                  We implement appropriate technical and organizational measures
+                  to safeguard your data against unauthorized access,
+                  disclosure, or misuse.
+                </p>
 
-                                <h3>Where does it come from?</h3>
-                                <p>
-                                    Contrary to popular belief, Lorem Ipsum is not simply random
-                                    text. It has roots in a piece of classical Latin literature
-                                    from 45 BC, making it over 2000 years old. Richard
-                                    McClintock, a Latin professor at Hampden-Sydney College in
-                                    Virginia, looked up one of the more obscure Latin words,
-                                    consectetur, from a Lorem Ipsum passage, and going through
-                                    the cites of the word in classical literature, discovered
-                                    the undoubtable source. Lorem Ipsum comes from sections
-                                    1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The
-                                    Extremes of Good and Evil) by Cicero, written in 45 BC. This
-                                    book is a treatise on the theory of ethics, very popular
-                                    during the Renaissance. The first line of Lorem Ipsum,
-                                    "Lorem ipsum dolor sit amet..", comes from a line in section
-                                    1.10.32.
-                                </p>
-                                <p>
-                                    The standard chunk of Lorem Ipsum used since the 1500s is
-                                    reproduced below for those interested. Sections 1.10.32 and
-                                    1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are
-                                    also reproduced in their exact original form, accompanied by
-                                    English versions from the 1914 translation by H. Rackham.
-                                </p>
+                <h3>5. Sharing of Information</h3>
+                <p>
+                  We do not sell, trade, or rent your personal information to
+                  third parties. However, we may share information with trusted
+                  partners, service providers, or regulatory authorities when
+                  required for business operations, legal compliance, or service
+                  delivery.
+                </p>
 
-                                <p>
-                                    Use both direct conversations and indirect observations to
-                                    get visibility into employees challenges and concerns. Use
-                                    every opportunity to make clear to employees that you
-                                    support and care them. To facilitate regular conversations
-                                    between managers and employees, provide.
-                                </p>
+                <h3>6. Cookies & Website Usage</h3>
+                <p>
+                  Our website may use cookies or similar technologies to enhance
+                  user experience, analyze website traffic, and improve
+                  functionality. You can choose to accept or decline cookies
+                  through your browser settings.
+                </p>
 
-                                <p>
-                                    The third Monday of January is supposed to be the most
-                                    depressing day of the year. Whether you believe that or not,
-                                    the long nights, cold weather, and trying to keep to new
-                                    year resolutions are all probably getting to you a little by
-                                    now. To make matters worse many will still be recovering
-                                    from their Christmas spending. So how can you make today
-                                </p>
+                <h3>7. Third-Party Links</h3>
+                <p>
+                  Our website may contain links to external websites. We are not
+                  responsible for the privacy practices or content of such
+                  websites and encourage users to review their respective
+                  privacy policies.
+                </p>
 
-                                <p>
-                                    Vast numbers of employees now work remotely, and it's too
-                                    late to develop a set of remote-work policies if you didn't
-                                    already have one. But there are ways to make the remote-work
-                                    experience productive and engaging for employees
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <h3>8. Your Rights</h3>
+                <p>
+                  You may request details of personal information we hold about
+                  you or request corrections if you believe any information is
+                  inaccurate or incomplete.
+                </p>
+
+                <h3>9. Policy Updates</h3>
+                <p>
+                  Kirti Bhavya Enterprises Private Limited may update this
+                  policy from time to time. Any changes will be posted on this
+                  page.
+                </p>
+
+                <h3>10. Contact Us</h3>
+                <p>
+                  If you have any questions regarding this Privacy Policy or how
+                  your information is handled, please contact us through the
+                  details provided on our website.
+                </p>
+              </div>
             </div>
+          </div>
         </div>
-    )
-}
+      </div>
+    </div>
+  );
+};
 
 export default PrivacyPolicySection;

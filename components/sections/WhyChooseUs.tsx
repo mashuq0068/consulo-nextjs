@@ -9,29 +9,30 @@ import SecondaryButton from "../buttons/SecondaryButton";
 import PromotionList from "../PromotionList";
 import CounterUpVertical from "./CounterUpVertical";
 
-const whyChooseUsData = {
-  wrapperCls: "py-5 bg-white",
-  container: "container",
+// const whyChooseUsData = {
+//   wrapperCls: "py-5 bg-white",
+//   container: "container",
 
-  subheading: "WHY CHOOSE US",
+//   subheading: "WHY CHOOSE US",
 
-  heading: "We Transform Your Requirements into Reliable Exports",
+//   heading: "We Transform Your Requirements into Reliable Exports",
 
-  text: "At Kirti Bhavya Enterprises, we focus on understanding client requirements and converting them into reliable, timely, and high-quality exports. We don’t just supply products — we deliver consistency, quality, transparency, and trust in every shipment.",
+//   text: "At Kirti Bhavya Enterprises, we focus on understanding client requirements and converting them into reliable, timely, and high-quality exports. We don’t just supply products — we deliver consistency, quality, transparency, and trust in every shipment.",
 
-  promotions: [
-    { title: "Experience" },
-    { title: "Reliability" },
-    { title: "Quality Control" },
-  ],
+//   promotions: [
+//     { title: "Experience" },
+//     { title: "Reliability" },
+//     { title: "Quality Control" },
+//   ],
 
-  image: {
-    src: "/img/about/why-choose.jpg",
-    width: 600,
-    height: 500,
-    alt: "Why Choose Us",
-  },
-};
+//   image: {
+//     src: "/img/about/why-choose.jpg",
+//     width: 600,
+//     height: 500,
+//     alt: "Why Choose Us",
+//   },
+// };
+
 const WhyChooseUs = ({ data }: { data: SectionProps }) => {
     const {
         wrapperCls,

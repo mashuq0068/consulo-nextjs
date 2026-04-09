@@ -27,18 +27,7 @@ const FooterTop = ({
                     menus={QuickLink}
                 />
               </div>
-              <div className="max-md:col-span-12 max-lg:col-span-6">
-                <div
-                  className="footer-widget footer-widget-menu"
-                  data-aos="fade-up"
-                  data-aos-anchor=".footer-top"
-                >
-                    <FooterMenu 
-                        heading="Services"
-                        menus={Services}
-                    />
-                </div>
-              </div>
+           
               <div className="max-md:col-span-12 max-lg:col-span-6">
                 <div
                   className="footer-widget footer-widget-menu"

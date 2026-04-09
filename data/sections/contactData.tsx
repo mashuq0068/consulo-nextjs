@@ -6,12 +6,12 @@ export const ContactData: SectionProps = {
     container: "container",
     subheading: "Contact Us",
     heading: "Get in Touch with Us",
-    text: "We are here to assist you with your international trading requirements. Reach out to us for inquiries, partnerships, or any business-related queries.",
+    text: "Kirti Bhavya Enterprises Private Limited (KBEPL) is a dynamic and growth-focused enterprise built on the pillars of global experience, operational excellence, and innovation.",
     promotions: [
         {
             icon: <Icons.ThumbsUp />,
             title: "Global Experience",
-            text: "Nearly 25 years of expertise across Africa, North America, and Asia.",
+            text: "Global sourcing and supply of agro commodities and food products across multiple international markets.",
         },
         {
             icon: <Icons.Support />,

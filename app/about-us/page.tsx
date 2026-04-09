@@ -17,6 +17,9 @@ import WhyChooseUsGrid from '@/components/sections/WhyChooseUsGrid';
 import TeamSlider from '@/components/sections/TeamSlider';
 import Testimonials from '@/components/sections/Testimonials';
 import Faq from '@/components/sections/Faq';
+import AboutUs from '@/components/sections/AboutUs';
+import Certifications from '@/components/sections/Certifications';
+import { CertificationsData } from '@/data/sections/certificationsData';
 
 
 const PAGE_TITLE: string = 'About Us';
@@ -32,9 +35,9 @@ const About = () => {
             <BreadcrumbBanner 
                 title={PAGE_TITLE}
                 image={{
-                    src: "/img/slider/new-hero-2.jpg",
-                    srcMobile: BreadcrumbBannerImageTablet.src,
-                    srcTablet: BreadcrumbBannerImageMobile.src,
+                    src: "/img/banner/about-banner.jpg",
+                    srcMobile: "/img/banner/about-banner.jpg",
+                    srcTablet: "/img/banner/about-banner.jpg",
                     width: 1920,
                     height: 520,
                     cls: "media media-bg",
@@ -44,10 +47,10 @@ const About = () => {
             />
 
             {/* Image Text */}
-            <ImageText data={ImageTextData} />
+            <AboutUs button={false} />
 
             {/* Scrolling Text */}
-            <ScrollingText data={ScrollingTextData} />
+            {/* <ScrollingText data={ScrollingTextData} /> */}
 
             {/* Why Choose Us */}
             <WhyChooseUsGrid data={WhyChooseUsGridBgData} />
@@ -55,14 +58,15 @@ const About = () => {
             {/* Our Team */}
             <TeamSlider 
                 data={TeamSliderData} 
-                pagination={true}
+                // pagination={true}
             />
+            <Certifications data={CertificationsData}/>
 
             {/* Testimonials */}
-            <Testimonials data={TestimonialData} />
+            {/* <Testimonials data={TestimonialData} /> */}
 
             {/* FAQ */}
-            <Faq data={Faq2Data} />
+            {/* <Faq data={Faq2Data} /> */}
         </>
     )
 }

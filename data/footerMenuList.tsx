@@ -9,16 +9,13 @@ export const QuickLink: MenuType[] = [
         path: '/about-us'
     },
     {
-        title: 'Our Team',
-        path: '/teams'
+        title: 'Our Products',
+        path: '/services'
     },
+ 
     {
-        title: 'Pricing Plans',
-        path: '/pricing-plan'
-    },
-    {
-        title: 'Blogs',
-        path: '/blogs'
+        title: 'News/Updates',
+        path: '/news-updates'
     },
     {
         title: 'Contact Us',
@@ -50,10 +47,10 @@ export const Services: MenuType[] = [
 ];
 
 export const Information: MenuType[] = [
-    {
-        title: 'Working Process',
-        path: '/services'
-    },
+    // {
+    //     title: 'Working Process',
+    //     path: '/services'
+    // },
     {
         title: 'Privacy Policy',
         path: '/privacy-policy'
@@ -62,10 +59,10 @@ export const Information: MenuType[] = [
         title: 'Terms & Conditions',
         path: '/terms-condition'
     },
-    {
-        title: 'FAQ',
-        path: '/faq'
-    }
+    // {
+    //     title: 'FAQ',
+    //     path: '/faq'
+    // }
 ];
 
 export const MenuContact: MenuType[] = [
@@ -89,9 +86,10 @@ export const MenuPolicies: MenuType[] = [
         path: '/privacy-policy'
     },
     {
-        title: 'FAQ',
-        path: '/faq'
+        title: 'Terms & Conditions',
+        path: '/terms-condition'
     },
+   
     {
         title: 'Contact',
         path: '/contact-us'

@@ -32,14 +32,14 @@ const CardBlog = ({
                 </div>
 
                 <h2 className="card-blog-heading heading text-22">
-                    <Link href={`/blogs/${article.slug}`} className="heading text-22">
+                    <Link href={`/news-updates/${article.slug}`} className="heading text-22">
                         {article.title}
                     </Link>
                 </h2>
             </div>
             <Link
                 className="card-blog-bottom"
-                href={`/blogs/${article.slug}`}
+                href={`/news-updates/${article.slug}`}
                 aria-label={article.title}
             >
                 {article.category &&

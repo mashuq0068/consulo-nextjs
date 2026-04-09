@@ -25,9 +25,9 @@ const Page = async ({ params }: TagProps) => {
             <BreadcrumbBanner 
                 title={PAGE_TITLE}
                 image={{
-                    src: BreadcrumbBannerImage.src,
-                    srcMobile: BreadcrumbBannerImageTablet.src,
-                    srcTablet: BreadcrumbBannerImageMobile.src,
+                    src: "/img/banner/about-banner.jpg",
+                    srcMobile: "/img/banner/about-banner.jpg",
+                    srcTablet: "/img/banner/about-banner.jpg",
                     width: 1920,
                     height: 520,
                     cls: "media media-bg",

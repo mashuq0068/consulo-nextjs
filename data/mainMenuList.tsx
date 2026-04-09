@@ -12,32 +12,32 @@ const Menus = [
     {
         title: 'Products/Services',
         path: '/services',
-        dropdown: [
-            { title: 'Rice', path: '/services' },
-            { title: 'Wheat', path: '/services' },
-            { title: 'Sugar', path: '/services' },
-            { title: 'Spices', path: '/services' },
-            { title: 'Pulses', path: '/services' },
-            { title: 'Animal Feeds', path: '/services' }
-        ]
+        // dropdown: [
+        //     { title: 'Rice', path: '/services' },
+        //     { title: 'Wheat', path: '/services' },
+        //     { title: 'Sugar', path: '/services' },
+        //     { title: 'Spices', path: '/services' },
+        //     { title: 'Pulses', path: '/services' },
+        //     { title: 'Animal Feeds', path: '/services' }
+        // ]
     },
     {
         title: 'Market Insights',
         path: '/market-insights',
         dropdown: [
             { title: 'Market Trends/Analysis weekly', path: '/market-insights' },
-            { title: 'News/Updates', path: '/market-insights' }
+            { title: 'News/Updates', path: '/news-updates' }
         ]
     },
     {
         title: 'HR at Kirti Bhavya',
         path: '/hr',
-        dropdown: [
-            { title: 'Life at KB', path: '/hr' },
-            { title: 'Careers', path: '/hr' },
-            { title: 'Training', path: '/hr' },
-            { title: 'Internships', path: '/hr' }
-        ]
+        // dropdown: [
+        //     { title: 'Life at KB', path: '/hr' },
+        //     { title: 'Careers', path: '/hr' },
+        //     { title: 'Training', path: '/hr' },
+        //     { title: 'Internships', path: '/hr' }
+        // ]
     },
     {
         title: 'Contact Us',

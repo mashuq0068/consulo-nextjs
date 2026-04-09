@@ -15,7 +15,7 @@ const dotStyle = {
   display: "inline-block",
   marginRight: "10px",
 };
-const WhyChooseUsGrid = ({ data }: { data: SectionProps }) => {
+const Certifications = ({ data }: { data: SectionProps }) => {
   const {
     wrapperCls,
     container,
@@ -31,7 +31,7 @@ const WhyChooseUsGrid = ({ data }: { data: SectionProps }) => {
   } = data || {};
 
   return (
-    <div className={`why-choose-us ${wrapperCls}`}>
+    <div style={{marginBottom:'100px'}} className={`why-choose-us ${wrapperCls}`}>
       {backgroundImage && (
         <div className="media media-bg">
           <Image
@@ -231,4 +231,4 @@ const WhyChooseUsGrid = ({ data }: { data: SectionProps }) => {
   );
 };
 
-export default WhyChooseUsGrid;
+export default Certifications;

@@ -10,7 +10,7 @@ import Services from '@/components/sections/Services';
 import PricingPlan from '@/components/sections/PricingPlan';
 import TeamSlider from '@/components/sections/TeamSlider';
 
-const PAGE_TITLE: string = 'Our Service';
+const PAGE_TITLE: string = 'Our Products/Services';
 export const metadata: Metadata = {
   title: PAGE_TITLE,
 }
@@ -22,9 +22,9 @@ const PageServices = () => {
             <BreadcrumbBanner 
                 title={PAGE_TITLE}
                 image={{
-                    src: BreadcrumbBannerImage.src,
-                    srcMobile: BreadcrumbBannerImageTablet.src,
-                    srcTablet: BreadcrumbBannerImageMobile.src,
+                    src: "/img/banner/about-banner.jpg",
+                    srcMobile: "/img/banner/about-banner.jpg",
+                    srcTablet: "/img/banner/about-banner.jpg",
                     width: 1920,
                     height: 520,
                     cls: "media media-bg",
@@ -34,19 +34,14 @@ const PageServices = () => {
             />
 
             {/* Service Cards */}
-            <Services
+           <div style={{marginBottom:'100px'}}>
+             <Services
                 wrapperCls="mt-100"
                 container="container"
             />
+           </div>
 
-            {/* Pricing Plan */}
-            <PricingPlan data={PricingPlan2Data} />
-
-            {/* Our Team */}
-            <TeamSlider 
-                data={TeamSlider2Data} 
-                pagination={true}
-            />
+            
         </>
     )
 }

@@ -6,7 +6,7 @@ import BreadcrumbBannerImageMobile from '@/public/img/banner/page-banner-575.jpg
 import BreadcrumbBanner from "@/components/BreadcrumbBanner";
 import BlogGrid from '@/components/sections/BlogGrid';
 
-const PAGE_TITLE: string = 'Our Blog';
+const PAGE_TITLE: string = 'News/Updates';
 export const metadata: Metadata = {
   title: PAGE_TITLE,
 }
@@ -17,9 +17,9 @@ const Blog = () => {
             <BreadcrumbBanner 
                 title={PAGE_TITLE}
                 image={{
-                    src: BreadcrumbBannerImage.src,
-                    srcMobile: BreadcrumbBannerImageTablet.src,
-                    srcTablet: BreadcrumbBannerImageMobile.src,
+                    src: "/img/banner/about-banner.jpg",
+                    srcMobile: "/img/banner/about-banner.jpg",
+                    srcTablet: "/img/banner/about-banner.jpg",
                     width: 1920,
                     height: 520,
                     cls: "media media-bg",
