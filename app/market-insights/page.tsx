@@ -88,7 +88,7 @@ const MarketInsights = () => {
                     background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
                     padding: 100px 20px;
                     min-height: 100vh;
-                    font-family: 'Poppins', sans-serif;
+                  
                 }
 
                 .market-insights-inner {
@@ -123,7 +123,7 @@ const MarketInsights = () => {
                 }
 
                 .monitoring-title {
-                    font-family: 'Playfair Display', serif;
+                   
                     font-size: 32px;
                     font-weight: 700;
                     color: #000;
@@ -225,14 +225,14 @@ const MarketInsights = () => {
                     font-size: 52px;
                     color: rgba(0, 0, 0, 0.06);
                     line-height: 0.7;
-                    font-family: 'Playfair Display', serif;
+                   
                     margin-bottom: 12px;
                     font-weight: 700;
                     font-style: italic;
                 }
 
                 .quote-text {
-                    font-family: 'Playfair Display', serif;
+                   
                     font-size: 30px;
                     font-weight: 500;
                     color: #1a1a1a;

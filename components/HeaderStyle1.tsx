@@ -16,8 +16,8 @@ const Header = () => {
           {/* Logo */}
           <Logo                   
             src={LogoImage.src}
-            width={189}
-            height={32}
+            width={300}
+            height={300}
             url="/"
             cls="header-logo"
             alt="Consulo logo"

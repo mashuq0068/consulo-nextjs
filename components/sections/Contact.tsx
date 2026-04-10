@@ -13,7 +13,7 @@ import { SectionProps } from "@/types/sectionProps";
 import SecondaryButton from "../buttons/SecondaryButton";
 import MapSection from "./Map";
 import { FiMapPin, FiPhone, FiMail, FiGlobe } from "react-icons/fi";
-
+import Image from "next/image";
 
 const ContactSection = ({ data }: { data: SectionProps }) => {
   const [status, setStatus] = useState("");
@@ -34,7 +34,8 @@ const ContactSection = ({ data }: { data: SectionProps }) => {
     {
       icon: <FiMapPin />,
       label: "Office Address",
-      value: "505-506, The Capital 2, Science City Road, Sola, Ahmedabad-380060",
+      value:
+        "505-506, The Capital 2, Science City Road, Sola, Ahmedabad-380060",
       isLink: false,
     },
     {
@@ -275,7 +276,11 @@ const ContactSection = ({ data }: { data: SectionProps }) => {
               <div className="max-lg:col-span-2 max-xxl:col-span-1 col-contact-content">
                 <div className="section-headings">
                   {subheading && (
-                    <Subheading title={subheading} cls="text-20" aos="fade-up" />
+                    <Subheading
+                      title={subheading}
+                      cls="text-20"
+                      aos="fade-up"
+                    />
                   )}
 
                   {heading && (
@@ -316,19 +321,104 @@ const ContactSection = ({ data }: { data: SectionProps }) => {
 
                   {/* Premium Contact Info with Icons */}
                   <div className="contact-info" data-aos="fade-up">
+                    {/* WhatsApp QR Section */}
+                    {/* WhatsApp QR Section */}
+                    <div style={{ marginTop: "40px" }} data-aos="fade-up">
+                      <div
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          gap: "20px",
+                          padding: "20px",
+                          borderRadius: "16px",
+                          background:
+                            "linear-gradient(135deg, #f8f8f8, #ffffff)",
+                          border: "1px solid #eee",
+                          transition: "all 0.3s ease",
+                        }}
+                      >
+                        <div
+                          style={{
+                            width: "100px",
+                            height: "100px",
+                            minWidth: "100px",
+                            borderRadius: "12px",
+                            overflow: "hidden",
+                            background: "#fff",
+                            border: "1px solid #eee",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                          }}
+                        >
+                          {/* Dummy QR */}
+                          <Image
+                            src="/img/contact/whatsapp-qr-code.jpeg"
+                            alt="WhatsApp QR"
+                            width={100}
+                            height={100}
+                            style={{ objectFit: "cover" }}
+                          />
+                        </div>
+
+                        <div style={{ flex: 1 }}>
+                          <h4
+                            style={{
+                              fontSize: "18px",
+                              fontWeight: 700,
+                              marginBottom: "6px",
+                            }}
+                          >
+                            Scan to Connect
+                          </h4>
+
+                          <p
+                            style={{
+                              fontSize: "14px",
+                              color: "#555",
+                              marginBottom: "10px",
+                              lineHeight: 1.5,
+                            }}
+                          >
+                            Message Priya Gupta~Kirti Bhavya Enterprises Pvt Ltd
+                            on WhatsApp.
+                          </p>
+
+                          <a
+                            href="https://wa.me/message/MOTTSORNXQ3YG1"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{
+                              fontSize: "14px",
+                              fontWeight: 600,
+                              textDecoration: "underline",
+                              color: "#000",
+                            }}
+                          >
+                            Open WhatsApp
+                          </a>
+                        </div>
+                      </div>
+                    </div>
                     {contactItems.map((item, index) => (
                       <div key={index} className="contact-info-item">
                         <div className="contact-icon-wrapper">
                           <div className="contact-icon">{item.icon}</div>
                         </div>
                         <div className="contact-info-content">
-                          <span className="contact-info-label">{item.label}</span>
+                          <span className="contact-info-label">
+                            {item.label}
+                          </span>
                           {item.isLink ? (
-                            <a 
-                              href={item.href} 
+                            <a
+                              href={item.href}
                               className="contact-link"
                               target={item.target || "_self"}
-                              rel={item.target === "_blank" ? "noopener noreferrer" : undefined}
+                              rel={
+                                item.target === "_blank"
+                                  ? "noopener noreferrer"
+                                  : undefined
+                              }
                             >
                               {item.value}
                             </a>

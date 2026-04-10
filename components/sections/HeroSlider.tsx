@@ -3,30 +3,30 @@
 import { useRef, useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { Swiper as SwiperType } from "swiper";
-import { Navigation } from "swiper/modules";
+import { Navigation, Pagination, Autoplay } from "swiper/modules"; // Added Autoplay
 import "swiper/css";
 import "swiper/css/navigation";
 import "@/styles/hero-slider.css";
+import { FiChevronLeft, FiChevronRight } from "react-icons/fi"; // React icons import
 import Subheading from "../Subheading";
 import Heading from "../Heading";
 import Text from "../Text";
 import PrimaryButton from "../buttons/PrimaryButton";
 import SecondaryButton from "../buttons/SecondaryButton";
-import Icons from "../Icons";
 import Image from "next/image";
 import { HeroSliderType } from "@/types/heroSlider";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 
 const HeroSlider = ({
     wrapperCls,
     slides,
     navigation
 }: HeroSliderType) => {
-    // Refs for custom navigation buttons
     const prevRef = useRef<HTMLDivElement>(null);
     const nextRef = useRef<HTMLDivElement>(null);
     const [swiperInstance, setSwiperInstance] = useState<SwiperType | null>(null);
 
-    // Attach navigation after both swiper and refs are ready
     useEffect(() => {
         if (
             swiperInstance &&
@@ -34,10 +34,8 @@ const HeroSlider = ({
             nextRef.current &&
             swiperInstance.params.navigation
         ) {
-            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
             // @ts-ignore
             swiperInstance.params.navigation.prevEl = prevRef.current;
-            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
             // @ts-ignore
             swiperInstance.params.navigation.nextEl = nextRef.current;
             swiperInstance.navigation.init();
@@ -46,12 +44,15 @@ const HeroSlider = ({
     }, [swiperInstance]);
 
     return (
-        <hero-slider className={`hero-slider ${wrapperCls}`}>
+        <div className={`hero-slider ${wrapperCls || ""}`}>
             <Swiper
                 slidesPerView={1}
-                // loop={true}
-                // modules={[Navigation]}
-                // onSwiper={setSwiperInstance}
+                loop={true}
+                modules={[Navigation, Pagination, Autoplay]} // Include Autoplay module
+                onSwiper={setSwiperInstance}
+                autoplay={{ delay: 5000, disableOnInteraction: false }} // Fixed autoplay config
+                 pagination={{ clickable: true }} 
+
             >
                 {slides.map((slide, index) => (
                     <SwiperSlide key={`slide-${index}`}>
@@ -83,7 +84,7 @@ const HeroSlider = ({
                                         {slide.heading && 
                                             <Heading 
                                                 title={slide.heading}
-                                                cls="text-80  fw-600"
+                                                cls="text-50 fw-600"
                                             />
                                         }
 
@@ -119,17 +120,17 @@ const HeroSlider = ({
                 ))}
             </Swiper>            
 
-            {/* {navigation && 
+            {navigation && 
                 <div className="slider-nav">
-                    <div className="swiper-button-prev" ref={prevRef}>
-                        <Icons.SliderNavPrev />
+                    <div className="swiper-button-prev" ref={prevRef} aria-label="Previous slide">
+                        <GoArrowLeft/>
                     </div>
-                    <div className="swiper-button-next" ref={nextRef}>
-                        <Icons.SliderNavNext />
+                    <div className="swiper-button-next" ref={nextRef} aria-label="Next slide">
+                        <GoArrowRight />
                     </div>
                 </div>
-            } */}
-      </hero-slider>
+            }
+        </div>
     )
 }
 

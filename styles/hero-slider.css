@@ -2,23 +2,28 @@
   --color-foreground: rgba(255, 255, 255, 1);
   --color-foreground-heading: rgba(255, 255, 255, 1);
   --color-foreground-subheading: rgba(255, 255, 255, 1);
-  --slider-nav-height: 120px;
+
   min-height: 100vh;
+  display: flex;
+  position: relative;
 }
 
 .hero-slider-wrapper {
   display: block;
 }
 
+/* =========================
+   SLIDER CARD
+========================= */
+
 .slider-card {
   position: relative;
-  padding-block-start: var(--slider-nav-height);
-  padding-block-end: var(--slider-nav-height);
+  height: 100%;
+  padding-block: 120px;
 }
 
 .with-floating-header .slider-card {
-  padding-block-start: calc(var(--header-height) + 60px);
-  padding-block-end: calc(var(--header-height) + 60px);
+  padding-block: calc(var(--header-height) + 60px);
 }
 
 .slider-card .content-box {
@@ -29,79 +34,131 @@
   max-width: 1000px;
 }
 
-.slider-card-4 .heading-color {
-  --color-foreground-heading: rgba(130, 180, 255, 1);
-}
+/* =========================
+   MEDIA
+========================= */
 
 .slider-media {
-  display: flex;
+  position: absolute;
+  inset: 0;
+  width: 100%;
   height: 100%;
+  display: flex;
 }
 
 .slider-media img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.slider-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
   width: 100%;
   height: 100%;
 }
+
+.slider-content .container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+/* =========================
+   NAVIGATION WRAPPER
+========================= */
 
 .slider-nav {
   position: absolute;
-  display: flex;
-  align-items: center;
-  bottom: 0;
-  left: 0;
-  z-index: 99;
+  inset: 0;
   width: 100%;
-  height: var(--slider-nav-height);
+  height: 100%;
+  z-index: 99;
+  pointer-events: none;
 }
+
+/* REMOVE SWIPER DEFAULT ICON */
+.slider-nav .swiper-button-next::after,
+.slider-nav .swiper-button-prev::after {
+  display: none !important;
+}
+
+/* =========================
+   NAV BUTTONS (FIXED CENTER)
+========================= */
 
 .slider-nav .swiper-button-next,
 .slider-nav .swiper-button-prev {
-  position: static;
-  z-index: 10;
-  cursor: pointer;
+  pointer-events: all;
+
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
+  padding: 0;
   margin: 0;
-  width: 50%;
-  height: inherit;
-  color: var(--swiper-navigation-color);
-  background-color: var(--swiper-navigation-background-color);
-  border: none;
-  outline: none;
-  border-top: 1px solid var(--color-border);
-  transition: all 0.3s;
+  /* line-height: 0; */
+
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(6px);
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
 }
 
+/* LEFT */
+.slider-nav .swiper-button-prev {
+  left: 24px;
+}
+
+/* RIGHT */
+.slider-nav .swiper-button-next {
+  right: 24px;
+}
+
+/* HOVER (IMPORTANT: KEEP CENTER FIX) */
 .slider-nav .swiper-button-next:hover,
 .slider-nav .swiper-button-prev:hover {
-  color: var(--swiper-navigation-hover-color);
-  background-color: var(--swiper-navigation-hover-background-color);
-  border-top: 1px solid var(--color-border-hover);
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-50%) scale(1.08);
 }
 
-.slider-nav .swiper-button-next svg,
-.slider-nav .swiper-button-prev svg {
-  width: 32px;
-  height: 32px;
+/* =========================
+   ICON FIX (CRITICAL)
+========================= */
+
+.slider-nav svg {
+  width: 24px;
+  height: 24px;
+  display: block;
+  margin: auto;
 }
 
-hero-slider {
-  display: flex;
-}
-
-.slider-card {
-  height: 100%;
-}
+/* =========================
+   ANIMATION
+========================= */
 
 .slider-animation > * {
   opacity: 0;
   transform: translate3d(0, 100px, 0);
-  transition-property: opacity, transform;
-  transition-timing-function: ease;
-  transition-duration: 1.5s;
-  transition-delay: 0.1s;
+  transition: all 1.5s ease;
 }
 
 .slider-animation > *:nth-child(2) {
@@ -121,23 +178,9 @@ hero-slider {
   transform: translateZ(0);
 }
 
-.slider-media {
-  display: flex;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.slider-content {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  position: relative;
-  z-index: 1;
-}
+/* =========================
+   THUMB SLIDER
+========================= */
 
 .slider-with-thumb .slider-card {
   min-height: 100vh;
@@ -146,99 +189,46 @@ hero-slider {
 }
 
 .slider-with-thumb .thumb-slider {
-  padding-inline-start: 0;
-  padding-inline-end: 0;
-  margin-block-start: 0;
   max-width: 400px;
   position: absolute;
   bottom: 24px;
   right: 24px;
 }
 
-.slider-with-thumb .thumb-slider .swiper {
-  padding: 24px;
-}
-
 .slider-with-thumb .thumb-img {
-  max-width: 110px;
   width: 110px;
   height: 110px;
   border-radius: 100%;
   overflow: hidden;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  position: relative;
 }
 
-.slider-with-thumb .swiper-slide-thumb-active .thumb-img {
-  outline: 2px solid #fff;
-  outline-offset: 5px;
-}
-
-.slider-with-thumb .thumb-img img {
-  object-fit: cover;
-  height: inherit;
-}
-
-.thumb-img:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease-in-out;
-}
-
-.slider-with-thumb .swiper-slide-thumb-active .thumb-img:before {
-  background: rgba(0, 0, 0, 0);
-}
-
-.slider-with-thumb .slider-card .content-box {
-  max-width: 840px;
-}
+/* =========================
+   RESPONSIVE
+========================= */
 
 @media (max-width: 1600px) {
-  .hero-slider {
-    --slider-nav-height: 80px;
+  .slider-card {
+    padding-block: 80px;
   }
 }
 
 @media (max-width: 1280px) {
-  .hero-slider {
-    --slider-nav-height: 60px;
-  }
-
-  .hero-slider-3 {
-    min-height: 640px;
+  .slider-card {
+    padding-block: 60px;
   }
 }
 
 @media (max-width: 767px) {
-  .slider-nav .swiper-button-next svg,
-  .slider-nav .swiper-button-prev svg {
-    width: 28px;
-    height: 28px;
+  .slider-nav .swiper-button-prev {
+    left: 12px;
   }
 
-  .with-floating-header .slider-card {
-    padding-block-start: calc(var(--header-height) + 40px);
-    padding-block-end: calc(var(--header-height) + 40px);
+  .slider-nav .swiper-button-next {
+    right: 12px;
   }
 
-  .slider-with-thumb .thumb-slider {
-    max-width: 340px;
-    margin-block-start: -110px;
-    padding-block-start: 40px;
-    margin-inline-start: auto;
-    position: static;
-    margin-inline-end: auto;
-  }
-
-  .slider-with-thumb .thumb-img {
-    max-width: 90px;
-    width: 90px;
-    height: 90px;
+  .slider-nav svg {
+    width: 20px;
+    height: 20px;
   }
 }

@@ -104,7 +104,7 @@ sticky-header[data-sticky-type="always"] {
 }
 
 .header-logo {
-  max-width: 188px;
+  /* max-width: 188px; */
   text-decoration: none;
   display: flex;
   align-items: center;
