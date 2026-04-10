@@ -35,21 +35,29 @@ const ContactSection = ({ data }: { data: SectionProps }) => {
       icon: <FiMapPin />,
       label: "Office Address",
       value: "505-506, The Capital 2, Science City Road, Sola, Ahmedabad-380060",
+      isLink: false,
     },
     {
       icon: <FiPhone />,
-      label: "Phone",
+      label: "Phone/WhatsApp",
       value: "+91 99749 26271",
+      isLink: true,
+      href: "tel:+919974926271",
     },
     {
       icon: <FiMail />,
       label: "Email",
-      value: "******************",
+      value: "info@kirtibhavya.com ",
+      isLink: true,
+      href: "mailto:info@kirtibhavya.com ",
     },
     {
       icon: <FiGlobe />,
       label: "Website",
       value: "www.kirtibhavya.com",
+      isLink: true,
+      href: "https://www.kirtibhavya.com",
+      target: "_blank",
     },
   ];
 
@@ -123,11 +131,7 @@ const ContactSection = ({ data }: { data: SectionProps }) => {
           display: flex;
           gap: 20px;
           align-items: flex-start;
-          
-         
         }
-
-       
 
         .contact-icon-wrapper {
           display: flex;
@@ -138,10 +142,7 @@ const ContactSection = ({ data }: { data: SectionProps }) => {
           flex-shrink: 0;
           background: linear-gradient(135deg, #f0f0f0 0%, #f8f8f8 100%);
           border-radius: 12px;
-        //   transition: all 0.4s ease;
         }
-
-    
 
         .contact-icon {
           font-size: 28px;
@@ -152,8 +153,6 @@ const ContactSection = ({ data }: { data: SectionProps }) => {
           justify-content: center;
         }
 
-       
-
         .contact-info-content {
           flex: 1;
           display: flex;
@@ -162,11 +161,7 @@ const ContactSection = ({ data }: { data: SectionProps }) => {
         }
 
         .contact-info-label {
-          
           font-weight: 700;
-       
-         
-         
           margin-bottom: 8px;
           display: block;
         }
@@ -174,14 +169,38 @@ const ContactSection = ({ data }: { data: SectionProps }) => {
         .contact-info-value {
           font-size: 16px;
           font-weight: 500;
-          color: #333;
+          color: #000;
           line-height: 1.6;
           transition: color 0.3s ease;
           word-break: break-word;
           margin: 0;
         }
 
-        .contact-info-item:hover .contact-info-value {
+        /* Link styles - underlined and black */
+        .contact-link {
+          font-size: 16px;
+          font-weight: 500;
+          color: #000 !important;
+          text-decoration: underline;
+          text-decoration-thickness: 1px;
+          text-underline-offset: 4px;
+          line-height: 1.6;
+          transition: all 0.2s ease;
+          cursor: pointer;
+          background: none;
+          border: none;
+          padding: 0;
+          margin: 0;
+          display: inline-block;
+        }
+
+        .contact-link:hover {
+          color: #333 !important;
+          text-decoration-thickness: 2px;
+          text-underline-offset: 5px;
+        }
+
+        .contact-info-item:hover .contact-info-value:not(.contact-link) {
           color: #000;
         }
 
@@ -210,7 +229,8 @@ const ContactSection = ({ data }: { data: SectionProps }) => {
             margin-bottom: 6px;
           }
 
-          .contact-info-value {
+          .contact-info-value,
+          .contact-link {
             font-size: 15px;
           }
         }
@@ -240,7 +260,8 @@ const ContactSection = ({ data }: { data: SectionProps }) => {
             margin-bottom: 4px;
           }
 
-          .contact-info-value {
+          .contact-info-value,
+          .contact-link {
             font-size: 14px;
             line-height: 1.5;
           }
@@ -302,7 +323,18 @@ const ContactSection = ({ data }: { data: SectionProps }) => {
                         </div>
                         <div className="contact-info-content">
                           <span className="contact-info-label">{item.label}</span>
-                          <p className="contact-info-value">{item.value}</p>
+                          {item.isLink ? (
+                            <a 
+                              href={item.href} 
+                              className="contact-link"
+                              target={item.target || "_self"}
+                              rel={item.target === "_blank" ? "noopener noreferrer" : undefined}
+                            >
+                              {item.value}
+                            </a>
+                          ) : (
+                            <p className="contact-info-value">{item.value}</p>
+                          )}
                         </div>
                       </div>
                     ))}

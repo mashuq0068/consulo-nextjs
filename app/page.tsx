@@ -43,7 +43,7 @@ const Home = () => {
       <WhyChooseUs data={WhyChooseUsData} />
 
       {/* Recent Projects */}
-      {/* <RecentProject data={RecentProjectData} /> */}
+     
       <GlobalReach/>
       {/* Our Team */}
       {/* <TeamSlider 

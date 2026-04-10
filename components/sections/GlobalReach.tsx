@@ -19,30 +19,42 @@ const Marker = dynamic(
   { ssr: false }
 );
 
-const countryData: Record<string, { coords: [number, number]; flag: string }> = {
-  Bangladesh: { coords: [23.685, 90.356], flag: "🇧🇩" },
-  India: { coords: [20.5937, 78.9629], flag: "🇮🇳" },
-  USA: { coords: [37.0902, -95.7129], flag: "🇺🇸" },
-  Germany: { coords: [51.1657, 10.4515], flag: "🇩🇪" },
-  UK: { coords: [55.3781, -3.436], flag: "🇬🇧" },
-  Canada: { coords: [56.1304, -106.3468], flag: "🇨🇦" },
-  Australia: { coords: [-25.2744, 133.7751], flag: "🇦🇺" },
-  Japan: { coords: [36.2048, 138.2529], flag: "🇯🇵" },
-  UAE: { coords: [23.4241, 53.8478], flag: "🇦🇪" },
-  Singapore: { coords: [1.3521, 103.8198], flag: "🇸🇬" },
-  France: { coords: [46.2276, 2.2137], flag: "🇫🇷" },
-  Brazil: { coords: [-14.235, -51.9253], flag: "🇧🇷" },
-  China: { coords: [35.8617, 104.1954], flag: "🇨🇳" },
-  Italy: { coords: [41.8719, 12.5674], flag: "🇮🇹" },
+// Only the requested locations
+const locationData: Record<string, { coords: [number, number]; flag: string; displayName: string }> = {
+  "Djibouti": { coords: [11.5721, 43.1456], flag: "🇩🇯", displayName: "Djibouti" },
+  "Somalia": { coords: [2.0469, 45.3182], flag: "🇸🇴", displayName: "Somalia" },
+  "Mombasa": { coords: [-4.0435, 39.6682], flag: "🇰🇪", displayName: "Mombasa, Kenya" },
+  "Dar es Salaam": { coords: [-6.7924, 39.2083], flag: "🇹🇿", displayName: "Dar es Salaam, Tanzania" },
+  "Durban": { coords: [-29.8587, 31.0218], flag: "🇿🇦", displayName: "Durban, South Africa" },
+  "Douala": { coords: [4.0511, 9.7679], flag: "🇨🇲", displayName: "Douala, Cameroon" },
+  "Cotonou": { coords: [6.3703, 2.3912], flag: "🇧🇯", displayName: "Cotonou, Benin" },
+  "Lomé": { coords: [6.1725, 1.2314], flag: "🇹🇬", displayName: "Lomé, Togo" },
+  "Abidjan": { coords: [5.3599, -4.0083], flag: "🇨🇮", displayName: "Abidjan, Ivory Coast" },
+  "Gambia": { coords: [13.4432, -16.5779], flag: "🇬🇲", displayName: "Gambia" },
+  "Algeria": { coords: [28.0339, 1.6596], flag: "🇩🇿", displayName: "Algeria" },
+  "Vietnam": { coords: [14.0583, 108.2772], flag: "🇻🇳", displayName: "Vietnam" },
+  "Sri Lanka": { coords: [7.8731, 80.7718], flag: "🇱🇰", displayName: "Sri Lanka" },
+  "China": { coords: [35.8617, 104.1954], flag: "🇨🇳", displayName: "China" },
+  "USA": { coords: [37.0902, -95.7129], flag: "🇺🇸", displayName: "USA" },
+  "Russia": { coords: [61.524, 105.3188], flag: "🇷🇺", displayName: "Russia" },
+  "Dubai": { coords: [25.2048, 55.2708], flag: "🇦🇪", displayName: "Dubai, UAE" },
+  "Saudi Arabia": { coords: [23.8859, 45.0792], flag: "🇸🇦", displayName: "Saudi Arabia" },
+  "Oman": { coords: [21.4735, 55.9754], flag: "🇴🇲", displayName: "Oman" },
+  "Afghanistan": { coords: [33.9391, 67.71], flag: "🇦🇫", displayName: "Afghanistan" },
 };
 
 interface GlobalReachProps {
-  countries?: string[];
+  locations?: string[];
   pinColor?: "black" | "red";
 }
 
 export default function GlobalReach({ 
-  countries = ["USA",  "India", "Japan", "UAE", "Singapore", "Australia"],
+  locations = [
+    "Djibouti", "Somalia", "Mombasa", "Dar es Salaam", "Durban",
+    "Douala", "Cotonou", "Lomé", "Abidjan", "Gambia",
+    "Algeria", "Vietnam", "Sri Lanka", "China", "USA",
+    "Russia", "Dubai", "Saudi Arabia", "Oman", "Afghanistan"
+  ],
   pinColor = "black"
 }: GlobalReachProps) {
   const [mounted, setMounted] = useState(false);
@@ -63,21 +75,20 @@ export default function GlobalReach({
     const highlightColor = isBlack ? "#333333" : "#991b1b";
     const ringColor = isBlack ? "0,0,0" : "127,29,29";
     
-    return (name: string, flag: string) => L.divIcon({
+    return (displayName: string, flag: string) => L.divIcon({
       className: "uber-style-marker",
       html: `
         <div style="
           position: relative;
-          width: 140px;
+          width: 160px;
           height: 80px;
-          margin-left: -70px;
+          margin-left: -80px;
           margin-top: -80px;
           display: flex;
           flex-direction: column;
           align-items: center;
           pointer-events: none;
         ">
-          <!-- Country Label (Above Pin) -->
           <div style="
             background: white;
             border: 2px solid #1a1a1a;
@@ -87,26 +98,23 @@ export default function GlobalReach({
             margin-bottom: 8px;
             white-space: nowrap;
             font-weight: 700;
-            font-size: 12px;
+            font-size: 11px;
             color: #1a1a1a;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.3px;
             display: flex;
             align-items: center;
             gap: 6px;
             z-index: 1000;
           ">
             <span style="font-size: 14px;">${flag}</span>
-            <span>${name}</span>
+            <span>${displayName}</span>
           </div>
           
-          <!-- Pin Container -->
           <div style="
             position: relative;
             width: 40px;
             height: 44px;
           ">
-            <!-- Radar Rings - Spreading from bottom of pin (ground level) -->
             <div style="
               position: absolute;
               width: 120px;
@@ -149,7 +157,6 @@ export default function GlobalReach({
               "></div>
             </div>
             
-            <!-- The Pin -->
             <div style="
               position: relative;
               width: 36px;
@@ -185,28 +192,28 @@ export default function GlobalReach({
           </div>
         </div>
       `,
-      iconSize: [140, 80],
-      iconAnchor: [70, 40],
+      iconSize: [160, 80],
+      iconAnchor: [80, 40],
     });
   }, [L, pinColor]);
 
   const markers = useMemo(() => {
-    return countries
-      .map((country) => {
-        const data = countryData[country];
+    return locations
+      .map((location) => {
+        const data = locationData[location];
         if (!data) return null;
         return { 
-          name: country, 
+          displayName: data.displayName, 
           coords: data.coords, 
           flag: data.flag 
         };
       })
       .filter(Boolean) as { 
-        name: string; 
+        displayName: string; 
         coords: [number, number]; 
         flag: string;
       }[];
-  }, [countries]);
+  }, [locations]);
 
   if (!mounted || !L || !createCustomIcon) {
     return (
@@ -217,7 +224,7 @@ export default function GlobalReach({
         <div style={{marginBottom:"30px", fontSize:"18px", textAlign: "center"}} className="section-headings">   
           <Heading title={"We have exposure in these international markets."} aos="fade-right" aosDelay="200" />
         </div>
-        <div style={styles.mapLoading}>Loading Colorful Map...</div>
+        <div style={styles.mapLoading}>Loading Map...</div>
       </div>
     );
   }
@@ -234,7 +241,7 @@ export default function GlobalReach({
 
       <div style={styles.mapWrapper}>
         <MapContainer
-          center={[20, 0]}
+          center={[20, 20]}
           zoom={2}
           minZoom={2}
           scrollWheelZoom={false}
@@ -246,15 +253,30 @@ export default function GlobalReach({
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
 
-          {markers.map(({ name, coords, flag }, i) => (
+          {markers.map(({ displayName, coords, flag }, i) => (
             <Marker 
-              key={`${name}-${i}`} 
+              key={`${displayName}-${i}`} 
               position={coords} 
-              icon={createCustomIcon(name, flag)}
+              icon={createCustomIcon(displayName, flag)}
               interactive={false}
             />
           ))}
         </MapContainer>
+      </div>
+
+      {/* Location Grid - Below the Map */}
+      <div style={styles.gridContainer}>
+        <div style={styles.gridTitle}>
+          <span>📍 Our Global Footprint</span>
+        </div>
+        <div style={styles.grid}>
+          {markers.map(({ displayName, flag }, i) => (
+            <div key={i} style={styles.gridItem}>
+              <span style={styles.gridFlag}>{flag}</span>
+              <span style={styles.gridName}>{displayName}</span>
+            </div>
+          ))}
+        </div>
       </div>
 
       <style>{`
@@ -315,4 +337,53 @@ const styles: Record<string, React.CSSProperties> = {
     letterSpacing: "0.05em",
     border: "2px solid #e5e5e5",
   },
+  gridContainer: {
+    marginTop: "40px",
+    background: "#f8f8f8",
+    borderRadius: "16px",
+    padding: "24px",
+    border: "1px solid #e5e5e5",
+  },
+  gridTitle: {
+    fontSize: "14px",
+    fontWeight: "600",
+    textTransform: "uppercase",
+    letterSpacing: "1px",
+    color: "#666",
+    marginBottom: "20px",
+    textAlign: "center" as const,
+  },
+  grid: {
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fill, minmax(180px, 1fr))",
+    gap: "12px",
+  },
+  gridItem: {
+    display: "flex",
+    alignItems: "center",
+    gap: "10px",
+    background: "white",
+    padding: "10px 16px",
+    borderRadius: "40px",
+    border: "1px solid #eaeaea",
+    transition: "all 0.2s ease",
+    cursor: "default",
+  },
+  gridFlag: {
+    fontSize: "20px",
+  },
+  gridName: {
+    fontSize: "13px",
+    fontWeight: "500",
+    color: "#1a1a1a",
+  },
 };
+
+// Add hover effect via a separate style tag or CSS module
+const gridItemHover = `
+  .grid-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    border-color: #1a1a1a;
+  }
+`;

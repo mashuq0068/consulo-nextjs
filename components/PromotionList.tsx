@@ -3,7 +3,7 @@ import { PromotionProps } from "@/types/promotionProps";
 
 const PromotionList = ({ items }: { items: PromotionProps[] }) => {
   return (
-    <ul  style={{backgroundColor:'#3e484e', marginTop:'30px', textAlign:'left'}} className="grid grid-cols-3 gap-1">
+    <ul  style={{backgroundColor:'#3e484e', marginTop:'30px', textAlign:'left'}} className="grid grid-cols-1 lg:grid-cols-3 lg:gap-1">
       {items.map((item, index) => (
         <li
         style={{padding:'30px'}}

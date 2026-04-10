@@ -7,25 +7,26 @@ interface SocialProps {
     aosAnchor?: string;
 }
 
+
 const menuSocial = [
     {
         label: "Facebook",
-        href: "https://web.facebook.com",
+        href: "https://www.facebook.com/profile.php?id=61585380045467",
         icon: <Icons.FaceBook />
     },
     {
         label: "Linkedin",
-        href: "https://www.linkedin.com/",
+        href: "https://www.linkedin.com/company/110299950/admin/dashboard/",
         icon: <Icons.LinkedIn />
     },
-    {
-        label: "Twitter",
-        href: "https://x.com/",
-        icon: <Icons.Twitter />
-    },
+    // {
+    //     label: "Twitter",
+    //     href: "https://x.com/",
+    //     icon: <Icons.Twitter />
+    // },
     {
         label: "Instagram",
-        href: "https://www.instagram.com/",
+        href: "https://www.instagram.com/kirtibhavya.enterprises/?hl=en",
         icon: <Icons.Instagram />
     }
 ]
@@ -46,6 +47,8 @@ const Social = ({
                     <Link
                         className="social-link text"
                         href={item.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
                     >
                         {item.icon}
                         <span className="visually-hidden">{item.label}</span>

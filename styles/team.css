@@ -1,164 +1,220 @@
-.team-slider {
-  display: block;
-  position: relative;
-  overflow: hidden;
+.team-section {
+    padding: 50px 0;
+    background: #ffffff;
 }
 
-.team-slider .swiper-slide {
-  height: auto;
+.team-grid {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
 }
 
-.card-team .social-list .svg-wrapper .icon {
-  --color-background: rgb(145, 52, 52);
+.team-card {
+    background: #ffffff;
+    border: 1px solid #e8e8e8;
+    padding: 32px;
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
-.card-team {
-  --color-foreground: rgba(255, 255, 255, 1);
-  --color-foreground-heading: rgba(255, 255, 255, 1);
-  text-decoration: none;
-  position: relative;
-  display: block;
-  overflow: hidden;
-  height: 100%;
+.team-card:hover {
+    border-color: #d0d0d0;
+    background: #fafafa;
 }
 
-.card-team:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(180deg, rgba(28, 37, 57, 0) 0%, #1c2539 100%);
-  transition: 0.5s;
-  opacity: 0;
+.team-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
 }
 
-.card-team:hover:after {
-  opacity: 1;
+.team-avatar-wrapper {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+    flex: 1;
 }
 
-.card-team img {
-  border-radius: inherit;
-  height: 100%;
-  object-fit: cover;
+.team-avatar {
+    width: 80px;
+    height: 80px;
+    background: #f5f5f5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e8e8e8;
+    flex-shrink: 0;
 }
 
-.card-team-content-absolute {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: flex-end;
-  z-index: 1;
-  padding: 35px;
+.team-avatar span {
+    font-size: 32px;
+    font-weight: 500;
+    color: #1a1a1a;
 }
 
-.card-team-content .heading {
-  text-decoration: none;
+.team-info {
+    flex: 1;
+    min-width: 180px;
 }
 
-.card-team-content .heading + .text {
-  margin-block-start: 7px;
+.team-name {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0 0 6px 0;
 }
 
-.card-team-content {
-  opacity: 0;
-  transform: translateY(80px);
-  transition: all 0.5s;
+.team-role {
+    font-size: 14px;
+    color: #666666;
+    margin: 0;
 }
 
-.card-team:hover .card-team-content {
-  opacity: 1;
-  transform: translateY(0px);
+.team-icon {
+    flex-shrink: 0;
+    margin-top: 10px;
 }
 
-.card-team .social-list .svg-wrapper {
-  position: absolute;
-  min-width: 44px;
-  height: 44px;
-  left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 100%;
-  background-color: var(--color-background);
-  z-index: 2;
-  opacity: 0;
-  transition: all 0.5s;
+.team-description p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #444444;
+    margin: 0 0 16px 0;
+    text-align: left;
 }
 
-.card-team .social-list .svg-wrapper:first-child {
-  top: 20px;
+.team-description-second {
+    margin-bottom: 0 !important;
 }
 
-.card-team .social-list .svg-wrapper:nth-child(2) {
-  top: 72px;
-  transition-delay: 0.2s;
+/* Responsive Breakpoints */
+@media (max-width: 968px) {
+    .team-grid {
+        gap: 20px;
+        padding: 0 16px;
+    }
 }
 
-.card-team .social-list .svg-wrapper:nth-child(3) {
-  top: 124px;
-  transition-delay: 0.3s;
+@media (max-width: 768px) {
+    .team-section {
+        padding: 40px 0;
+    }
+    
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 0 16px;
+    }
+    
+    .team-card {
+        padding: 24px;
+    }
 }
 
-.card-team:hover .svg-wrapper {
-  opacity: 1;
-  transform: translateX(21px);
+@media (max-width: 600px) {
+    .team-card {
+        padding: 20px;
+    }
+    
+    .team-avatar {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .team-avatar span {
+        font-size: 24px;
+    }
+    
+    .team-name {
+        font-size: 18px;
+    }
+    
+    .team-role {
+        font-size: 12px;
+    }
+    
+    .team-description p {
+        font-size: 14px;
+    }
 }
 
-.card-team .social-list .svg-wrapper svg {
-  --color-foreground: rgba(32, 40, 45, 1);
-  color: var(--color-foreground);
+@media (max-width: 480px) {
+    .team-section {
+        padding: 30px 0;
+    }
+    
+    .team-grid {
+        gap: 20px;
+        padding: 0 12px;
+    }
+    
+    .team-card {
+        padding: 16px;
+    }
+    
+    .team-avatar-wrapper {
+        gap: 12px;
+    }
+    
+    .team-avatar {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .team-avatar span {
+        font-size: 20px;
+    }
+    
+    .team-name {
+        font-size: 16px;
+    }
+    
+    .team-role {
+        font-size: 11px;
+    }
+    
+    .team-description p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
 }
 
-.service-slider .swiper-pagination-bullets.swiper-pagination-horizontal,
-.team-slider .swiper-pagination-bullets.swiper-pagination-horizontal {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  position: static;
-  margin-block-start: 60px;
-}
-
-.service-slider .swiper-pagination-bullet,
-.team-slider .swiper-pagination-bullet {
-  width: 20px;
-  height: 14px;
-  display: inline-block;
-  border-radius: 10px;
-  background: var(--swiper-pagination-bullet-inactive-color);
-  opacity: var(--swiper-pagination-bullet-inactive-opacity);
-  transition: all 0.3s;
-  margin: 0 !important;
-}
-
-.service-slider .swiper-pagination-bullet.swiper-pagination-bullet-active,
-.team-slider .swiper-pagination-bullet.swiper-pagination-bullet-active {
-  background: var(--swiper-pagination-color);
-  width: 40px;
-}
-
-@media (max-width: 767px) {
-  .card-team-content-absolute {
-    padding: 24px;
-  }
-
-  .service-slider .swiper-pagination-bullets.swiper-pagination-horizontal,
-  .team-slider .swiper-pagination-bullets.swiper-pagination-horizontal {
-    margin-block-start: 40px;
-  }
-
-  .team-slider .section-headings-horizontal .buttons {
-    margin-block-start: 10px;
-  }
-}
-
-@media (max-width: 575px) {
-  .team-slider .swiper {
-    overflow: visible;
-  }
+@media (max-width: 380px) {
+    .team-card {
+        padding: 14px;
+    }
+    
+    .team-avatar-wrapper {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .team-info {
+        text-align: center;
+        min-width: auto;
+    }
+    
+    .team-card-header {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .team-icon {
+        margin-top: 15px;
+    }
+    
+    .team-description p {
+        text-align: center;
+    }
 }
