@@ -61,7 +61,7 @@ const HeroSlider = ({
                                 <picture className="slider-media">
                                     {slide.imageMobile && <source media="(max-width: 575px)" srcSet={slide.imageMobile} />}
                                     {slide.imageTablet && <source media="(max-width: 991px)" srcSet={slide.imageTablet} />}
-                                    <Image
+                                    <img
                                         src={slide.image}
                                         width={1920}
                                         height={1000}

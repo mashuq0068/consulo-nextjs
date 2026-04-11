@@ -19,6 +19,8 @@ import Testimonials from "@/components/sections/Testimonials";
 import FeaturedBlogGrid from "@/components/sections/FeaturedBlogGrid";
 import GlobalReach from "@/components/sections/GlobalReach";
 import AboutUs from "@/components/sections/AboutUs";
+import { Parallax } from "swiper/modules";
+import ParallaxScroll from "@/components/sections/Parallax";
 
 const Home = () => {
   return (
@@ -39,12 +41,9 @@ const Home = () => {
       {/* Service Section */}
       <OurServices data={OurServicesData} />
 
-      {/* Why Choose Us */}
-      <WhyChooseUs data={WhyChooseUsData} />
-
-      {/* Recent Projects */}
-     
-      <GlobalReach/>
+         <WhyChooseUs data={WhyChooseUsData} />
+       
+        <GlobalReach />
       {/* Our Team */}
       {/* <TeamSlider 
         data={TeamSliderData} 

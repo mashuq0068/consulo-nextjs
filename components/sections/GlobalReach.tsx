@@ -307,17 +307,17 @@ export default function GlobalReach({
 
 const styles: Record<string, React.CSSProperties> = {
   container: {
-    maxWidth: "1200px",
+    maxWidth: "1400px",
     margin: "0 auto",
     padding: "0 20px 80px",
-    backgroundColor: "#ffffff",
+    // backgroundColor: "#ffffff",
   },
   mapWrapper: {
     position: "relative",
     borderRadius: "16px",
     overflow: "hidden",
     boxShadow: "0 20px 60px rgba(0,0,0,0.1)",
-    border: "2px solid #1a1a1a",
+    // border: "2px solid #1a1a1a",
     marginTop: "40px",
   },
   map: {

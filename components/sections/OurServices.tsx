@@ -100,13 +100,13 @@ import { FaGlobe, FaSeedling, FaStore, FaTruck } from "react-icons/fa";
 // ];
 
 import { LuGlobe, LuStore, LuTruck } from "react-icons/lu";
-
 const services = [
   {
     id: 1,
     slug: "international-trading",
     title: "International Trading",
-    icon: LuGlobe,
+    image:
+      "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/73/88/74/2c/cb/v1_E11/E118GDIA.jpg?w=800&cf_fit=scale-down&q=85&format=auto&s=9f3e5fffe29649de8e0402dee7011bf1e725a8531dc7f496fb26c2a53be2393b",
     description:
       "Global sourcing and supply of agro commodities and food products across multiple international markets.",
   },
@@ -114,7 +114,8 @@ const services = [
     id: 2,
     slug: "tech-enabled-retail",
     title: "Tech-Enabled Retail",
-    icon: LuStore,
+    image:
+      "https://elements-resized.envatousercontent.com/envato-dam-assets-production/d2f028ff-060f-4050-aea8-751dee05986a/7a4d4fd4-d95d-4cb0-8ca7-8459effb41d4.jpg?w=800&cf_fit=scale-down&q=85&format=auto&s=76d72f403574e55f7d473aa34c6245960cccc53cc795a5862b7d349d42ff2c06",
     description:
       "Technology solutions designed to support and modernize traditional retail distribution networks.",
   },
@@ -122,12 +123,12 @@ const services = [
     id: 3,
     slug: "food-distribution",
     title: "Food Distribution",
-    icon: LuTruck,
+    image:
+      "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/0f/96/9f/a9/48/v1_E10/E1027ZET.jpg?w=800&cf_fit=scale-down&q=85&format=auto&s=18f97e74c47d2cf6adee4d2942a595d5f70df2e6db13d95b67f96246fc4f0894",
     description:
       "Distribution of food products through efficient supply chain and logistics networks.",
   },
 ];
-
 
 const OurServices = ({ data }: { data: SectionProps }) => {
     const serviceList = ServiceList;
@@ -144,17 +145,7 @@ const OurServices = ({ data }: { data: SectionProps }) => {
 
     return (
         <div className={`multicolumn ${wrapperCls}`}>
-            {backgroundImage &&
-                <div className="media media-bg">
-                    <Image
-                        src={backgroundImage.src}
-                        width={backgroundImage.width}
-                        height={backgroundImage.height}
-                        loading={backgroundImage.loading}
-                        alt={backgroundImage.alt ? backgroundImage.alt : 'bg image'}
-                    />
-                </div>
-            }
+     
 
             <div className={container}>
                 <div className="multicolumn-header section-headings">
@@ -189,27 +180,7 @@ const OurServices = ({ data }: { data: SectionProps }) => {
                     </div>
                 </div>
 
-                {/* {button && 
-                    <div className="section-headings text-center">
-                        <div className="buttons" data-aos="fade-up">
-                            {button.type == 'primary' &&
-                                <PrimaryButton 
-                                    label={button.label}
-                                    href={button.href}
-                                    ariaLabel={button.label}
-                                />
-                            }
 
-                            {button.type == 'secondary' &&
-                                <SecondaryButton 
-                                    label={button.label}
-                                    href={button.href}
-                                    ariaLabel={button.label}
-                                />
-                            }
-                        </div>
-                    </div>
-                } */}
             </div>
         </div>
     )

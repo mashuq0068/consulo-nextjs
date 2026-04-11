@@ -16,7 +16,7 @@ const Picture = ({ image }: PictureType) => {
         <picture className={cls ?  cls : ''}>
             {srcMobile && <source media="(max-width: 575px)" srcSet={srcMobile} />}
             {srcTablet && <source media="(max-width: 991px)" srcSet={srcTablet} />}
-            <Image
+            <img
                 src={src}
                 width={width}
                 height={height}

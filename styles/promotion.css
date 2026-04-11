@@ -12,9 +12,9 @@
 }
 
 .promotion .counter-item:nth-child(2) {
-  --color-background: rgba(255, 255, 255, 1);
+  /* --color-background: rgba(255, 255, 255, 1);
   --color-foreground: rgba(28, 37, 57, 1);
-  --color-foreground-heading: rgba(93, 102, 111, 1);
+  --color-foreground-heading: rgba(93, 102, 111, 1); */
 }
 
 .promtion-content .subheading.subheading-bg {

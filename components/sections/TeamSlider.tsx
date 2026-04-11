@@ -36,7 +36,7 @@ const TeamSection = ({
     } = data || {};    
 
     return (
-        <section className={`team-section ${wrapperCls || ''}`}>
+        <section style={{padding:'0px'}} className={`team-section ${wrapperCls || ''}`}>
             <div className={container || 'container'}>
                 <div className="section-headings headings-width text-center">
                     {subheading &&

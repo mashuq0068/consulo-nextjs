@@ -24,8 +24,8 @@ const AboutUs = ({button = false} : {button : boolean}) => {
         <div className="grid lg:grid-cols-2 lg:gap-3 items-center">
           <div className="lg:col-span-1 col-span-2">
             <div className="media-wrap" data-aos="zoom-in-up">
-              <Image
-                src={"/img/about/about.jpeg"}
+              <img
+                src={"https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/4d/bb/f0/be/4f/v1_E10/E10I7JO2.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=2e6df30d905ec6bfa35ffa7451a0f59d1ce06982c7d90ac99fdab542f03abdba"}
                 width={600}
                 height={400}
                 alt={"Image"}

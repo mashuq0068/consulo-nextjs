@@ -31,8 +31,8 @@ const Certifications = ({ data }: { data: SectionProps }) => {
   } = data || {};
 
   return (
-    <div style={{marginBottom:'100px'}} className={`why-choose-us ${wrapperCls}`}>
-      {backgroundImage && (
+    <div style={{ marginBottom: "100px" }} className={`${wrapperCls}`}>
+      {/* {backgroundImage && (
         <div className="media media-bg">
           <Image
             src={backgroundImage.src}
@@ -42,7 +42,7 @@ const Certifications = ({ data }: { data: SectionProps }) => {
             loading={backgroundImage.loading}
           />
         </div>
-      )}
+      )} */}
       <div className={container}>
         <div className="choose-top">
           <div>
@@ -132,8 +132,8 @@ const Certifications = ({ data }: { data: SectionProps }) => {
 
         <div className="mt-3">
           {promotions && (
-            <div  className="">
-              <div  className="grid grid-cols-12  gap-1">
+            <div className="">
+              <div className="grid grid-cols-12  gap-1">
                 {promotions.map((item, index) => (
                   <div
                     className="col-span-12  md:col-span-2 lg:col-span-4 "
@@ -152,7 +152,13 @@ const Certifications = ({ data }: { data: SectionProps }) => {
                           </h2>
                         )}
                         {item.title === "Our Core Values" ? (
-                          <ul style={{ paddingLeft: "0", marginTop:"10px", listStyle: "none" }}>
+                          <ul
+                            style={{
+                              paddingLeft: "0",
+                              marginTop: "10px",
+                              listStyle: "none",
+                            }}
+                          >
                             <li
                               style={{
                                 display: "flex",
@@ -225,6 +231,29 @@ const Certifications = ({ data }: { data: SectionProps }) => {
               </div>
             </div>
           )}
+        </div>
+        <div
+          style={{
+            position: "relative",
+            marginTop: "50px",
+            width: "100%",
+            minHeight: "100vh",
+            backgroundImage:
+              "url(https://elements-resized.envatousercontent.com/envato-dam-assets-production/1da902e5-8bb7-4bc2-883f-e253ca487511/ac237032-b223-4705-9f35-14287df4ba59.jpg?w=800&cf_fit=scale-down&q=85&format=auto&s=17d5fea155f977e7ebcdc718158641c42c331288be63f4787ea8cf0a1fd69876)",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          {/* overlay */}
+          <div
+            style={{
+              position: "absolute",
+              inset: 0,
+              background:
+                "linear-gradient(135deg, rgba(255,242,214,0.57) 0%, rgba(215,143,71,0.50) 100%)",
+              zIndex: 1,
+            }}
+          />
         </div>
       </div>
     </div>

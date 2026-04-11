@@ -19,7 +19,7 @@ const Heading = ({
         const parts = title.split(new RegExp(`(${styledText})`, "gi"));
 
         return (
-            <h2 className={`heading w-full ${cls}`} {...conditionalAttributes}>
+            <h2 style={{color:'black'}} className={`heading w-full ${cls}`} {...conditionalAttributes}>
                 {parts.map((part, index) =>
                     part.toLowerCase() === styledText.toLowerCase() ? (
                     <span key={index} className={styledTextCls}>

@@ -1,40 +1,47 @@
-import Link from "next/link";
 import { ServiceDataType } from "@/types/service";
-import Icons from "./Icons";
-import parser from "html-react-parser";
+import Image from "next/image";
 
 const CardService = ({ data }: ServiceDataType) => {
-  const { title, description, slug, list, icon } = data || {};
+  const { title, description, image } = data || {};
 
   return (
-    <div
-      className="multicolumn-card"
-    //   href={`/services/${slug}`}
-    //   aria-label="View Service Details"
-    >
-      {icon && (
-        <div className="card-icon icon-40">
-          {(() => {
-            const Icon = icon;
-            return <Icon size={40} />;
-          })()}
+    <div style={{padding:'0px'}} className="multicolumn-card hover:bg-transparent">
+
+      {/* FIXED IMAGE BOX (IMPORTANT) */}
+      {image && (
+        <div
+          style={{
+            width: "100%",
+            height: "300px",
+            overflow: "hidden",
+            // borderRadius: "8px",
+            // marginBottom: "16px"
+          }}
+        >
+          <img
+            src={image}
+            alt={title || "service"}
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              display: "block"
+            }}
+            width={400}
+            height={400}
+            
+          />
         </div>
       )}
 
-      {title && <h2 className="heading text-28">{title}</h2>}
+     <div style={{ padding:'25px'}}>
+       {title && <h2 className="heading text-28">{title}</h2>}
 
-      {description && <div className="text text-16">{description}</div>}
+      {description && (
+        <div className="text text-16">{description}</div>
+      )}
+     </div>
 
-      {/* {list &&
-                <ul className="text-lists list-unstyled">
-                    {list.map((item, index) => (                        
-                        <li className="text-item text text-16 fw-500" key={`service-${index}`}>
-                            <Icons.Plus />
-                            {item.title}
-                        </li>
-                    ))}
-                </ul>
-            } */}
     </div>
   );
 };

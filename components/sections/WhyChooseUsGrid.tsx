@@ -31,18 +31,8 @@ const WhyChooseUsGrid = ({ data }: { data: SectionProps }) => {
   } = data || {};
 
   return (
-    <div className={`why-choose-us ${wrapperCls}`}>
-      {backgroundImage && (
-        <div className="media media-bg">
-          <Image
-            src={backgroundImage.src}
-            alt={backgroundImage.alt ? backgroundImage.alt : "Background image"}
-            width={backgroundImage.width}
-            height={backgroundImage.height}
-            loading={backgroundImage.loading}
-          />
-        </div>
-      )}
+    <div className={`${wrapperCls}`}>
+  
       <div className={container}>
         <div className="choose-top">
           <div>
@@ -74,7 +64,7 @@ const WhyChooseUsGrid = ({ data }: { data: SectionProps }) => {
                 {subheading && (
                   <Subheading title={subheading} cls="text-20" aos="fade-up" />
                 )}
-
+                 
                 {heading && (
                   <Heading title={heading} cls="text-50" aos="fade-up" />
                 )}
@@ -136,14 +126,16 @@ const WhyChooseUsGrid = ({ data }: { data: SectionProps }) => {
               <div  className="grid grid-cols-12  gap-1">
                 {promotions.map((item, index) => (
                   <div
+                    
                     className="col-span-12  md:col-span-2 lg:col-span-4 "
                     data-aos="fade-up"
                     key={`promo-${index}`}
-                  >
+                  >  
+                    <img style={{marginBottom:'20px'}} src={item.image} alt="" />
                     <div className="card-icon-text card-icon-text-horizontal">
-                      {item.icon && (
-                        <div className="svg-wrapper">{item.icon}</div>
-                      )}
+                      {/* {item.icon && (
+                        <div style={{backgroundColor:'#D78F47'}} className="svg-wrapper">{item.icon}</div>
+                      )} */}
 
                       <div className="content">
                         {item.title && (
@@ -226,6 +218,7 @@ const WhyChooseUsGrid = ({ data }: { data: SectionProps }) => {
             </div>
           )}
         </div>
+        
       </div>
     </div>
   );
