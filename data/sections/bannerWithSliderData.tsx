@@ -1,6 +1,6 @@
 import { BannerSliderType } from "@/types/bannerSlider";
-import { BannerSlides } from '@/data/sections/heroSliderData';
 import BannerSliderImage from "@/public/img/slider/slider-bg.jpg";
+import { HeroSlidesData } from "./heroSliderData";
 
 export const BannerWithSliderData: BannerSliderType = {
     wrapperCls: "with-floating-header",
@@ -16,6 +16,6 @@ export const BannerWithSliderData: BannerSliderType = {
         type: "primary"
     },
     logoIconName: "LogoRotate",
-    slides: BannerSlides,
+    slides: HeroSlidesData,
     navigation: true,
 }

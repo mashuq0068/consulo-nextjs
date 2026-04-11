@@ -1,5 +1,5 @@
 export interface PromotionProps {
-  image:string;
+  image?:string;
   icon?: any;
   title?: string;
   text?: string;
