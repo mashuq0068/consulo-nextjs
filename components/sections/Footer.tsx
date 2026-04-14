@@ -36,11 +36,7 @@ const Footer = () => {
 
     return (
         <footer>
-            {showFooterStyle1 && <FooterStyle1 container={container} />}
-            {showFooterStyle2 && <FooterStyle2 container={container} />}
-            {showFooterStyle3 && <FooterStyle3 container={container} />}
-            {showFooterStyle4 && <FooterStyle4 container={container} />}
-            {showFooterStyleGlobal && <FooterStyleGlobal container={container} />}
+           <FooterStyle1 container={container} />
         </footer>
     )
 }

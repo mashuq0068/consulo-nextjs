@@ -210,15 +210,7 @@
   inset: 0;
   z-index: 1;
 
-  background: linear-gradient(
-    90deg,
-    rgba(215, 143, 71, 0.25) 0%,   /* soft gold start */
-    rgba(215, 143, 71, 0.15) 20%,
-    rgba(215, 143, 71, 0.05) 40%,
-    rgba(0, 0, 0, 0.05) 60%,        /* transition zone */
-    rgba(0, 0, 0, 0.35) 80%,        /* text readability */
-    rgba(0, 0, 0, 0.55) 100%        /* strong right depth */
-  );
+
 }
 /* =========================
    RESPONSIVE

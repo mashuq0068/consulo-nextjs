@@ -25,7 +25,7 @@ export const WhyChooseUsGridBgData: SectionProps = {
   },
   subheading: "Vision, Mission & Values",
   heading: "Building a Globally Respected Enterprise",
-  text: "With strong leadership, global networks, and market knowledge, KBEPL aims to build a sustainable, efficient, and customer-focused international trading and distribution business.",
+  text: "With strong leadership, global networks, and market knowledge, Kirti Bhavya Enterprises aims to build a sustainable, efficient, and customer-focused international trading and distribution business.",
   button: {
     label: "Learn More",
     href: "/contact-us",
@@ -38,14 +38,14 @@ export const WhyChooseUsGridBgData: SectionProps = {
   promotions: [
     {
       image:
-        "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/29/ae/f7/36/55/v1_E10/E10I7JO5.jpg?w=800&cf_fit=scale-down&q=85&format=auto&s=dd292f82cafabc878f995faf202899c0bd67f435ef3f12d7d580e96a5924fb0f",
+        "https://elements-resized.envatousercontent.com/envato-dam-assets-production/dc5543cd-20c5-4602-86b3-3a5739d45743/5b96956c-774d-4335-98de-7ae5cbe6effe.jpg?w=800&cf_fit=scale-down&q=85&format=auto&s=14bfd8694529604df1a676521dc6e31386a128982417dc5541e2fa38b0321408",
       icon: <Icons.Vision />,
       title: "Our Vision",
       text: "To become a globally respected enterprise that strengthens international supply chains,empowers retail and distribution ecosystems, and builds sustainable, technology-driven solutions that create long-term value across markets.",
     },
     {
       image:
-        "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/f5/92/e2/36/ae/v1_E10/E10JCMT.jpg?w=800&cf_fit=scale-down&q=85&format=auto&s=1e07c77395dee23dfb80f226ce15fa96a0fda2250fd41caade077eb3c071de71",
+        "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/30/70/83/7a/7d/v1_E11/E114GSYC.jpg?w=800&cf_fit=scale-down&q=85&format=auto&s=c309b9a39cd7daab9d256154507bd2827755e1ee661dea0d40416062ab5fc95a",
       icon: <Icons.Mission />,
       title: "Our Mission",
       text: "To build a reliable global trading and distribution company by providing quality products,efficient supply chain solutions, transparent operations, and long-term value to customers,suppliers, and partners.",
@@ -58,7 +58,7 @@ export const WhyChooseUsGridBgData: SectionProps = {
     //  Sustainable Growth
     {
       image:
-        "https://elements-resized.envatousercontent.com/envato-dam-assets-production/46fc6827-980d-491d-b4ca-429a0281d76f/a7de9a80-a6d8-49cf-a11f-7f7610cbd095.jpg?w=800&cf_fit=scale-down&q=85&format=auto&s=60b9a443c6437b36dc48c66de3a19414491c102d20e7d556904dd1db9de6964e",
+        "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/1b/88/d4/af/e4/v1_E11/E113ZINP.jpg?w=800&cf_fit=scale-down&q=85&format=auto&s=7416b2b6bc54494f462b33837846c5ce2cdb61725fda5199c6f96a8114d8f915",
       icon: <Icons.Awards />,
       title: "Our Core Values",
       text: "<ul><li>Integrity & Transparency</li><li>Partnership & Trust</li><li>Innovation with Purpose</li><li>Long-Term Relationships</li><li>Sustainable Growth</li></ul>",

@@ -41,9 +41,9 @@ const Home = () => {
       {/* Service Section */}
       <OurServices data={OurServicesData} />
 
-         <WhyChooseUs data={WhyChooseUsData} />
-       
-        <GlobalReach />
+      <WhyChooseUs data={WhyChooseUsData} />
+
+      <GlobalReach />
       {/* Our Team */}
       {/* <TeamSlider 
         data={TeamSliderData} 

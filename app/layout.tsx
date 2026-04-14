@@ -12,13 +12,13 @@ import ScrollTop from "@/components/ScrollToTop";
 export const metadata: Metadata = {
   title: {
     template: '%s',
-    default: 'Kirti Bhavya Enterprises Private Limited (KBEPL)',
+    default: 'Kirti Bhavya Enterprises Private Limited ',
   },
   description: "Global Trading, Food Distribution, and Tech-Enabled Retail.",
   openGraph: {
     title: 'Kirti Bhavya Enterprises Private Limited',
     description: 'Global Trading, Food Distribution, and Tech-Enabled Retail.',
-    url: 'https://kbepl.com',
+    url: 'https://Kirti Bhavya Enterprises.com',
     type: 'website',
   },
 };

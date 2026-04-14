@@ -14,6 +14,7 @@ import SecondaryButton from "../buttons/SecondaryButton";
 import MapSection from "./Map";
 import { FiMapPin, FiPhone, FiMail, FiGlobe } from "react-icons/fi";
 import Image from "next/image";
+import Icons from "../Icons";
 
 const ContactSection = ({ data }: { data: SectionProps }) => {
   const [status, setStatus] = useState("");
@@ -40,6 +41,13 @@ const ContactSection = ({ data }: { data: SectionProps }) => {
     },
     {
       icon: <FiPhone />,
+      label: "Landline",
+      value: "+91 7945942348",
+      isLink: true,
+      href: "tel:+917945942348",
+    },
+    {
+      icon: <FiPhone />,
       label: "Phone/WhatsApp",
       value: "+91 99749 26271",
       isLink: true,
@@ -48,17 +56,9 @@ const ContactSection = ({ data }: { data: SectionProps }) => {
     {
       icon: <FiMail />,
       label: "Email",
-      value: "info@kirtibhavya.com ",
+      value: "info@kirtibhavya.com",
       isLink: true,
-      href: "mailto:info@kirtibhavya.com ",
-    },
-    {
-      icon: <FiGlobe />,
-      label: "Website",
-      value: "www.kirtibhavya.com",
-      isLink: true,
-      href: "https://www.kirtibhavya.com",
-      target: "_blank",
+      href: "mailto:info@kirtibhavya.com",
     },
   ];
 
@@ -138,15 +138,15 @@ const ContactSection = ({ data }: { data: SectionProps }) => {
           display: flex;
           align-items: center;
           justify-content: center;
-          width: 56px;
-          height: 56px;
+          width: 36px;
+          height: 36px;
           flex-shrink: 0;
           background: linear-gradient(135deg, #f0f0f0 0%, #f8f8f8 100%);
           border-radius: 12px;
         }
 
         .contact-icon {
-          font-size: 28px;
+          font-size: 20px;
           color: #000;
           transition: color 0.4s ease;
           display: flex;
@@ -217,12 +217,12 @@ const ContactSection = ({ data }: { data: SectionProps }) => {
           }
 
           .contact-icon-wrapper {
-            width: 48px;
-            height: 48px;
+            width: 30px;
+            height: 30px;
           }
 
           .contact-icon {
-            font-size: 24px;
+            font-size: 18px;
           }
 
           .contact-info-label {
@@ -372,7 +372,7 @@ const ContactSection = ({ data }: { data: SectionProps }) => {
                             Scan to Connect
                           </h4>
 
-                          <p
+                          {/* <p
                             style={{
                               fontSize: "14px",
                               color: "#555",
@@ -382,7 +382,7 @@ const ContactSection = ({ data }: { data: SectionProps }) => {
                           >
                             Message Priya Gupta~Kirti Bhavya Enterprises Pvt Ltd
                             on WhatsApp.
-                          </p>
+                          </p> */}
 
                           <a
                             href="https://wa.me/message/MOTTSORNXQ3YG1"
@@ -429,6 +429,153 @@ const ContactSection = ({ data }: { data: SectionProps }) => {
                       </div>
                     ))}
                   </div>
+               {/* SOCIAL MEDIA */}
+<div style={{ marginTop: "35px" }} data-aos="fade-up">
+  <h4
+    style={{
+      fontSize: "18px",
+      fontWeight: 700,
+      marginBottom: "14px",
+    }}
+  >
+    Follow Us
+  </h4>
+
+  <div
+    style={{
+      display: "flex",
+      gap: "14px",
+      alignItems: "center",
+      flexWrap: "wrap",
+    }}
+  >
+    {/* Facebook */}
+    <a
+      href="https://www.facebook.com/profile.php?id=61585380045467"
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{
+        width: "52px",
+        height: "52px",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        borderRadius: "12px",
+        border: "1px solid #eee",
+        background: "#fff",
+        transition: "all 0.25s ease",
+        overflow: "hidden",
+      }}
+    >
+      <div
+        style={{
+          width: "26px",
+          height: "26px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <Image
+          src="/img/social/facebook.webp"
+          alt="Facebook"
+          width={26}
+          height={26}
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "contain",
+            display: "block",
+          }}
+        />
+      </div>
+    </a>
+
+    {/* LinkedIn */}
+    <a
+      href="https://www.linkedin.com/company/110299950/admin/dashboard/"
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{
+        width: "52px",
+        height: "52px",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        borderRadius: "12px",
+        border: "1px solid #eee",
+        background: "#fff",
+        transition: "all 0.25s ease",
+        overflow: "hidden",
+      }}
+    >
+      <div
+        style={{
+          width: "26px",
+          height: "26px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <Image
+          src="/img/social/linkedin.png"
+          alt="LinkedIn"
+          width={26}
+          height={26}
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "contain",
+            display: "block",
+          }}
+        />
+      </div>
+    </a>
+
+    {/* Instagram */}
+    <a
+      href="https://www.instagram.com/kirtibhavya.enterprises/?hl=en"
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{
+        width: "52px",
+        height: "52px",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        borderRadius: "12px",
+        border: "1px solid #eee",
+        background: "#fff",
+        transition: "all 0.25s ease",
+        overflow: "hidden",
+      }}
+    >
+      <div
+        style={{
+          width: "30px",
+          height: "30px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <Image
+          src="/img/social/instagram.jpg"
+          alt="Instagram"
+          width={30}
+          height={30}
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "contain",
+            display: "block",
+          }}
+        />
+      </div>
+    </a>
+  </div>
+</div>
                 </div>
               </div>
 

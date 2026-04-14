@@ -12,7 +12,7 @@ export const WhyChooseUsData: SectionProps = {
         loading: "lazy",
         alt: "Why choose us image"
     },
-    subheading: "Why Choose Us",
+    subheading: "Partner With Us",
     heading: "We Transform Your Requirements into Reliable Exports",
     text: "At Kirti Bhavya Enterprises, we focus on understanding client requirements and converting them into reliable, timely, and high-quality exports. We don't just supply products — we deliver consistency, quality, transparency, and trust in every shipment.",
     button: {

@@ -25,7 +25,7 @@ const AboutUs = ({button = false} : {button : boolean}) => {
           <div className="lg:col-span-1 col-span-2">
             <div className="media-wrap" data-aos="zoom-in-up">
               <img
-                src={"https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/4d/bb/f0/be/4f/v1_E10/E10I7JO2.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=2e6df30d905ec6bfa35ffa7451a0f59d1ce06982c7d90ac99fdab542f03abdba"}
+                src={"https://i.ibb.co.com/Gfyk8MgL/3085e9a3-c4a3-405b-983c-53a56146096e-2026-04-14.png"} 
                 width={600}
                 height={400}
                 alt={"Image"}
@@ -53,7 +53,7 @@ const AboutUs = ({button = false} : {button : boolean}) => {
                 }}
               >
                 <p>
-                  Kirti Bhavya Enterprises Private Limited (KBEPL) is a dynamic
+                  Kirti Bhavya Enterprises Private Limited  is a dynamic
                   and growth-focused enterprise built on the pillars of global
                   experience, operational excellence, and innovation.
                 </p>
@@ -66,7 +66,7 @@ const AboutUs = ({button = false} : {button : boolean}) => {
                 </p>
                 <p>
                   With strong leadership, global networks, and market knowledge,
-                  KBEPL aims to build a sustainable, efficient, and
+                  Kirti Bhavya Enterprises aims to build a sustainable, efficient, and
                   customer-focused international trading and distribution
                   business.
                 </p>

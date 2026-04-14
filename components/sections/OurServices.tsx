@@ -115,7 +115,7 @@ const services = [
     slug: "tech-enabled-retail",
     title: "Tech-Enabled Retail",
     image:
-      "https://elements-resized.envatousercontent.com/envato-dam-assets-production/d2f028ff-060f-4050-aea8-751dee05986a/7a4d4fd4-d95d-4cb0-8ca7-8459effb41d4.jpg?w=800&cf_fit=scale-down&q=85&format=auto&s=76d72f403574e55f7d473aa34c6245960cccc53cc795a5862b7d349d42ff2c06",
+      "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/d1/58/bd/c9/db/v1_E11/E114FIMB.jpg?w=800&cf_fit=scale-down&q=85&format=auto&s=2604d466972fc87cbc8c8b549c37f83272ccd75ffd1145e9235d7005780e6cb9",
     description:
       "Technology solutions designed to support and modernize traditional retail distribution networks.",
   },
@@ -124,7 +124,7 @@ const services = [
     slug: "food-distribution",
     title: "Food Distribution",
     image:
-      "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/0f/96/9f/a9/48/v1_E10/E1027ZET.jpg?w=800&cf_fit=scale-down&q=85&format=auto&s=18f97e74c47d2cf6adee4d2942a595d5f70df2e6db13d95b67f96246fc4f0894",
+      "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/c0/03/5b/a5/e4/v1_E10/E10ANLNW.jpg?w=800&cf_fit=scale-down&q=85&format=auto&s=b2c85ce784531ad18f2143728073f2246c55ebabc89b4fcd66ef2a1a243a2549",
     description:
       "Distribution of food products through efficient supply chain and logistics networks.",
   },

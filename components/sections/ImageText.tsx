@@ -50,7 +50,7 @@ const ImageText = ({ data }: { data: SectionProps }) => {
 
               <div style={{fontSize:'18px', display:'flex', flexDirection:'column', gap:'10px', marginTop:'20px'}}>
                 <p>
-                  Kirti Bhavya Enterprises Private Limited (KBEPL) is a dynamic
+                  Kirti Bhavya Enterprises Private Limited  is a dynamic
                   and growth-focused enterprise built on the pillars of global
                   experience, operational excellence, and innovation.
                 </p>
@@ -63,7 +63,7 @@ const ImageText = ({ data }: { data: SectionProps }) => {
                 </p>
                 <p>
                   With strong leadership, global networks, and market knowledge,
-                  KBEPL aims to build a sustainable, efficient, and
+                  Kirti Bhavya Enterprises aims to build a sustainable, efficient, and
                   customer-focused international trading and distribution
                   business.
                 </p>

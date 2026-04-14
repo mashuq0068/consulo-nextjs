@@ -9,7 +9,7 @@ export const RecentProjectData: SectionProps = {
     link: "/about-us",
     subheading: "Global Reach",
     heading: "Connecting Producers, Suppliers, and Buyers Across Markets",
-    text: "With a long-term vision to integrate technology with distribution and retail ecosystems, KBEPL aims to build efficient supply chains that connect producers, suppliers, and buyers across global markets.",        
+    text: "With a long-term vision to integrate technology with distribution and retail ecosystems, Kirti Bhavya Enterprises aims to build efficient supply chains that connect producers, suppliers, and buyers across global markets.",        
     imageList: [
         {
             src: Image1.src,

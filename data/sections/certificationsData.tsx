@@ -41,19 +41,19 @@ export const CertificationsData: SectionProps = {
       icon: <Icons.Awards />, // Reusing existing icon
       title: "APEDA",
       text: "Registered with APEDA for export of agricultural and processed food products including rice, wheat, pulses, fruits, vegetables, and other agro commodities. ",
-      image: ""
+      image: "/img/certifications/apeda.webp"
     },
     {
       icon: <Icons.Awards />,
       title: "Spice Board",
       text: "Registered with Spice Board of India for export of spices and spice products with mandatory quality certification and Spice House registration. ",
-      image: ""
+      image: "/img/certifications/Spices_Board.png"
     },
     {
       icon: <Icons.Awards />,
       title: "FSSAI",
       text: "Licensed under FSSAI for food business operations ensuring compliance with food safety standards, hygiene protocols, and quality regulations. ",
-      image: ""
+      image: "/img/certifications/fassai-logo.png"
     },
   ],
   // promoImage: {

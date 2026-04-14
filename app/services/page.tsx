@@ -10,7 +10,7 @@ import Services from '@/components/sections/Services';
 import PricingPlan from '@/components/sections/PricingPlan';
 import TeamSlider from '@/components/sections/TeamSlider';
 
-const PAGE_TITLE: string = 'Our Products/Services';
+const PAGE_TITLE: string = 'Our Offerings';
 export const metadata: Metadata = {
   title: PAGE_TITLE,
 }

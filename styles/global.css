@@ -994,6 +994,16 @@ h6,
     margin-block-start: 40px;
   }
 }
+@keyframes pulse {
+  0% {
+    transform: translateX(-50%) scale(0.3);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-50%) scale(1);
+    opacity: 0;
+  }
+}
 
 @media (max-width: 767px) {
   .mt-100 {

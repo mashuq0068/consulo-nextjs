@@ -10,7 +10,7 @@ const Menus = [
         path: '/about-us'
     },
     {
-        title: 'Products/Services',
+        title: 'Our Offerings',
         path: '/services',
         // dropdown: [
         //     { title: 'Rice', path: '/services' },
@@ -21,16 +21,16 @@ const Menus = [
         //     { title: 'Animal Feeds', path: '/services' }
         // ]
     },
+    // {
+    //     title: 'Market Insights',
+    //     path: '/market-insights',
+    //     dropdown: [
+    //         { title: 'Market Trends/Analysis weekly', path: '/market-insights' },
+    //         { title: 'News/Updates', path: '/news-updates' }
+    //     ]
+    // },
     {
-        title: 'Market Insights',
-        path: '/market-insights',
-        dropdown: [
-            { title: 'Market Trends/Analysis weekly', path: '/market-insights' },
-            { title: 'News/Updates', path: '/news-updates' }
-        ]
-    },
-    {
-        title: 'HR at Kirti Bhavya',
+        title: 'Talent Management',
         path: '/hr',
         // dropdown: [
         //     { title: 'Life at KB', path: '/hr' },

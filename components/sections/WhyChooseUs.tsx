@@ -103,33 +103,30 @@ const WhyChooseUs = ({ data }: { data: SectionProps }) => {
           {/* {counterData && <CounterUpVertical data={counterData} />} */}
         </div>
         <div
-            style={{
-                position: "relative",
-                marginTop: "50px",
-                width: "100%",
-                minHeight: "100vh",
-                backgroundImage:
-                    "url(https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/0f/96/9f/a9/48/v1_E10/E1027ZET.jpg?w=800&cf_fit=scale-down&q=85&format=auto&s=18f97e74c47d2cf6adee4d2942a595d5f70df2e6db13d95b67f96246fc4f0894)",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-               
-            }}
+          style={{
+            position: "relative",
+            marginTop: "50px",
+            width: "100%",
+            height: "700px", // ✅ FIXED HEIGHT (important)
+            borderRadius: "16px",
+            overflow: "hidden",
+            backgroundImage:
+              "url(https://i.ibb.co.com/ymzC4qGN/25114247-ded6-4577-988b-981deb637c05-2026-04-14.jpg)",
+            backgroundSize: "contain", // fills without distortion
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
         >
-            {/* overlay */}
-            <div
-                style={{
-                    position: "absolute",
-                    inset: 0,
-                    background:
-                        "linear-gradient(135deg, rgba(255,242,214,0.57) 0%, rgba(215,143,71,0.50) 100%)",
-                    zIndex: 1,
-                }}
-            />
-
-            
+          {/* optional overlay */}
+          <div
+            style={{
+              position: "absolute",
+              inset: 0,
+             
+            }}
+          />
         </div>
       </div>
-     
     </div>
   );
 };

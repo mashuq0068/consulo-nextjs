@@ -15,7 +15,7 @@ const TermsConditionSection = () => {
               <div className="blog-description">
                 <p>
                   These Terms & Conditions govern your use of the website
-                  operated by Kirti Bhavya Enterprises Private Limited (KBEPL).
+                  operated by Kirti Bhavya Enterprises Private Limited .
                   By accessing or using this website, you agree to comply with
                   and be bound by these terms. If you do not agree with any part
                   of these terms, you should not use this website.

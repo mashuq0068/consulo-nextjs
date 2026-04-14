@@ -15,7 +15,7 @@ const PrivacyPolicySection = () => {
               <div className="blog-description">
                 <p>
                   This Privacy Policy describes how Kirti Bhavya Enterprises
-                  Private Limited (KBEPL) collects, uses, and protects any
+                  Private Limited  collects, uses, and protects any
                   information that you provide when using our website. We are
                   committed to ensuring that your privacy is protected and that
                   your information is handled in a safe and responsible manner.

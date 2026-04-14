@@ -6,7 +6,7 @@ export const ContactData: SectionProps = {
     container: "container",
     subheading: "Contact Us",
     heading: "Get in Touch with Us",
-    text: "Kirti Bhavya Enterprises Private Limited (KBEPL) is a dynamic and growth-focused enterprise built on the pillars of global experience, operational excellence, and innovation.",
+    text: "Kirti Bhavya Enterprises Private Limited  is a dynamic and growth-focused enterprise built on the pillars of global experience, operational excellence, and innovation.",
     promotions: [
         {
             icon: <Icons.ThumbsUp />,

@@ -8,7 +8,7 @@ import Heading from "../Heading";
 
 const MapContainer = dynamic(
   () => import("react-leaflet").then((mod) => mod.MapContainer),
-  { ssr: false, loading: () => <div style={styles.mapLoading}>Loading Map...</div> }
+  { ssr: false }
 );
 const TileLayer = dynamic(
   () => import("react-leaflet").then((mod) => mod.TileLayer),
@@ -19,371 +19,207 @@ const Marker = dynamic(
   { ssr: false }
 );
 
-// Only the requested locations
-const locationData: Record<string, { coords: [number, number]; flag: string; displayName: string }> = {
-  "Djibouti": { coords: [11.5721, 43.1456], flag: "🇩🇯", displayName: "Djibouti" },
-  "Somalia": { coords: [2.0469, 45.3182], flag: "🇸🇴", displayName: "Somalia" },
-  "Mombasa": { coords: [-4.0435, 39.6682], flag: "🇰🇪", displayName: "Mombasa, Kenya" },
-  "Dar es Salaam": { coords: [-6.7924, 39.2083], flag: "🇹🇿", displayName: "Dar es Salaam, Tanzania" },
-  "Durban": { coords: [-29.8587, 31.0218], flag: "🇿🇦", displayName: "Durban, South Africa" },
-  "Douala": { coords: [4.0511, 9.7679], flag: "🇨🇲", displayName: "Douala, Cameroon" },
-  "Cotonou": { coords: [6.3703, 2.3912], flag: "🇧🇯", displayName: "Cotonou, Benin" },
-  "Lomé": { coords: [6.1725, 1.2314], flag: "🇹🇬", displayName: "Lomé, Togo" },
-  "Abidjan": { coords: [5.3599, -4.0083], flag: "🇨🇮", displayName: "Abidjan, Ivory Coast" },
-  "Gambia": { coords: [13.4432, -16.5779], flag: "🇬🇲", displayName: "Gambia" },
-  "Algeria": { coords: [28.0339, 1.6596], flag: "🇩🇿", displayName: "Algeria" },
-  "Vietnam": { coords: [14.0583, 108.2772], flag: "🇻🇳", displayName: "Vietnam" },
-  "Sri Lanka": { coords: [7.8731, 80.7718], flag: "🇱🇰", displayName: "Sri Lanka" },
-  "China": { coords: [35.8617, 104.1954], flag: "🇨🇳", displayName: "China" },
-  "USA": { coords: [37.0902, -95.7129], flag: "🇺🇸", displayName: "USA" },
-  "Russia": { coords: [61.524, 105.3188], flag: "🇷🇺", displayName: "Russia" },
-  "Dubai": { coords: [25.2048, 55.2708], flag: "🇦🇪", displayName: "Dubai, UAE" },
-  "Saudi Arabia": { coords: [23.8859, 45.0792], flag: "🇸🇦", displayName: "Saudi Arabia" },
-  "Oman": { coords: [21.4735, 55.9754], flag: "🇴🇲", displayName: "Oman" },
-  "Afghanistan": { coords: [33.9391, 67.71], flag: "🇦🇫", displayName: "Afghanistan" },
+// ✅ Accurate trade hubs / ports
+const locationData = {
+  "Vietnam": { coords: [10.8231, 106.6297], flag: "🇻🇳", displayName: "Ho Chi Minh City" },
+  "Sri Lanka": { coords: [6.9271, 79.8612], flag: "🇱🇰", displayName: "Colombo" },
+  "India": { coords: [19.0760, 72.8777], flag: "🇮🇳", displayName: "Mumbai" },
+  "Ethiopia": { coords: [8.9806, 38.7578], flag: "🇪🇹", displayName: "Addis Ababa" },
+  "Djibouti": { coords: [11.5721, 43.1456], flag: "🇩🇯", displayName: "Djibouti Port" },
+  "Afghanistan": { coords: [34.5553, 69.2075], flag: "🇦🇫", displayName: "Kabul" },
+  "Turkey": { coords: [41.0082, 28.9784], flag: "🇹🇷", displayName: "Istanbul" },
+  "Somalia": { coords: [2.0469, 45.3182], flag: "🇸🇴", displayName: "Mogadishu Port" },
+  "Somaliland": { coords: [9.5600, 44.0650], flag: "🏳️", displayName: "Berbera Port" },
+  "Dubai": { coords: [25.0657, 55.1713], flag: "🇦🇪", displayName: "Jebel Ali Port" },
+  "Russia": { coords: [59.9311, 30.3609], flag: "🇷🇺", displayName: "St. Petersburg" },
+  "China": { coords: [31.2304, 121.4737], flag: "🇨🇳", displayName: "Shanghai" },
+  "Ivory Coast": { coords: [5.3599, -4.0083], flag: "🇨🇮", displayName: "Abidjan Port" },
 };
 
-interface GlobalReachProps {
-  locations?: string[];
-  pinColor?: "black" | "red";
-}
+// ✅ Offset to prevent overlap
+const locationOffsets: Record<string, [number, number]> = {
+  "Djibouti": [0.8, 0.8],
+  "Somalia": [-0.8, 0.5],
+  "Somaliland": [0.6, -0.6],
+  "Dubai": [0.5, 1.0],
+};
 
-export default function GlobalReach({ 
-  locations = [
-    "Djibouti", "Somalia", "Mombasa", "Dar es Salaam", "Durban",
-    "Douala", "Cotonou", "Lomé", "Abidjan", "Gambia",
-    "Algeria", "Vietnam", "Sri Lanka", "China", "USA",
-    "Russia", "Dubai", "Saudi Arabia", "Oman", "Afghanistan"
-  ],
-  pinColor = "black"
-}: GlobalReachProps) {
+export default function GlobalReach() {
   const [mounted, setMounted] = useState(false);
   const [L, setL] = useState<typeof import("leaflet") | null>(null);
 
   useEffect(() => {
     setMounted(true);
-    import("leaflet").then((leaflet) => {
-      setL(leaflet);
+    import("leaflet").then((leaflet) => setL(leaflet));
+  }, []);
+
+  // ✅ Navy theme icon
+const createCustomIcon = useMemo(() => {
+  if (!L) return null;
+
+  const mainColor = "#111038";
+  const highlightColor = "#1c1a5a";
+  const ringColor = "17,16,56";
+
+  return (displayName: string, flag: string) =>
+    L.divIcon({
+      className: "custom-marker",
+      html: `
+      <div style="
+        position: relative;
+        width: 120px;
+        height: 70px;
+        margin-left: -60px;
+        margin-top: -70px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      ">
+        
+        <!-- Label -->
+        <div style="
+          background: white;
+          border: 1.5px solid ${mainColor};
+          border-radius: 6px;
+          padding: 4px 8px;
+          font-size: 10px;
+          font-weight: 600;
+          color: ${mainColor};
+          display: flex;
+          gap: 5px;
+          align-items: center;
+          margin-bottom: 4px;
+          white-space: nowrap;
+          box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        ">
+          <span>${flag}</span>
+          <span>${displayName}</span>
+        </div>
+
+        <!-- Pin Wrapper -->
+        <div style="
+          position: relative;
+          width: 18px;
+          height: 26px;
+        ">
+
+          <!-- Pulse ring -->
+          <div style="
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            left: 50%;
+            bottom: -10px;
+            transform: translateX(-50%);
+            border: 2px solid rgba(${ringColor}, 0.25);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+          "></div>
+
+          <!-- Pin -->
+          <div style="
+            width: 18px;
+            height: 18px;
+            background: linear-gradient(135deg, ${highlightColor}, ${mainColor});
+            border-radius: 50% 50% 50% 0;
+            transform: rotate(-45deg);
+            position: absolute;
+            top: 0;
+            left: 0;
+            border: 1.5px solid #fff;
+            box-shadow: 0 3px 6px rgba(${ringColor},0.4);
+          "></div>
+
+          <!-- Inner dot -->
+          <div style="
+            width: 6px;
+            height: 6px;
+            background: #fff;
+            border-radius: 50%;
+            position: absolute;
+            top: 6px;
+            left: 6px;
+          "></div>
+
+        </div>
+      </div>
+      `,
+      iconSize: [120, 70],
+      iconAnchor: [60, 35],
+    });
+}, [L]);
+
+  const locations = [
+    "Vietnam",
+    "Sri Lanka",
+    "India",
+    "Ethiopia",
+    "Djibouti",
+    "Afghanistan",
+    "Turkey",
+    "Somalia",
+    "Somaliland",
+    "Dubai",
+    "Russia",
+    "China",
+    "Ivory Coast",
+  ];
+
+  // ✅ Apply offset
+  const markers = useMemo(() => {
+    return locations.map((loc) => {
+      const data = locationData[loc];
+      const offset = locationOffsets[loc] || [0, 0];
+
+      return {
+        displayName: data.displayName,
+        flag: data.flag,
+        coords: [
+          data.coords[0] + offset[0],
+          data.coords[1] + offset[1],
+        ] as [number, number],
+      };
     });
   }, []);
 
-  const createCustomIcon = useMemo(() => {
-    if (!L) return null;
-    
-    const isBlack = pinColor === "black";
-    const mainColor = isBlack ? "#1a1a1a" : "#7f1d1d";
-    const highlightColor = isBlack ? "#333333" : "#991b1b";
-    const ringColor = isBlack ? "0,0,0" : "127,29,29";
-    
-    return (displayName: string, flag: string) => L.divIcon({
-      className: "uber-style-marker",
-      html: `
-        <div style="
-          position: relative;
-          width: 160px;
-          height: 80px;
-          margin-left: -80px;
-          margin-top: -80px;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          pointer-events: none;
-        ">
-          <div style="
-            background: white;
-            border: 2px solid #1a1a1a;
-            border-radius: 8px;
-            padding: 6px 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-            margin-bottom: 8px;
-            white-space: nowrap;
-            font-weight: 700;
-            font-size: 11px;
-            color: #1a1a1a;
-            letter-spacing: 0.3px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            z-index: 1000;
-          ">
-            <span style="font-size: 14px;">${flag}</span>
-            <span>${displayName}</span>
-          </div>
-          
-          <div style="
-            position: relative;
-            width: 40px;
-            height: 44px;
-          ">
-            <div style="
-              position: absolute;
-              width: 120px;
-              height: 120px;
-              left: 50%;
-              bottom: -60px;
-              transform: translateX(-50%);
-              pointer-events: none;
-              z-index: 1;
-            ">
-              <div style="
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                border: 2px solid rgba(${ringColor}, 0.4);
-                border-radius: 50%;
-                animation: uber-spread 2.5s ease-out infinite;
-                left: 0;
-                top: 0;
-              "></div>
-              <div style="
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                border: 2px solid rgba(${ringColor}, 0.3);
-                border-radius: 50%;
-                animation: uber-spread 2.5s ease-out infinite 0.8s;
-                left: 0;
-                top: 0;
-              "></div>
-              <div style="
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                border: 2px solid rgba(${ringColor}, 0.2);
-                border-radius: 50%;
-                animation: uber-spread 2.5s ease-out infinite 1.6s;
-                left: 0;
-                top: 0;
-              "></div>
-            </div>
-            
-            <div style="
-              position: relative;
-              width: 36px;
-              height: 44px;
-              z-index: 10;
-              filter: drop-shadow(0 4px 8px rgba(${ringColor}, 0.4));
-            ">
-              <div style="
-                position: absolute;
-                width: 36px;
-                height: 36px;
-                background: linear-gradient(135deg, ${highlightColor} 0%, ${mainColor} 50%, #000000 100%);
-                border-radius: 50% 50% 50% 0;
-                transform: rotate(-45deg);
-                left: 2px;
-                top: 2px;
-                box-shadow: 
-                  inset -2px -2px 4px rgba(0,0,0,0.3),
-                  inset 2px 2px 4px rgba(255,255,255,0.1);
-                border: 2px solid #ffffff;
-              "></div>
-              <div style="
-                position: absolute;
-                width: 10px;
-                height: 10px;
-                background: ${isBlack ? '#666' : '#fca5a5'};
-                border-radius: 50%;
-                left: 15px;
-                top: 15px;
-                box-shadow: inset 0 1px 2px rgba(0,0,0,0.5);
-              "></div>
-            </div>
-          </div>
-        </div>
-      `,
-      iconSize: [160, 80],
-      iconAnchor: [80, 40],
-    });
-  }, [L, pinColor]);
-
-  const markers = useMemo(() => {
-    return locations
-      .map((location) => {
-        const data = locationData[location];
-        if (!data) return null;
-        return { 
-          displayName: data.displayName, 
-          coords: data.coords, 
-          flag: data.flag 
-        };
-      })
-      .filter(Boolean) as { 
-        displayName: string; 
-        coords: [number, number]; 
-        flag: string;
-      }[];
-  }, [locations]);
-
-  if (!mounted || !L || !createCustomIcon) {
-    return (
-      <div style={styles.container}>
-        <div style={{marginBottom:"30px", marginTop:"120px", textAlign: "center"}}>
-          <Subheading title={"Global Reach"} cls="text-20" aos="fade-right" />
-        </div>
-        <div style={{marginBottom:"30px", fontSize:"18px", textAlign: "center"}} className="section-headings">   
-          <Heading title={"We have exposure in these international markets."} aos="fade-right" aosDelay="200" />
-        </div>
-        <div style={styles.mapLoading}>Loading Map...</div>
-      </div>
-    );
-  }
+  if (!mounted || !L || !createCustomIcon) return null;
 
   return (
-    <div style={styles.container}>
-      <div style={{marginBottom:"30px", marginTop:"120px", textAlign: "center"}}>
-        <Subheading title={"Global Reach"} cls="text-20" aos="fade-right" />
+    <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "80px 20px" }}>
+      
+      <div style={{ textAlign: "center", marginBottom: "20px" }}>
+        <Subheading title={"Our Global Network"} />
       </div>
 
-      <div style={{marginBottom:"30px", fontSize:"18px", textAlign: "center"}} className="section-headings">   
-        <Heading title={"We have exposure in these international markets."} aos="fade-right" aosDelay="200" />
+      <div style={{ textAlign: "center", marginBottom: "30px" }}>
+        <Heading title={"We have exposure in these international markets."} />
       </div>
 
-      <div style={styles.mapWrapper}>
+      <div style={{
+        borderRadius: "16px",
+        overflow: "hidden",
+        boxShadow: "0 20px 60px rgba(0,0,0,0.1)"
+      }}>
         <MapContainer
-          center={[20, 20]}
-          zoom={2}
+          center={[20, 60]}
+          zoom={3}
           minZoom={2}
           scrollWheelZoom={false}
-          style={styles.map}
-          worldCopyJump={true}
+          style={{ width: "100%", height: "600px" }}
         >
           <TileLayer
-            attribution='&copy; OpenStreetMap contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
 
-          {markers.map(({ displayName, coords, flag }, i) => (
-            <Marker 
-              key={`${displayName}-${i}`} 
-              position={coords} 
-              icon={createCustomIcon(displayName, flag)}
-              interactive={false}
+          {markers.map((m, i) => (
+            <Marker
+              key={i}
+              position={m.coords}
+              icon={createCustomIcon(m.displayName, m.flag)}
             />
           ))}
         </MapContainer>
       </div>
-
-      {/* Location Grid - Below the Map */}
-      <div style={styles.gridContainer}>
-        <div style={styles.gridTitle}>
-          <span>📍 Our Global Footprint</span>
-        </div>
-        <div style={styles.grid}>
-          {markers.map(({ displayName, flag }, i) => (
-            <div key={i} style={styles.gridItem}>
-              <span style={styles.gridFlag}>{flag}</span>
-              <span style={styles.gridName}>{displayName}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <style>{`
-        @keyframes uber-spread {
-          0% {
-            transform: scale(0.2);
-            opacity: 1;
-          }
-          100% {
-            transform: scale(1);
-            opacity: 0;
-          }
-        }
-        
-        .uber-style-marker {
-          background: transparent !important;
-          border: none !important;
-        }
-        
-        .leaflet-marker-icon {
-          background: transparent !important;
-          border: none !important;
-        }
-      `}</style>
     </div>
   );
 }
-
-const styles: Record<string, React.CSSProperties> = {
-  container: {
-    maxWidth: "1400px",
-    margin: "0 auto",
-    padding: "0 20px 80px",
-    // backgroundColor: "#ffffff",
-  },
-  mapWrapper: {
-    position: "relative",
-    borderRadius: "16px",
-    overflow: "hidden",
-    boxShadow: "0 20px 60px rgba(0,0,0,0.1)",
-    // border: "2px solid #1a1a1a",
-    marginTop: "40px",
-  },
-  map: {
-    width: "100%",
-    height: "600px",
-    zIndex: 1,
-  },
-  mapLoading: {
-    height: "600px",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    background: "#f5f5f5",
-    borderRadius: "16px",
-    color: "#1a1a1a",
-    fontSize: "14px",
-    letterSpacing: "0.05em",
-    border: "2px solid #e5e5e5",
-  },
-  gridContainer: {
-    marginTop: "40px",
-    background: "#f8f8f8",
-    borderRadius: "16px",
-    padding: "24px",
-    border: "1px solid #e5e5e5",
-  },
-  gridTitle: {
-    fontSize: "14px",
-    fontWeight: "600",
-    textTransform: "uppercase",
-    letterSpacing: "1px",
-    color: "#666",
-    marginBottom: "20px",
-    textAlign: "center" as const,
-  },
-  grid: {
-    display: "grid",
-    gridTemplateColumns: "repeat(auto-fill, minmax(180px, 1fr))",
-    gap: "12px",
-  },
-  gridItem: {
-    display: "flex",
-    alignItems: "center",
-    gap: "10px",
-    background: "white",
-    padding: "10px 16px",
-    borderRadius: "40px",
-    border: "1px solid #eaeaea",
-    transition: "all 0.2s ease",
-    cursor: "default",
-  },
-  gridFlag: {
-    fontSize: "20px",
-  },
-  gridName: {
-    fontSize: "13px",
-    fontWeight: "500",
-    color: "#1a1a1a",
-  },
-};
-
-// Add hover effect via a separate style tag or CSS module
-const gridItemHover = `
-  .grid-item:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    border-color: #1a1a1a;
-  }
-`;

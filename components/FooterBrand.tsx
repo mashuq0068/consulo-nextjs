@@ -22,7 +22,7 @@ const FooterBrand = () => {
         />
       </div>
       <p className="text text-16">
-        Kirti Bhavya Enterprises Private Limited (KBEPL) is a growth-driven
+        Kirti Bhavya Enterprises Private Limited  is a growth-driven
         enterprise engaged in Global Trading, Food Distribution, and
         Tech-Enabled Retail. The company is built on the foundations of global
         experience, operational excellence, and long-term business

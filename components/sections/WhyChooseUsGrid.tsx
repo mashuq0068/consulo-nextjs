@@ -32,7 +32,6 @@ const WhyChooseUsGrid = ({ data }: { data: SectionProps }) => {
 
   return (
     <div className={`${wrapperCls}`}>
-  
       <div className={container}>
         <div className="choose-top">
           <div>
@@ -64,7 +63,7 @@ const WhyChooseUsGrid = ({ data }: { data: SectionProps }) => {
                 {subheading && (
                   <Subheading title={subheading} cls="text-20" aos="fade-up" />
                 )}
-                 
+
                 {heading && (
                   <Heading title={heading} cls="text-50" aos="fade-up" />
                 )}
@@ -122,16 +121,34 @@ const WhyChooseUsGrid = ({ data }: { data: SectionProps }) => {
 
         <div className="mt-3">
           {promotions && (
-            <div  className="">
-              <div  className="grid grid-cols-12  gap-1">
+            <div className="">
+              <div className="grid grid-cols-12  gap-1">
                 {promotions.map((item, index) => (
                   <div
-                    
                     className="col-span-12  md:col-span-2 lg:col-span-4 "
                     data-aos="fade-up"
                     key={`promo-${index}`}
-                  >  
-                    <img style={{marginBottom:'20px'}} src={item.image} alt="" />
+                  >
+                    <div
+                      style={{
+                        position: "relative",
+                        width: "100%",
+                        height: "300px",
+                        borderRadius: "12px",
+                        overflow: "hidden",
+                        marginBottom: "20px",
+                      }}
+                    >
+                      <img
+                        src={item.image}
+                        alt=""
+                    
+                        style={{
+                           height: "100%",
+                          objectFit: "cover",
+                        }}
+                      />
+                    </div>{" "}
                     <div className="card-icon-text card-icon-text-horizontal">
                       {/* {item.icon && (
                         <div style={{backgroundColor:'#D78F47'}} className="svg-wrapper">{item.icon}</div>
@@ -144,7 +161,13 @@ const WhyChooseUsGrid = ({ data }: { data: SectionProps }) => {
                           </h2>
                         )}
                         {item.title === "Our Core Values" ? (
-                          <ul style={{ paddingLeft: "0", marginTop:"10px", listStyle: "none" }}>
+                          <ul
+                            style={{
+                              paddingLeft: "0",
+                              marginTop: "10px",
+                              listStyle: "none",
+                            }}
+                          >
                             <li
                               style={{
                                 display: "flex",
@@ -218,7 +241,6 @@ const WhyChooseUsGrid = ({ data }: { data: SectionProps }) => {
             </div>
           )}
         </div>
-        
       </div>
     </div>
   );
