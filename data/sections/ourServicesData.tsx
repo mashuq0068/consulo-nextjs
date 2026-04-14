@@ -12,7 +12,7 @@ export const OurServicesData: SectionProps = {
         loading: "lazy"
     },
     subheading: "Our Business Areas",
-    heading: "Product Categories",
+    heading: "Our Business Verticals",
     button: {
         label: "View All Products",
         href: "/services",

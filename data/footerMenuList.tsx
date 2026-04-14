@@ -82,6 +82,10 @@ export const MenuContact: MenuType[] = [
 
 export const MenuPolicies: MenuType[] = [
     {
+        title:'News/Updates',
+        path: '/news-updates'
+    },
+    {
         title: 'Privacy Policy',
         path: '/privacy-policy'
     },

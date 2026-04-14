@@ -25,7 +25,7 @@ const AboutUs = ({button = false} : {button : boolean}) => {
           <div className="lg:col-span-1 col-span-2">
             <div className="media-wrap" data-aos="zoom-in-up">
               <img
-                src={"https://i.ibb.co.com/Gfyk8MgL/3085e9a3-c4a3-405b-983c-53a56146096e-2026-04-14.png"} 
+                src={"https://i.ibb.co.com/cXM3kQbQ/img1-1.webp"} 
                 width={600}
                 height={400}
                 alt={"Image"}
