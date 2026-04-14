@@ -88,7 +88,7 @@ blockquote::before {
 .blog-share-item .subheading-bg {
   --color-foreground-subheading: rgba(28, 37, 57, 1);
   --color-background-subheading: rgba(255, 255, 255, 1);
-  --color-border-subheading-bg: #D78F47
+  --color-border-subheading-bg: #14134A;
   transition: 0.3s;
 }
 

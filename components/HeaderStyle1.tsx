@@ -14,7 +14,13 @@ const Header = () => {
       >
         <div className="header-grid">
           {/* Logo */}
-          <Logo                   
+       
+          
+          {/* Nav Bar */}
+          <NavBar />
+
+          {/* Header Actions */}
+              <Logo                   
             src={LogoImage.src}
             width={300}
             height={300}
@@ -24,11 +30,6 @@ const Header = () => {
             ariaLabel="Consulo logo"
             loading="eager"
           />
-          
-          {/* Nav Bar */}
-          <NavBar />
-
-          {/* Header Actions */}
            <HeaderActions />
         </div>
       </StickyHeader>

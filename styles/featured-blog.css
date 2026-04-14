@@ -4,7 +4,7 @@
   --color-foreground-heading: rgba(28, 37, 57, 1);
   --color-foreground-subheading: rgba(93, 102, 111, 1);
   --color-background-subheading: rgba(255, 255, 255, 0);
-  --color-border-subheading-bg: #D78F47
+  --color-border-subheading-bg: #14134A;
   background-color: var(--color-background);
   overflow: hidden;
 }

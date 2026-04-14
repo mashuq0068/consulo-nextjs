@@ -7,13 +7,14 @@ const Subheading = ({
     aos,
     aosAnchor,
     cls,
+    styles,
 }: SubheadingType) => {
     const isAos = aos ? { 'data-aos': `${aos}` } : null;
     const isAosAnchor = aosAnchor ? { 'data-aos-anchor': `${aosAnchor}` } : null;
     const conditionalAttributes = {...isAos, ...isAosAnchor};
 
     return (
-        <div className={`subheading subheading-bg ${cls}`} {...conditionalAttributes}>
+        <div style={styles} className={`subheading subheading-bg ${cls}`} {...conditionalAttributes}>
             {icon && <span className="icon icon-14"><Icons.Subheading /></span>}
             <span>{title}</span>
             {icon && <span className="icon icon-14"><Icons.Subheading /></span>}

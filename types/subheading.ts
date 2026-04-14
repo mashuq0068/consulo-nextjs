@@ -4,4 +4,5 @@ export interface SubheadingType {
     aos?: string;
     aosAnchor?: string;
     cls?: string;
+    styles?:object
 }

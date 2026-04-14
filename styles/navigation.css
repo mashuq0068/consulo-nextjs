@@ -247,9 +247,10 @@
 
   .header-menu {
     display: flex;
+    margin-right: 50px;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: end;
   }
 }
 

@@ -15,17 +15,17 @@
 }
 
 .team-card {
-    background: #ffffff;
+    background: #F5EF78;
     border: 1px solid #e8e8e8;
     padding: 32px;
     transition: all 0.3s ease;
     cursor: pointer;
 }
 
-.team-card:hover {
+/* .team-card:hover {
     border-color: #d0d0d0;
     background: #fafafa;
-}
+} */
 
 .team-card-header {
     display: flex;

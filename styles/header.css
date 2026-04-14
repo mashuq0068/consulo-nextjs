@@ -1,12 +1,13 @@
 .header-1 {
   --header-radius: 0;
-  --color-background: white;
+  --color-background: #F5EF78;
   --color-foreground: rgba(255, 255, 255, 1);
   /* --color-primary-hover: rgba(255, 255, 255, 0.6); */
   --color-border: rgba(255, 255, 255, 0.2);
   --style-border-width: 1px;
   background: var(--color-background);
   border-bottom: var(--style-border-width) solid var(--color-border);
+  /* z-index: 2999; */
 }
 
 .header-2 {
@@ -46,7 +47,7 @@
 .header-1.header-floating:hover,
 .header-1.header-sticky.scrolled-past-header {
   --color-secondary-button-hover-border: rgba(255, 255, 255, 0.3);
-  --color-background: white;
+  --color-background: #F5EF78;
   color: black;
   border-bottom: var(--style-border-width) solid rgba(255, 255, 255, 0);
 }
@@ -75,15 +76,15 @@
 sticky-header[data-sticky-type="always"] {
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
 }
 
 .header-grid {
   display: grid;
-  grid-template-columns: 290px 1fr;
+  grid-template-columns: 1fr 290px ;
   align-items: center;
-  justify-content: space-between;
-  gap: 20px;
+  justify-content: end;
+  gap: 10px;
   background: var(--color-background);
   border-radius: var(--header-radius);
   padding: var(--header-padding);
