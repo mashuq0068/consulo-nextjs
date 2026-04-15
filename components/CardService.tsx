@@ -1,48 +1,49 @@
 import { ServiceDataType } from "@/types/service";
 import Image from "next/image";
+import Link from "next/link";
 
 const CardService = ({ data }: ServiceDataType) => {
-  const { title, description, image } = data || {};
+  const { title, description, image, slug } = data || {};
 
   return (
-    <div style={{padding:'0px'}} className="multicolumn-card hover:bg-transparent">
-
-      {/* FIXED IMAGE BOX (IMPORTANT) */}
-      {image && (
-        <div
-          style={{
-            width: "100%",
-            height: "300px",
-            overflow: "hidden",
-            // borderRadius: "8px",
-            // marginBottom: "16px"
-          }}
-        >
-          <img
-            src={image}
-            alt={title || "service"}
+    <Link href={`${slug}`}>
+      <div
+        style={{ padding: "0px" }}
+        className="multicolumn-card hover:bg-transparent"
+      >
+        {/* FIXED IMAGE BOX (IMPORTANT) */}
+        {image && (
+          <div
             style={{
               width: "100%",
-              height: "100%",
-              objectFit: "cover",
-              display: "block"
+              height: "300px",
+              overflow: "hidden",
+              // borderRadius: "8px",
+              // marginBottom: "16px"
             }}
-            width={400}
-            height={400}
-            
-          />
+          >
+            <img
+              src={image}
+              alt={title || "service"}
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                display: "block",
+              }}
+              width={400}
+              height={400}
+            />
+          </div>
+        )}
+
+        <div style={{ padding: "25px" }}>
+          {title && <h2 className="heading text-28">{title}</h2>}
+
+          {description && <div className="text text-16">{description}</div>}
         </div>
-      )}
-
-     <div style={{ padding:'25px'}}>
-       {title && <h2 className="heading text-28">{title}</h2>}
-
-      {description && (
-        <div className="text text-16">{description}</div>
-      )}
-     </div>
-
-    </div>
+      </div>
+    </Link>
   );
 };
 

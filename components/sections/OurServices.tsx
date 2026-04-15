@@ -110,7 +110,7 @@ import Link from "next/link";
 const services = [
   {
     id: 1,
-    slug: "international-trading",
+    slug: "/services",
     title: "International Trading",
     image:
       "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/73/88/74/2c/cb/v1_E11/E118GDIA.jpg?w=800&cf_fit=scale-down&q=85&format=auto&s=9f3e5fffe29649de8e0402dee7011bf1e725a8531dc7f496fb26c2a53be2393b",
@@ -119,7 +119,7 @@ const services = [
   },
   {
     id: 2,
-    slug: "tech-enabled-retail",
+    slug: "/services",
     title: "Tech-Enabled Retail",
     image:
       "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/d1/58/bd/c9/db/v1_E11/E114FIMB.jpg?w=800&cf_fit=scale-down&q=85&format=auto&s=2604d466972fc87cbc8c8b549c37f83272ccd75ffd1145e9235d7005780e6cb9",
@@ -128,7 +128,7 @@ const services = [
   },
   {
     id: 3,
-    slug: "food-distribution",
+    slug: "/services",
     title: "Food Distribution",
     image:
       "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/c0/03/5b/a5/e4/v1_E10/E10ANLNW.jpg?w=800&cf_fit=scale-down&q=85&format=auto&s=b2c85ce784531ad18f2143728073f2246c55ebabc89b4fcd66ef2a1a243a2549",

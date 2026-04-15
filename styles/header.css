@@ -169,9 +169,9 @@ sticky-header[data-sticky-type="always"] {
 }
 
 @media (max-width: 1365px) {
-  .header-grid {
+  /* .header-grid {
     grid-template-columns: 240px 1fr 240px;
-  }
+  } */
 
   .header-2 .header-grid {
     grid-template-columns: repeat(3, auto);
@@ -192,9 +192,9 @@ sticky-header[data-sticky-type="always"] {
 }
 
 @media (max-width: 1279px) {
-  .header-grid {
+  /* .header-grid {
     grid-template-columns: 200px 1fr 200px;
-  }
+  } */
 
   .header-2 .header-grid {
     grid-template-columns: repeat(3, auto);
