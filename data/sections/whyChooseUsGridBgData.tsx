@@ -38,7 +38,7 @@ export const WhyChooseUsGridBgData: SectionProps = {
   promotions: [
     {
       image:
-        "https://elements-resized.envatousercontent.com/envato-dam-assets-production/dc5543cd-20c5-4602-86b3-3a5739d45743/5b96956c-774d-4335-98de-7ae5cbe6effe.jpg?w=800&cf_fit=scale-down&q=85&format=auto&s=14bfd8694529604df1a676521dc6e31386a128982417dc5541e2fa38b0321408",
+        "https://elements-resized.envatousercontent.com/envato-dam-assets-production/bf1c8381-32aa-4189-aaf6-1c4bd8917591/77cb28dc-b359-46a9-b8d6-12f88d765a4f.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=c26430bc283b2863ec39be6ab6e89004efc1206401ef5e12c776c6e006787a64",
       icon: <Icons.Vision />,
       title: "Our Vision",
       text: "To become a globally respected enterprise that strengthens international supply chains,empowers retail and distribution ecosystems, and builds sustainable, technology-driven solutions that create long-term value across markets.",

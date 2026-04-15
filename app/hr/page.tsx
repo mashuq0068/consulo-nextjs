@@ -498,9 +498,9 @@ const HR = () => {
               We're always looking for talented individuals who share our
               passion for excellence and commitment to growth.
             </p>
-            <p className="hr-cta-contact">
+            {/* <p className="hr-cta-contact">
               For careers and internships, contact us
-            </p>
+            </p> */}
             <PrimaryButton
               label="Get in Touch"
               href="/contact-us"

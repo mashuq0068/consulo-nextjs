@@ -9,9 +9,9 @@ export const HeroSlidesData = [
       type: "secondary",
     },
     image:
-      "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/97/1d/ae/5f/c8/v1_E10/E10AO7A1.jpg?w=800&cf_fit=scale-down&q=85&format=auto&s=cb0f7c4ae341ce7505157cc25da8e54dffa2df1a16e17221358233b415b2709d",
-    imageTablet: "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/97/1d/ae/5f/c8/v1_E10/E10AO7A1.jpg?w=800&cf_fit=scale-down&q=85&format=auto&s=cb0f7c4ae341ce7505157cc25da8e54dffa2df1a16e17221358233b415b2709d",
-    imageMobile: "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/97/1d/ae/5f/c8/v1_E10/E10AO7A1.jpg?w=800&cf_fit=scale-down&q=85&format=auto&s=cb0f7c4ae341ce7505157cc25da8e54dffa2df1a16e17221358233b415b2709d",
+      "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/1d/d2/aa/03/7b/v1_E10/E104CKHO.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=f9ec0e9147c3b7f5b6f710598663028342bd6c4ab3e1b15b7e0d5d94ed9cf368",
+    imageTablet: "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/1d/d2/aa/03/7b/v1_E10/E104CKHO.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=f9ec0e9147c3b7f5b6f710598663028342bd6c4ab3e1b15b7e0d5d94ed9cf368",
+    imageMobile: "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/1d/d2/aa/03/7b/v1_E10/E104CKHO.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=f9ec0e9147c3b7f5b6f710598663028342bd6c4ab3e1b15b7e0d5d94ed9cf368",
   },
 
   {

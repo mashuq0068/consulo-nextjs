@@ -5,8 +5,7 @@ import Subheading from "../Subheading";
 import Heading from "../Heading";
 import PrimaryButton from "../buttons/PrimaryButton";
 
-
-const AboutUs = ({button = false} : {button : boolean}) => {
+const AboutUs = ({ button = false }: { button: boolean }) => {
   //   const {
   //     wrapperCls,
   //     container,
@@ -19,29 +18,38 @@ const AboutUs = ({button = false} : {button : boolean}) => {
   //   } = data || {};
 
   return (
-    <div style={{marginTop:'120px'}} className={`image-text `}>
+    <div style={{ marginTop: "120px" }} className={`image-text `}>
       <div className={"container"}>
         <div className="grid lg:grid-cols-2 lg:gap-3 items-center">
           <div className="lg:col-span-1 col-span-2">
-            <div className="media-wrap" data-aos="zoom-in-up">
-              <img
-                src={"https://i.ibb.co.com/cXM3kQbQ/img1-1.webp"} 
-                width={600}
-                height={400}
-                alt={"Image"}
+            <div
+              className="media-wrap"
+              data-aos="zoom-in-up"
+              style={{
+                position: "relative",
+                width: "100%",
+                height: "500px", // 🔥 increase this value
+              }}
+            >
+              <Image
+                src="/img/about/about.jpeg"
+                fill
+                alt="Image"
+                style={{
+                  objectFit: "contain",
+                }}
               />
             </div>
           </div>
 
           <div className="lg:col-span-1 col-span-2">
             <div className="content section-headings">
-          
-                <Subheading title={"About Us"} cls="text-20" aos="fade-up" />
-              
+              <Subheading title={"About Us"} cls="text-20" aos="fade-up" />
 
-            
-                <Heading title={"A Dynamic and Growth-Focused Enterprise"} cls="text-50" />
-             
+              <Heading
+                title={"A Dynamic and Growth-Focused Enterprise"}
+                cls="text-50"
+              />
 
               <div
                 style={{
@@ -53,8 +61,8 @@ const AboutUs = ({button = false} : {button : boolean}) => {
                 }}
               >
                 <p>
-                  Kirti Bhavya Enterprises Private Limited  is a dynamic
-                  and growth-focused enterprise built on the pillars of global
+                  Kirti Bhavya Enterprises Private Limited is a dynamic and
+                  growth-focused enterprise built on the pillars of global
                   experience, operational excellence, and innovation.
                 </p>
                 <p>
@@ -66,9 +74,9 @@ const AboutUs = ({button = false} : {button : boolean}) => {
                 </p>
                 <p>
                   With strong leadership, global networks, and market knowledge,
-                  Kirti Bhavya Enterprises aims to build a sustainable, efficient, and
-                  customer-focused international trading and distribution
-                  business.
+                  Kirti Bhavya Enterprises aims to build a sustainable,
+                  efficient, and customer-focused international trading and
+                  distribution business.
                 </p>
               </div>
               {/* {textList &&
@@ -88,14 +96,11 @@ const AboutUs = ({button = false} : {button : boolean}) => {
 
               {button && (
                 <div className="buttons" data-aos="fade-up">
-                  
-                    <PrimaryButton
-                      label={"More About Us"}
-                      href={"/about-us"}
-                      ariaLabel={"More About Us"}
-                    />
-                
-
+                  <PrimaryButton
+                    label={"More About Us"}
+                    href={"/about-us"}
+                    ariaLabel={"More About Us"}
+                  />
                 </div>
               )}
             </div>
