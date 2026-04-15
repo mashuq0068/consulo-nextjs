@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import "@/styles/multicolumn.css";
 import Image from "next/image";
@@ -9,7 +9,13 @@ import SecondaryButton from "../buttons/SecondaryButton";
 import ServiceList from "@/data/services.json";
 import CardService from "../CardService";
 import { SectionProps } from "@/types/sectionProps";
-import { GiWheat, GiSugarCane, GiChiliPepper, GiPlantRoots, GiCow } from "react-icons/gi";
+import {
+  GiWheat,
+  GiSugarCane,
+  GiChiliPepper,
+  GiPlantRoots,
+  GiCow,
+} from "react-icons/gi";
 import { FaGlobe, FaSeedling, FaStore, FaTruck } from "react-icons/fa";
 
 // const services = [
@@ -100,6 +106,7 @@ import { FaGlobe, FaSeedling, FaStore, FaTruck } from "react-icons/fa";
 // ];
 
 import { LuGlobe, LuStore, LuTruck } from "react-icons/lu";
+import Link from "next/link";
 const services = [
   {
     id: 1,
@@ -131,59 +138,47 @@ const services = [
 ];
 
 const OurServices = ({ data }: { data: SectionProps }) => {
-    const serviceList = ServiceList;
-    if(serviceList.length == 0) return null;
+  const serviceList = ServiceList;
+  if (serviceList.length == 0) return null;
 
-    const {
-        wrapperCls,
-        container,
-        backgroundImage,
-        subheading,
-        heading,
-        button
-    } = data || {};
+  const {
+    wrapperCls,
+    container,
+    backgroundImage,
+    subheading,
+    heading,
+    button,
+  } = data || {};
 
-    return (
-        <div className={`multicolumn ${wrapperCls}`}>
-     
+  return (
+    <div className={`multicolumn ${wrapperCls}`}>
+      <div className={container}>
+        <div className="multicolumn-header section-headings">
+          {subheading && (
+            <Subheading title={subheading} cls="text-20" aos="fade-up" />
+          )}
 
-            <div className={container}>
-                <div className="multicolumn-header section-headings">
-                    {subheading && 
-                        <Subheading 
-                            title={subheading}
-                            cls="text-20"
-                            aos="fade-up"
-                        />
-                    }
-
-                    {heading && 
-                        <Heading 
-                            title={heading}
-                            cls="text-50"
-                            aos="fade-up"
-                        />
-                    }
-                </div>
-
-                <div className="multicolumn-inner">
-                    <div className="grid lg:grid-cols-3 lg:gap-1">
-                        {services.map((service) => (
-                            <div 
-                                className="col-span-1 multi-col" 
-                                data-aos="fade-up" 
-                                key={`servicel-card-${service.id}`}
-                            >
-                                <CardService data={service} />
-                            </div>
-                        ))}
-                    </div>
-                </div>
-
-
-            </div>
+          {heading && <Heading title={heading} cls="text-50" aos="fade-up" />}
         </div>
-    )
-}
+
+        <div className="multicolumn-inner">
+          <div className="grid lg:grid-cols-3 lg:gap-1">
+            {services.map((service, i) => (
+              <Link href="/services" key={i}>
+                <div
+                  className="col-span-1 multi-col"
+                  data-aos="fade-up"
+                  key={`servicel-card-${service.id}`}
+                >
+                  <CardService data={service} />
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default OurServices;

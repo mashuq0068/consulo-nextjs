@@ -2,7 +2,7 @@ import { ButtonProps } from "./button";
 
 export interface SlideType {
   subheading?: string;
-  heading?: string;
+  heading?: string | string[];
   text?: string;
   button?: {
     label: string;

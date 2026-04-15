@@ -413,12 +413,8 @@ const ContactSection = ({ data }: { data: SectionProps }) => {
                             <a
                               href={item.href}
                               className="contact-link"
-                              target={item.target || "_self"}
-                              rel={
-                                item.target === "_blank"
-                                  ? "noopener noreferrer"
-                                  : undefined
-                              }
+                              target="_blank"
+                              
                             >
                               {item.value}
                             </a>

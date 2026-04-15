@@ -20,7 +20,7 @@ const Marker = dynamic(
 );
 
 // ✅ Accurate trade hubs / ports
-const locationData = {
+const locationData: Record<string, { coords: [number, number]; flag: string; displayName: string }> = {
   "Vietnam": { coords: [10.8231, 106.6297], flag: "🇻🇳", displayName: "Ho Chi Minh City" },
   "Sri Lanka": { coords: [6.9271, 79.8612], flag: "🇱🇰", displayName: "Colombo" },
   "India": { coords: [19.0760, 72.8777], flag: "🇮🇳", displayName: "Mumbai" },
