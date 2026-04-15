@@ -95,7 +95,7 @@ const TeamSection = ({ data }: { data: SectionProps }) => {
               {/* HEADER */}
               <div className="team-card-header">
                 <div className="team-avatar-wrapper">
-                  <div className="">
+                  <div className="team-avatar">
                     <Image
                      width={100}
                      height={100}
