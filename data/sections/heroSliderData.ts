@@ -9,9 +9,9 @@ export const HeroSlidesData = [
       type: "secondary",
     },
     image:
-      "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/1d/d2/aa/03/7b/v1_E10/E104CKHO.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=f9ec0e9147c3b7f5b6f710598663028342bd6c4ab3e1b15b7e0d5d94ed9cf368",
-    imageTablet: "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/1d/d2/aa/03/7b/v1_E10/E104CKHO.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=f9ec0e9147c3b7f5b6f710598663028342bd6c4ab3e1b15b7e0d5d94ed9cf368",
-    imageMobile: "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/1d/d2/aa/03/7b/v1_E10/E104CKHO.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=f9ec0e9147c3b7f5b6f710598663028342bd6c4ab3e1b15b7e0d5d94ed9cf368",
+      "/img/slider/slide-1.jpg",
+    imageTablet: "/img/slider/slide-1.jpg",
+    imageMobile: "/img/slider/slide-1.jpg",
   },
 
   {
@@ -24,9 +24,9 @@ export const HeroSlidesData = [
       type: "secondary",
     },
     image:
-      "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/91/0a/fa/90/0e/v1_E10/E105B6S5.jpeg?w=800&cf_fit=scale-down&q=85&format=auto&s=2341fa79733106fb41fcfc1b8dafbe3dbf8fb8e141340abcb737a80b841f8c06",
-    imageTablet: "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/91/0a/fa/90/0e/v1_E10/E105B6S5.jpeg?w=800&cf_fit=scale-down&q=85&format=auto&s=2341fa79733106fb41fcfc1b8dafbe3dbf8fb8e141340abcb737a80b841f8c06",
-    imageMobile: "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/91/0a/fa/90/0e/v1_E10/E105B6S5.jpeg?w=800&cf_fit=scale-down&q=85&format=auto&s=2341fa79733106fb41fcfc1b8dafbe3dbf8fb8e141340abcb737a80b841f8c06",
+      "/img/slider/slide-2.jpeg",
+    imageTablet: "/img/slider/slide-2.jpeg",
+    imageMobile: "/img/slider/slide-2.jpeg",
   },
 
   {
@@ -39,9 +39,9 @@ export const HeroSlidesData = [
       type: "secondary",
     },
     image:
-      "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/57/2d/cf/f3/0c/v1_E10/E101X4Q7.jpg?w=800&cf_fit=scale-down&q=85&format=auto&s=54d15a8c453f372d12353f297098bc5312cd8bc52b5d392eede76fc999807725",
-    imageTablet: "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/57/2d/cf/f3/0c/v1_E10/E101X4Q7.jpg?w=800&cf_fit=scale-down&q=85&format=auto&s=54d15a8c453f372d12353f297098bc5312cd8bc52b5d392eede76fc999807725",
-    imageMobile: "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/57/2d/cf/f3/0c/v1_E10/E101X4Q7.jpg?w=800&cf_fit=scale-down&q=85&format=auto&s=54d15a8c453f372d12353f297098bc5312cd8bc52b5d392eede76fc999807725",
+      "/img/slider/slide-3.jpg",
+    imageTablet: "/img/slider/slide-3.jpg",
+    imageMobile: "/img/slider/slide-3.jpg",
   },
 
   {
@@ -54,9 +54,9 @@ export const HeroSlidesData = [
       type: "secondary",
     },
     image:
-      "https://i.ibb.co.com/jZPkP0yb/Whats-App-Image-2026-04-13-at-7-47-03-PM.jpg",
-    imageTablet: "https://i.ibb.co.com/jZPkP0yb/Whats-App-Image-2026-04-13-at-7-47-03-PM.jpg",
-    imageMobile: "https://i.ibb.co.com/jZPkP0yb/Whats-App-Image-2026-04-13-at-7-47-03-PM.jpg",
+      "/img/slider/slide-4.jpg",
+    imageTablet: "/img/slider/slide-4.jpg",
+    imageMobile: "/img/slider/slide-4.jpg",
   },
 
   {
@@ -69,9 +69,9 @@ export const HeroSlidesData = [
       type: "secondary",
     },
     image:
-      "https://i.ibb.co.com/Kc1546YR/Whats-App-Image-2026-04-13-at-7-47-09-PM.jpg",
-    imageTablet: "https://i.ibb.co.com/Kc1546YR/Whats-App-Image-2026-04-13-at-7-47-09-PM.jpg",
-    imageMobile: "https://i.ibb.co.com/Kc1546YR/Whats-App-Image-2026-04-13-at-7-47-09-PM.jpg",
+      "/img/slider/slide-5.jpg",
+    imageTablet: "/img/slider/slide-5.jpg",
+    imageMobile: "/img/slider/slide-5.jpg",
   },
 ];
 
@@ -127,7 +127,7 @@ export const HeroSlidesData = [
 //       href: "/products",
 //       type: "secondary"
 //     },
-//     image: "https://i.ibb.co.com/jZPkP0yb/Whats-App-Image-2026-04-13-at-7-47-03-PM.jpg",
+//     image: "/img/slider/slide-4.jpg",
 //     imageTablet: "/img/slider/hero-main.jpg",
 //     imageMobile: "/img/slider/hero-main.jpg"
 //   },

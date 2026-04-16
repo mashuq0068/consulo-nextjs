@@ -6,21 +6,23 @@ import HeaderActions from "./HeaderActions";
 import StickyHeader from "./StickyHeader";
 
 const Header = () => {
-    return (
-      <StickyHeader 
-        wrapperCls="header-1 header-floating"
-        container="container-fluid"
-        stickyType= 'always'
-      >
-        <div className="header-grid">
-          {/* Logo */}
-       
-          
-          {/* Nav Bar */}
-          <NavBar />
+  return (
+    <StickyHeader
+      wrapperCls="header-1 header-floating"
+      container="container-fluid"
+      stickyType="always"
+    >
+      <div className="header-grid">
+        <div className="header-left">
+          <HeaderActions />
+        </div>
 
-          {/* Header Actions */}
-              <Logo                   
+        <div className="header-center">
+          <NavBar />
+        </div>
+
+        <div className="header-right">
+          <Logo
             src={LogoImage.src}
             width={300}
             height={300}
@@ -30,10 +32,10 @@ const Header = () => {
             ariaLabel="Consulo logo"
             loading="eager"
           />
-           <HeaderActions />
         </div>
-      </StickyHeader>
-    )
-}
+      </div>
+    </StickyHeader>
+  );
+};
 
 export default Header;

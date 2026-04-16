@@ -116,7 +116,7 @@ const Certifications = ({ data }: { data: SectionProps }) => {
         </div>
 
         {/* BACKGROUND SECTION */}
-        <div
+        {/* <div
           style={{
             position: "relative",
             marginTop: "50px",
@@ -137,7 +137,7 @@ const Certifications = ({ data }: { data: SectionProps }) => {
               zIndex: 1,
             }}
           />
-        </div>
+        </div> */}
       </div>
     </div>
   );

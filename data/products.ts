@@ -56,9 +56,19 @@ const products: Product[] = [
           "We supply various Non-Basmati rice varieties suitable for daily consumption, bulk supply programs, food processing, and export markets, especially in Africa, Asia, and the Middle East. These varieties are known for their good cooking quality, affordability, and high demand in bulk markets.",
         varieties: [
           {
-            name: "IR64 Raw / Parboiled Rice",
+            name: "IR64 Parboiled Rice",
             image:
-              "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=400&q=80",
+              "/img/products/rice/ir64-parboiled.jpeg",
+          },
+          {
+            name: "IR64 Raw Rice",
+            image:
+              "/img/products/rice/ir64-raw.jpeg",
+          },
+          {
+            name: "100% Broken White Rice",
+            image:
+              "/img/products/rice/white-rice.jpeg",
           },
           {
             name: "IR8 Rice",
@@ -66,9 +76,9 @@ const products: Product[] = [
               "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/c1/b9/18/de/39/v1_E10/E10QZPI.jpg?w=800&cf_fit=scale-down&q=85&format=auto&s=b4a9e206178e76322f913504ac8a491282b6a843a11eb8523a3568a821d45bbe",
           },
           {
-            name: "PR11 Rice",
+            name: "PR11 Rice Sella/Steam/Golden",
             image:
-              "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/70/53/1e/d5/00/v1_E10/E106OFZ7.jpg?w=800&cf_fit=scale-down&q=85&format=auto&s=b35eff2965e480a57207931b07a1838ef8cb23fdea4a638136e67718af4828c8",
+              "/img/products/rice/pr11-golden.jpeg",
           },
           {
             name: "Sona Masoori Rice",
@@ -223,7 +233,7 @@ const products: Product[] = [
     title: "Spices",
     tagline: "High-Quality Natural Spices with Authentic Flavour & Aroma",
     heroImage:
-      "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/1a/1c/69/02/ab/v1_E10/E102I8CF.jpg?w=800&cf_fit=scale-down&q=85&format=auto&s=f73b872ec52d37a9a088c3d24ba4ff2798903e6166c7f9b28c0b44767b35f7b8",
+      "/img/service/spices.jpeg",
     description:
       "We supply high-quality spices sourced from reliable producers and processed to maintain colour, flavour, and freshness. Suitable for spice traders, food processors, and export markets.",
     specs: [

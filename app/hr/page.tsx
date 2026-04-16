@@ -8,7 +8,7 @@ import PrimaryButton from "@/components/buttons/PrimaryButton";
 import Link from "next/link";
 import { useState } from "react";
 
-const PAGE_TITLE: string = "Talent Management";
+const PAGE_TITLE: string = "Talent Asset";
 
 const HR = () => {
   const [showEmailPopup, setShowEmailPopup] = useState(false);
@@ -76,7 +76,7 @@ const HR = () => {
   ];
 
   const handleCardClick = (slug: string) => {
-    if (slug === "careers") {
+    if (slug === "careers" || "training") {
       setShowEmailPopup(true);
     }
   };
@@ -418,7 +418,7 @@ const HR = () => {
       <div className="hr-container">
         <div className="hr-inner">
           <div className="hr-intro-section">
-            <h1 className="hr-intro-title">Talent Management</h1>
+            <h1 className="hr-intro-title">Talent Asset</h1>
             <p className="hr-intro-text">
               At Kirti Bhavya Enterprises, we believe that people are our
               biggest strength. We focus on creating a professional, positive,

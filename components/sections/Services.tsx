@@ -142,7 +142,7 @@ const services = [
     slug: "/products/spices",
     title: "Spices",
     icon: GiChiliPepper,
-    image: "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/1a/1c/69/02/ab/v1_E10/E102I8CF.jpg?w=800&cf_fit=scale-down&q=85&format=auto&s=f73b872ec52d37a9a088c3d24ba4ff2798903e6166c7f9b28c0b44767b35f7b8",
+    image: "/img/service/spices.jpeg",
     content: "...",
     description: "Premium Indian spices export with Spice Board certification and quality assurance.",
     list: [

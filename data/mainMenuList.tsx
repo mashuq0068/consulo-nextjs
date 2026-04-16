@@ -30,7 +30,7 @@ const Menus = [
     //     ]
     // },
     {
-        title: 'Talent Management',
+        title: 'Talent Asset',
         path: '/hr',
         // dropdown: [
         //     { title: 'Life at KB', path: '/hr' },

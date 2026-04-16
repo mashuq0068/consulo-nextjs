@@ -51,7 +51,7 @@
   width: 220px;
   border-right: 1px solid var(--color-border);
   background: rgba(20, 19, 74, 0.04);
-  font-size: 13.5px;
+  font-size: 15px;
 }
 
 .pd-spec-value {
@@ -81,17 +81,17 @@
 }
 
 .pd-category-desc {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.75;
   /* color: var(--color-foreground-subheading); */
   margin: 0 0 28px;
-  max-width: 720px;
+  /* max-width: 720px; */
 }
 
 /* ── VARIETY GRID ── */
 .pd-variety-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
@@ -143,8 +143,8 @@
 } */
 
 .pd-variety-name {
-  font-size: 16px;
-  /* font-weight: 600; */
+  font-size: 17px;
+  font-weight: 600;
   color: var(--color-foreground);
   padding: 11px 13px;
   line-height: 1.4;

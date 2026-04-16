@@ -48,7 +48,7 @@ const ContactSection = ({ data }: { data: SectionProps }) => {
     },
     {
       icon: <FiPhone />,
-      label: "Phone/WhatsApp",
+      label: "Cell phone",
       value: "+91 99749 26271",
       isLink: true,
       href: "tel:+919974926271",
