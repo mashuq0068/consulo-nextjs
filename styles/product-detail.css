@@ -112,7 +112,7 @@
 .pd-variety-card {
   border-radius: 12px;
   overflow: hidden;
-  border: 8.5px solid #F5EF78;
+  border: 3.5px solid #33336f;
   background: #fff;
   transition: transform 0.22s ease, box-shadow 0.22s ease;
   cursor: default;

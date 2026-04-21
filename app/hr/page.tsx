@@ -75,12 +75,14 @@ const HR = () => {
     },
   ];
 
-  const handleCardClick = (slug: string) => {
-    if (slug === "careers" || "training") {
+  const [selectedSection, setSelectedSection] = useState<any>(null);
+
+  const handleCardClick = (section: any) => {
+    if (section.slug === "careers" || section.slug === "internship") {
+      setSelectedSection(section);
       setShowEmailPopup(true);
     }
   };
-
   return (
     <>
       <BreadcrumbBanner
@@ -158,7 +160,7 @@ const HR = () => {
           border-radius: 20px;
           padding: 48px 36px;
           transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-          cursor: pointer;
+      
           animation: fadeInUp 0.8s ease-out both;
           position: relative;
           overflow: hidden;
@@ -429,10 +431,17 @@ const HR = () => {
 
           <div className="hr-grid">
             {hrSections.map((section, idx) => (
-              <div 
-                key={idx} 
+              <div
+                key={idx}
+                style={{
+                  cursor:
+                    section?.slug === "careers" ||
+                    section?.slug === "internship"
+                      ? "pointer"
+                      : "default",
+                }}
                 className="hr-card"
-                onClick={() => handleCardClick(section.slug)}
+                onClick={() => handleCardClick(section)}
               >
                 <span className="hr-card-icon">{section.icon}</span>
                 <h2 className="hr-card-title">{section.title}</h2>
@@ -450,45 +459,48 @@ const HR = () => {
         </div>
       </div>
 
-  {showEmailPopup && (
-  <div 
-    className="popup-overlay"
-    onClick={(e) => {
-      if (e.target === e.currentTarget) {
-        setShowEmailPopup(false);
-      }
-    }}
-  >
-    <div className="popup-content">
-      {/* Close X button - top right */}
-      <button
-        className="popup-close-x"
-        onClick={() => setShowEmailPopup(false)}
-        aria-label="Close popup"
-      >
-        <svg 
-          width="24" 
-          height="24" 
-          viewBox="0 0 24 24" 
-          fill="none" 
-          stroke="currentColor" 
-          strokeWidth="2" 
-          strokeLinecap="round" 
-          strokeLinejoin="round"
+      {showEmailPopup && selectedSection && (
+        <div
+          className="popup-overlay"
+          onClick={(e) => {
+            if (e.target === e.currentTarget) {
+              setShowEmailPopup(false);
+            }
+          }}
         >
-          <line x1="18" y1="6" x2="6" y2="18" />
-          <line x1="6" y1="6" x2="18" y2="18" />
-        </svg>
-      </button>
-      
-      <span className="popup-icon">💼</span>
-      <h3 className="popup-title">Career Opportunities</h3>
-      <div className="popup-email">
-        Email us at <a href="mailto:hr@kirtibhavya.com" className="email-link">hr@kirtibhavya.com</a>
-      </div>
-    </div>
-  </div>
-)}
+          <div className="popup-content">
+            {/* Close X button - top right */}
+            <button
+              className="popup-close-x"
+              onClick={() => setShowEmailPopup(false)}
+              aria-label="Close popup"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+              </svg>
+            </button>
+
+            <span className="popup-icon">{selectedSection?.icon}</span>
+            <h3 className="popup-title">{selectedSection?.title}</h3>
+            <div className="popup-email">
+              Email us at{" "}
+              <a href="mailto:hr@kirtibhavya.com" className="email-link">
+                hr@kirtibhavya.com
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
 
       <div className="hr-cta-wrapper">
         <div className="hr-cta-section">

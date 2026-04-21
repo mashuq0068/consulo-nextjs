@@ -82,7 +82,7 @@ const HeroSlider = ({ wrapperCls, slides, navigation }: HeroSliderType) => {
                   <div className="content-box w-full slider-animation section-headings">
                     {slide.subheading && (
                       <div
-                        style={{ backgroundColor: "#14134A", color: "#F5EF78" }}
+                        style={{ backgroundColor: "#14134A", color: "white" }}
                         className={`subheading subheading-bg`}
                       >
                         <span className="icon icon-14">

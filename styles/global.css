@@ -68,7 +68,7 @@
   --font-nav-main: 16px;
 
   /* Colors */
-  --color-background: #f3f3ff;
+  --color-background: white;
   --color-foreground: #14134A;
   --color-foreground-heading: #181750;
   --color-foreground-subheading: rgba(20, 19, 74, 0.8);
@@ -94,30 +94,30 @@
   --style-cta-underline-thickness: 1px;
 
   /* Colors - Primary Button */
-  --color-primary-button-text: #F5EF78;
+  --color-primary-button-text: white;
   --color-primary-button-background: #14134A;
   --color-primary-button-border: #14134A;
   --color-primary-button-icon: #14134A;
-  --color-primary-button-icon-background: #F5EF78;
+  --color-primary-button-icon-background: white;
 
-  --color-primary-button-hover-text: #14134A;
-  --color-primary-button-hover-background: #F5EF78;
+  --color-primary-button-hover-text: white;
+  --color-primary-button-hover-background: #1f1e64;
   --color-primary-button-hover-border: #14134A;
-  --color-primary-button-hover-icon: #F5EF78;
-  --color-primary-button-hover-icon-background: #14134A;
+  --color-primary-button-hover-icon: #14134A;
+  --color-primary-button-hover-icon-background: white;
 
   /* Colors - Secondary Button */
-  --color-secondary-button-text: #14134A;
+  --color-secondary-button-text: white;
   --color-secondary-button-background: transparent;
   /* --color-secondary-button-border: rgba(255, 255, 255, 1); */
-  --color-secondary-button-icon: #F5EF78;
-  --color-secondary-button-icon-background: #14134A;
+  --color-secondary-button-icon: #14134A;
+  --color-secondary-button-icon-background: white;
 
-  --color-secondary-button-hover-text: #F5EF78;
+  --color-secondary-button-hover-text: white;
   --color-secondary-button-hover-background: #14134A;
   /* --color-secondary-button-hover-border: rgba(32, 40, 45, 1); */
   --color-secondary-button-hover-icon: #14134A;
-  --color-secondary-button-hover-icon-background: #F5EF78;
+  --color-secondary-button-hover-icon-background: white;
 
   /* Colors - Input */
   --color-input-background: rgba(255, 255, 255, 0.5);
