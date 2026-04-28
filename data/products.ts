@@ -227,43 +227,66 @@ const products: Product[] = [
       },
     ],
   },
-  {
-    id: 4,
-    slug: "spices",
-    title: "Spices",
-    tagline: "High-Quality Natural Spices with Authentic Flavour & Aroma",
-    heroImage:
-      "/img/service/spices.jpeg",
-    description:
-      "We supply high-quality spices sourced from reliable producers and processed to maintain colour, flavour, and freshness. Suitable for spice traders, food processors, and export markets.",
-    specs: [
-      { label: "Cleaned", value: "Machine Cleaned" },
-      { label: "Colour", value: "Natural Colour" },
-      { label: "Pungency", value: "High Pungency" },
-      { label: "Moisture", value: "Low Moisture" },
-      { label: "Drying", value: "Properly Dried" },
-      { label: "Packaging", value: "Export Packaging Available" },
-    ],
-    categories: [
-      {
-        name: "Spice Products",
-        description:
-          "Our spices are sourced from prime growing regions and processed with modern machinery to retain their natural colour, flavour, and freshness. Ideal for spice traders, food processors, and international export markets.",
-        varieties: [
-          {
-            name: "Red Chilli (Whole)",
-            image:
-              "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/fe/10/20/aa/5d/v1_E10/E104R93Q.jpg?w=800&cf_fit=scale-down&q=85&format=auto&s=fb0031a038f282c1afa9bd8985cf527d8cac5d247235fdf4c5a7d2959dd59d51",
-          },
-          {
-            name: "Red Chilli Powder",
-            image:
-              "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/ca/50/a2/e5/73/v1_E10/E107QWYX.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=8f55841c64d358d7e5684d33e5163833b5d8251d97a8a8ea8de575a14b5cebfb",
-          },
-        ],
-      },
-    ],
-  },
+{
+  id: 4,
+  slug: "spices",
+  title: "Spices",
+  tagline: "High-Quality Natural Spices with Authentic Flavour & Aroma",
+  heroImage: "/img/service/spices.jpeg",
+  description:
+    "We supply high-quality spices sourced from reliable producers and processed to maintain colour, flavour, and freshness. Suitable for spice traders, food processors, and export markets.",
+  specs: [
+    { label: "Cleaned", value: "Machine Cleaned" },
+    { label: "Colour", value: "Natural Colour" },
+    { label: "Pungency", value: "High Pungency" },
+    { label: "Moisture", value: "Low Moisture" },
+    { label: "Drying", value: "Properly Dried" },
+    { label: "Packaging", value: "Export Packaging Available" },
+  ],
+  categories: [
+    {
+      name: "Spice Products",
+      description:
+        "Our spices are sourced from prime growing regions and processed with modern machinery to retain their natural colour, flavour, and freshness. Ideal for spice traders, food processors, and international export markets.",
+      varieties: [
+        {
+          name: "Red Chilli (Whole)",
+          image: "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/fe/10/20/aa/5d/v1_E10/E104R93Q.jpg?w=800&cf_fit=scale-down&q=85&format=auto&s=fb0031a038f282c1afa9bd8985cf527d8cac5d247235fdf4c5a7d2959dd59d51",
+        },
+        {
+          name: "Red Chilli Powder",
+          image: "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/ca/50/a2/e5/73/v1_E10/E107QWYX.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=8f55841c64d358d7e5684d33e5163833b5d8251d97a8a8ea8de575a14b5cebfb",
+        },
+
+        // Newly added spices
+        {
+          name: "Cumin",
+          image: "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/4c/77/c9/f7/6b/v1_E10/E109FLKQ.jpg?w=800&cf_fit=scale-down&q=85&format=auto&s=e46beb8653a19d53b97d513e1622a086e21e2be41b14f341b6a8df3b42798424",
+        },
+        {
+          name: "Coriander",
+          image: "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/e8/e4/7a/1d/b1/v1_E10/E101A77W.jpg?w=800&cf_fit=scale-down&q=85&format=auto&s=a12c7defe00d5c2660a2e4e732c00743f56ba448a50e77a5161a68ba2c51f0db",
+        },
+        {
+          name: "Fennel",
+          image: "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/32/14/e6/13/13/v1_E10/E10FUKX1.jpg?w=800&cf_fit=scale-down&q=85&format=auto&s=4c20a51c32ca341f2a535a53447e8e1ae2ee9042b42ca783ef7b9507b0c2dadf",
+        },
+        {
+          name: "Chilli",
+          image: "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/cd/bf/66/7c/da/v1_E10/E102KV3Y.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=7a581905e0efd825334693398684d1819ab9ca745eae4bf5134c663df733338c",
+        },
+        {
+          name: "Turmeric",
+          image: "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/be/b9/47/b5/b3/v1_E10/E10G7U0T.jpg?w=800&cf_fit=scale-down&q=85&format=auto&s=df901c554b2fccdad84167145a6f0c941c2c2554de0337f065a8eaf446121c77",
+        },
+        {
+          name: "Cardamom",
+          image: "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/31/14/7b/b1/55/v1_E10/E10ARNUU.jpg?w=800&cf_fit=scale-down&q=85&format=auto&s=3102feed874e51a2d6516c78cc3fe2bc86add86323d60e7ba210dfc8de5077a3",
+        },
+      ],
+    },
+  ],
+},
   {
     id: 5,
     slug: "pulses",

@@ -185,7 +185,7 @@ const createCustomIcon = useMemo(() => {
   if (!mounted || !L || !createCustomIcon) return null;
 
   return (
-    <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "80px 20px" }}>
+    <div style={{ maxWidth: "1300px", margin: "0 auto", padding: "80px 20px" }}>
       
       <div style={{ textAlign: "center", marginBottom: "20px" }}>
         <Subheading title={"Our Global Network"} />
@@ -195,31 +195,7 @@ const createCustomIcon = useMemo(() => {
         <Heading title={"We have exposure in these international markets."} />
       </div>
 
-      <div style={{
-        borderRadius: "16px",
-        overflow: "hidden",
-        boxShadow: "0 20px 60px rgba(0,0,0,0.1)"
-      }}>
-        <MapContainer
-          center={[20, 60]}
-          zoom={3}
-          minZoom={2}
-          scrollWheelZoom={false}
-          style={{ width: "100%", height: "600px" }}
-        >
-          <TileLayer
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          />
-
-          {markers.map((m, i) => (
-            <Marker
-              key={i}
-              position={m.coords}
-              icon={createCustomIcon(m.displayName, m.flag)}
-            />
-          ))}
-        </MapContainer>
-      </div>
+      <img src="/img/globalReach/map.jpeg" alt="" />
     </div>
   );
 }

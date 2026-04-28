@@ -89,20 +89,20 @@ const TeamSection = ({ data }: { data: SectionProps }) => {
           {teamMembers.map((member) => (
             <div
               key={member.id}
-              className="team-card radius18"
+              className="team-card"
               data-aos="fade-up"
             >
               {/* HEADER */}
               <div className="team-card-header">
                 <div className="team-avatar-wrapper">
-                  <div className="team-avatar">
+                  {/* <div className="team-avatar">
                     <Image
                      width={100}
                      height={100}
                      alt={member?.name}
                      src={member?.image}
                      />
-                  </div>
+                  </div> */}
 
                   <div className="team-info">
                     <h2 className="team-name">{member.name}</h2>

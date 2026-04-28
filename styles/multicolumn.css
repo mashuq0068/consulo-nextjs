@@ -47,7 +47,7 @@
 .multicolumn .multicolumn-card {
   padding: 36px;
   background-color: var(--color-background);
-  border-radius: 10px;
+  /* border-radius: 10px; */
   overflow: hidden;
   height: 100%;
   text-decoration: none;

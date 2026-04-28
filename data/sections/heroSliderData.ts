@@ -1,8 +1,8 @@
 export const HeroSlidesData = [
   {
     subheading: "Welcome to Kirti Bhavya Enterprises",
-    heading: ["Global Trading", "Food Distribution", "Tech-Enabled Retail"],
-    text: "Kirti Bhavya Enterprises Private Limited  is a growth-driven enterprise engaged in Global Trading, Food Distribution, and Tech-Enabled Retail. Built on the foundations of global experience, operational excellence, and long-term business relationships.",
+    heading:"International Trading",
+    text: "Global sourcing and supply of agro commodities and food products across multiple international markets.",
     button: {
       label: "Learn More",
       href: "/about-us",
@@ -15,64 +15,36 @@ export const HeroSlidesData = [
   },
 
   {
-    subheading: "Reliable Commodity Supply Chain",
-    heading: "Rice Trading & Distribution",
-    text: "We source and distribute high-quality rice through a reliable supply chain network, ensuring consistency, purity, and timely delivery across markets.",
-    button: {
-      label: "Learn More",
-      href: "/about-us",
-      type: "secondary",
-    },
-    image:
-      "/img/slider/slide-2.jpeg",
-    imageTablet: "/img/slider/slide-2.jpeg",
-    imageMobile: "/img/slider/slide-2.jpeg",
-  },
-
-  {
     subheading: "Grain Trading Strength",
-    heading: "Wheat Procurement & Supply",
-    text: "Our wheat trading operations connect trusted producers with markets, ensuring stable supply and quality assurance across the value chain.",
+    heading: "Tech-Enabled Retail",
+    text: "Technology solutions designed to support and modernize traditional retail distribution networks.",
     button: {
       label: "Learn More",
       href: "/about-us",
       type: "secondary",
     },
     image:
-      "/img/slider/slide-3.jpg",
-    imageTablet: "/img/slider/slide-3.jpg",
-    imageMobile: "/img/slider/slide-3.jpg",
+      "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/c9/ac/c0/76/65/v1_E10/E10CJK9V.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=e62efe1b0f2c06ca0fcbf79c7333bdf148a430b41e953cde6074f2078a831911",
+    imageTablet: "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/c9/ac/c0/76/65/v1_E10/E10CJK9V.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=e62efe1b0f2c06ca0fcbf79c7333bdf148a430b41e953cde6074f2078a831911",
+    imageMobile: "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/c9/ac/c0/76/65/v1_E10/E10CJK9V.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=e62efe1b0f2c06ca0fcbf79c7333bdf148a430b41e953cde6074f2078a831911",
   },
 
   {
-    subheading: "Spice & Specialty Trade",
-    heading: "Premium Red Chilli Trading",
-    text: "We specialize in sourcing and supplying premium red chilli, connecting agricultural regions to domestic and international buyers with strict quality control.",
+    subheading: "Reliable Commodity Supply Chain",
+    heading: "Food Distribution",
+    text: "Distribution of food products through efficient supply chain and logistics networks.",
     button: {
       label: "Learn More",
-      href: "/products",
+      href: "/about-us",
       type: "secondary",
     },
     image:
-      "/img/slider/slide-4.jpg",
-    imageTablet: "/img/slider/slide-4.jpg",
-    imageMobile: "/img/slider/slide-4.jpg",
+      "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/59/ae/13/ce/91/v1_E10/E10ANIT8.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=519329298dfe2aa73c3158c6e1c2a2dceff4f00a9f99a3ba491c8a030b1cf422",
+    imageTablet: "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/59/ae/13/ce/91/v1_E10/E10ANIT8.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=519329298dfe2aa73c3158c6e1c2a2dceff4f00a9f99a3ba491c8a030b1cf422",
+    imageMobile: "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/59/ae/13/ce/91/v1_E10/E10ANIT8.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=519329298dfe2aa73c3158c6e1c2a2dceff4f00a9f99a3ba491c8a030b1cf422",
   },
 
-  {
-    subheading: "Future Expansion",
-    heading: "Animal Feed Solutions",
-    text: "Expanding into animal nutrition with feed solutions for cattle, poultry, pigs, and fish, building a complete agricultural ecosystem from farm to feed.",
-    button: {
-      label: "Learn More",
-      href: "/future",
-      type: "secondary",
-    },
-    image:
-      "/img/slider/slide-5.jpg",
-    imageTablet: "/img/slider/slide-5.jpg",
-    imageMobile: "/img/slider/slide-5.jpg",
-  },
+
 ];
 
 // export const HeroSlidesData = [

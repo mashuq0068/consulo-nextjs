@@ -67,7 +67,7 @@ const HeroSlider = ({ wrapperCls, slides, navigation }: HeroSliderType) => {
                       srcSet={slide.imageTablet}
                     />
                   )}
-                  <Image
+                  <img
                     src={slide.image}
                     width={1920}
                     height={1000}
