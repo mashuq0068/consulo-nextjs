@@ -271,10 +271,10 @@ const products: Product[] = [
           name: "Fennel",
           image: "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/32/14/e6/13/13/v1_E10/E10FUKX1.jpg?w=800&cf_fit=scale-down&q=85&format=auto&s=4c20a51c32ca341f2a535a53447e8e1ae2ee9042b42ca783ef7b9507b0c2dadf",
         },
-        {
-          name: "Chilli",
-          image: "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/cd/bf/66/7c/da/v1_E10/E102KV3Y.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=7a581905e0efd825334693398684d1819ab9ca745eae4bf5134c663df733338c",
-        },
+        // {
+        //   name: "Chilli",
+        //   image: "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/cd/bf/66/7c/da/v1_E10/E102KV3Y.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=7a581905e0efd825334693398684d1819ab9ca745eae4bf5134c663df733338c",
+        // },
         {
           name: "Turmeric",
           image: "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/be/b9/47/b5/b3/v1_E10/E10G7U0T.jpg?w=800&cf_fit=scale-down&q=85&format=auto&s=df901c554b2fccdad84167145a6f0c941c2c2554de0337f065a8eaf446121c77",

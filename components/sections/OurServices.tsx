@@ -59,7 +59,7 @@ const CardService = ({ data }: ServiceDataType) => {
         style={{
           background: "var(--color-background)",
           borderRadius: "16px",
-          // height:'500px',
+          height:'480px',
           overflow: "hidden",
           transform: "perspective(900px) rotateX(4deg) rotateY(-6deg)",
           transition: "transform 0.15s ease, box-shadow 0.3s ease",

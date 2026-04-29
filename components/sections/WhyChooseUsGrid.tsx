@@ -17,7 +17,7 @@ import {
 
   HiOutlineGlobeAlt,
 } from "react-icons/hi2";
-import { MdOutlineGrowthOutlined } from "react-icons/md";
+// import { MdOutlineGrowthOutlined } from "react-icons/md";
 import { TbLeaf } from "react-icons/tb";
 import { FaRegHandshake } from "react-icons/fa";
 
@@ -261,7 +261,7 @@ const WhyChooseUsGrid = ({ data }: { data: SectionProps }) => {
                     {/* Icon with dashed ring */}
                     <div className="vmv-icon-ring">
                       <div className="vmv-icon-wrap">
-                        {cardIcons[item.title] ?? <FiTarget size={32} />}
+                        {cardIcons[item.title || ''] ?? <FiTarget size={32} />}
                       </div>
                     </div>
 
